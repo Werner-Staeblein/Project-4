@@ -1,6 +1,15 @@
  
 # Table of contents
 
+- [Project Planning](#project-planning)
+- [Agile Development Process](#agile-development-process)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Security Features](#security-features)
+- [Content](#content)
+- [Deployment](#deployment) 
+
 # Project Planning
 	
 This is project milestone 4 for the Code Institute full-stack development program. The project is a full-stack website built using the Django framework.
@@ -57,7 +66,7 @@ This is a full-stack (front-end/back-end) project with the primary use of HTML, 
 
 The frontend primarily relies on the CSS framework Bootstrap for the efficient layout of mobile-first responsive design (MFRD).
 
-## Django-based technologies		
+## Django-based technologies
 
 **[Django](https://www.djangoproject.com/)** Django is an open-source web framework for building robust and dynamic web applications
 
@@ -65,7 +74,7 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[Cloudinary](https://cloudinary.com/)** Cloudinary is an image/video management solution for websites to easily upload images to the cloud with the delivery of media files through a fast content delivery network (CDN)
 
-**[CrispyForms](https://pypi.org/project/django-crispy-forms/)** Crispy Forms is a third-party Django app to manage Django forms with Bootstrap styles									
+**[CrispyForms](https://pypi.org/project/django-crispy-forms/)** Crispy Forms is a third-party Django app to manage Django forms with Bootstrap styles		
 
 **[Summernote](https://summernote.org/)** Summernote is a JavaScript library that allows to create a WYSIWYG (What You See Is What You Get) editor
 
