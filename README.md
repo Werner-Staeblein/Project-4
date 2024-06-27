@@ -32,7 +32,6 @@ The database model (Entity Relationship Diagram | ERD) describes the connection 
 ## Color Scheme
 
 ## Typography
-
  
 	
 # Agile Development Process
