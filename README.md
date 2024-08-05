@@ -35,6 +35,8 @@ The database model (Entity Relationship Diagram | ERD) describes the connection 
  
 	
 # Agile Development Process
+
+Details on the agile development process can be found here [AGILE.md](agile.md)
 	
 ## EPICS and User Stories
 
