@@ -1,2 +1,2 @@
-web: gunicorn tesproject.wsgi
+web: gunicorn testproject.wsgi
 
