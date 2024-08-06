@@ -6,19 +6,18 @@ import dj_database_url
 from pathlib import Path
 import os
 
+# Loading the environment variables from env.py file as the env.py does exist these will be loaded
 if os.path.exists("env.py"):
     import env
-
-# Other Django settings configurations
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = os.getenv('DEBUG', default='False').lower() == 'true'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Securit Settings for Secret Key
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Debug setting
+DEBUG = os.getenv('DEBUG', default='False').lower() == 'true'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,8 +28,9 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+# Configuration of database
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
 # CSRF trusted origins
@@ -82,18 +82,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'testproject.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -129,6 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
