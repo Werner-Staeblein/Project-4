@@ -1,2 +1,2 @@
-web: gunicorn testproject.wsgi
+web: gunicorn diviblog.wsgi
 
