@@ -5,6 +5,9 @@ Django settings for testproject project.
 import dj_database_url
 from pathlib import Path
 import os
+import os
+print(os.environ.get('DJANGO_SETTINGS_MODULE'))
+
 
 # Loading the environment variables from env.py file as the env.py does exist these will be loaded
 if os.path.exists("env.py"):
@@ -19,11 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    '.herokuapp.com',  
-    'localhost',       
-    '127.0.0.1',
-]
+ALLOWED_HOSTS = ['dividend-blog-app-7524309b6f0c.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Configuration of database
 DATABASES = {
@@ -59,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'testproject.urls'
+ROOT_URLCONF = 'diviblog.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'testproject.wsgi.application'
+WSGI_APPLICATION = 'diviblog.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
