@@ -27,7 +27,3 @@ The distribution of "must have" to "could have"/"should have" was not the perfec
 not perfectly clear at the start of the iteration whether users stories 6,7, and 8 can be completed in the timeframe set for the first sprint (iteration 1).
 
 ![Iteration_1_milestone](docs/agile/iteration_1_milestone.png)
-
-
-	
-

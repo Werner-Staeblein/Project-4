@@ -5,9 +5,6 @@ Django settings for testproject project.
 import dj_database_url
 from pathlib import Path
 import os
-import os
-print(os.environ.get('DJANGO_SETTINGS_MODULE'))
-
 
 # Loading the environment variables from env.py file as the env.py does exist these will be loaded
 if os.path.exists("env.py"):
