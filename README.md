@@ -154,23 +154,20 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
     
 ## Deployment on Heroku (step-by-step guide)
     
-1	Log in to Heroku under
-2	In the Heroku dashboard click the button "Create new app"
-3	Assign a unique name to your app. Names of apps existing already are not considered unique
-4	Select the region (for this project, Europe was selected)
-5	Click "Create app"
-6	The deployment method must be selected. For this project, github was used as the deployment method
-7	Search for the name of the github repository to be deployed
-8	Click on "connect" to connect Heroku with the GitHub repository
-9	Under the options of either manual or automatic deployment the "main branch" must be selected
-10	In the tab named settings select the config vars
-    Config Vars is Heroku's name for environment variables
-    Inside the ConfigVars set the following
-    
-    SECRET_KEY and its value from the env.py file that was ignored with .gitignore
-    DATABASE_URL and its value (the database URL) from the env.py file and that was ignored with .gitignore
-    DISABLE_COLLECTSTATIC with a value of 1 initially. For final deployment and once static files are collected this must be removed
-    
-11	Final Step
-    The last step is to click "Deploy Branch" in the section named Manual deploy
-    This will start the build process in Heroku. Once the build process is completed successfully, a link is shown to view the deployed app
+1. Log in to Heroku under.
+2. In the Heroku dashboard, click the button **"Create new app"**.
+3. Assign a unique name to your app. Names of apps existing already are not considered unique.
+4. Select the region (for this project, Europe was selected).
+5. Click **"Create app"**.
+6. The deployment method must be selected. For this project, GitHub was used as the deployment method.
+7. Search for the name of the GitHub repository to be deployed.
+8. Click on **"Connect"** to connect Heroku with the GitHub repository.
+9. Under the options of either manual or automatic deployment, the **"main branch"** must be selected.
+10. In the tab named **"Settings"**, select the **Config Vars**. Config Vars is Heroku's name for environment variables.
+    - Inside the Config Vars, set the following:
+      - **SECRET_KEY** and its value from the `env.py` file that was ignored with `.gitignore`.
+      - **DATABASE_URL** and its value (the database URL) from the `env.py` file that was ignored with `.gitignore`.
+      - **DISABLE_COLLECTSTATIC** with a value of `1` initially. For final deployment and once static files are collected, this must be removed.
+11. Final Step:
+    - The last step is to click **"Deploy Branch"** in the section named **"Manual deploy"**.
+    - This will start the build process in Heroku. Once the build process is completed successfully, a link is shown to view the deployed app.
