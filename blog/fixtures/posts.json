@@ -1,7 +1,7 @@
 [
     {
         "model": "blog.dividendposts",
-        "pk": "null",
+        "pk": null,
         "fields": {
             "headline": "Quench Your Portfolio's Thirst: Coca-Cola's Consistent Dividends",
             "slug": "quench-your-portfolios-thirst-coca-colas-consistent-dividends",
