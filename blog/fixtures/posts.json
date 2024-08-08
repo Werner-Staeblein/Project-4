@@ -1,0 +1,15 @@
+[
+    {
+        "model": "blog.dividendposts",
+        "pk": "null",
+        "fields": {
+            "headline": "Quench Your Portfolio's Thirst: Coca-Cola's Consistent Dividends",
+            "slug": "quench-your-portfolios-thirst-coca-colas-consistent-dividends",
+            "writer": 1,
+            "body": "<p><b>The Coca-Cola Company: A Global Beverage Leader</b></p><p>\r\nThe Coca-Cola Company is a global beverage leader. Renowned for its flagship product, Coca-Cola, the company offers a diverse portfolio of over 500 brands, including sparkling and still beverages. The product range covers sodas, energy drinks, bottled water, juices, and teas, with popular names such as Sprite, Fanta, Powerade, and Minute Maid.</p><p><b>Financial Performance and Revenue Growth</b></p><p>\r\nCoca-Cola operates in over 200 countries and benefits from a vast distribution network. Over the past decade, Coca-Cola has demonstrated robust financial performance, with a compound annual revenue growth rate (CAGR) of approximately 3%. The company has consistently maintained strong earnings margins, averaging around 25%, reflecting its effective cost management.</p><p><b>Dividend History</b></p><p>\r\nCoca-Cola has a remarkable dividend history, paying dividends for 25 years without a reduction and increasing them 25 times in succession. The average dividend growth rate over the past five years is 3.4%, while the ten-year average stands at 5.0%, showcasing the company’s commitment to returning value to shareholders.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"  
+        }
+    }
+]
