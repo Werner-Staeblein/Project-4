@@ -32,4 +32,5 @@ Documentation of progress:
 
 - Despite the hickup of renaming my Django testing folder with subsequent adjustments to wsgi, settings, asgi to capture the new named "assigned" to the Django project, the first iteration proceeded surprisingly well. The "must have" user stories were closed on the second day into the sprint/iteration 1
 - Progress with iteration 1 supported by careful planning of all users stories in advance and revisiting the LMS material notes
-- Creation of content for blog app very likey to remain a user story for subsequent iterations as for now none of the content visible in admin panel is displayed in browser with no views/templates defined in iteration 1
+- Creation of content for blog app most time-consuming user story in Iteration 1 as expected with almost one working day spent on collecting data and writing the blog app content
+- 
