@@ -1,0 +1,28 @@
+[
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Johnson & Johnson: Healthy and Reliable Dividends",
+            "slug": "johnson-and-johnson-healthy-and-reliable-dividends",
+            "writer": 1,
+            "body": "<p><b>Johnson & Johnson: A Global Leader in Healthcare</b></p><p>Johnson & Johnson is a global leader in the healthcare industry, renowned for its wide-ranging portfolio of pharmaceuticals, medical devices, and consumer health products. Over the past decade, the company has shown robust financial performance, with a compound annual revenue growth rate (CAGR) of approximately 4%. Its strong operational efficiency is reflected in consistently high earnings margins, averaging around 20%.</p><p><b>Dividend History</b></p><p>A hallmark of Johnson & Johnson's financial strategy is its exceptional dividend history. The company has paid dividends for 25 years without a reduction, increasing them 25 times in succession, showcasing its commitment to returning value to shareholders. The average dividend growth rate over the past five years is 5.8%, while the ten-year average stands at 6.1%, underscoring its reliability as a dividend-paying stock.</p><p>Johnson & Johnson's dedication to innovation drives its continuous development of new products and therapies, addressing some of the most pressing health challenges worldwide. This commitment to research and development ensures a steady stream of advanced solutions in pharmaceuticals, medical devices, and consumer health products, maintaining its competitive edge in the industry.</p>",
+            "published_date": "2023-08-15T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Microsoft: A Decade of Double-Digit Growth and Steadfast Dividends",
+            "slug": "microsoft-a-decade-of-double-digit-growth-and-steadfast-dividends",
+            "writer": 1,
+            "body": "<p><b>Microsoft Corporation: A Global Technology Leader</b></p><p>Microsoft Corporation is a global technology leader known for its extensive range of software products, services, and hardware devices. Over the past decade, Microsoft has exhibited strong financial performance with a compound annual revenue growth rate (CAGR) of approximately 11%. The company’s operational efficiency is reflected in its consistently high earnings margins, which have averaged around 30%.</p><p><b>Dividend History</b></p><p>The company has paid dividends for over 20 years without a reduction and has increased them 22 times in succession. The average dividend growth rate over the past five years is 10.2%, while the ten-year average stands at an impressive 10.6%, making Microsoft a reliable choice for investors seeking dependable and growing dividend payouts from an investment.</p><p>Microsoft's success is driven by its diverse portfolio, including flagship products like Windows and Office, cloud services through Azure, and a strong presence in gaming with Xbox. The company’s focus on innovation is evident in its investments in artificial intelligence, cloud computing, and other cutting-edge technologies. These initiatives have not only bolstered its market position but also ensured sustained growth.</p><p>With a legacy of innovation and a strong financial track record, Microsoft will likely continue to shape the future of technology while delivering consistent value to its shareholders.</p>",
+            "published_date": "2023-08-22T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-22T10:00:00Z"
+        }
+    }
+]
