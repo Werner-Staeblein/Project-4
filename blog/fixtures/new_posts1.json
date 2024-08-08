@@ -1,0 +1,93 @@
+[
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Roche: Pioneering Pharma Innovation with 25 Years of Steady Dividends",
+            "slug": "roche-pioneering-pharma-innovation-with-25-years-of-steady-dividends",
+            "writer": 1,
+            "body": "<p>Roche Holdings, headquartered in Basel, Switzerland, is a global leader in the pharmaceutical and diagnostics sectors, renowned for its innovative contributions to healthcare. Over the past decade, Roche has demonstrated strong financial performance, with a compound annual revenue growth rate (CAGR) of approximately 4%. The company maintains robust earnings margins, averaging around 25%, reflecting its effective cost management.</p><p>The company has been paying dividends for 25 years without a reduction, and it has increased the dividend 25 times during this period, showcasing a quarter of a century track-record to have shareholders participating in the company’s success. The average dividend growth rate over the past five years is 2.0%, with a ten-year average of 2.1%, highlighting Roche's consistent, if modest, dividend increases.</p><p>Roche's success is driven by its strong focus on research and development, particularly in oncology, immunology, and diagnostics. The company is a pioneer in personalized medicine, with significant investments in cutting-edge therapies and diagnostic tools that address complex health challenges.</p><p>Its ongoing efforts to advance medical science and contribute to patient well-being underscore its role as a leading force in the healthcare industry. With a rich history of innovation and a reliable dividend record, Roche Holdings continues to be a solid choice for investors seeking both stability and growth in the healthcare sector.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Reaping the Rewards of 25 Years of Reliable Dividends and Steady Growth",
+            "slug": "reaping-the-rewards-of-25-years-of-reliable-dividends-and-steady-growth",
+            "writer": 1,
+            "body": "<p>SAP SE, headquartered in Walldorf, Germany, is a global leader in enterprise application software and related services. The company operates through several segments: Applications, Technology, and Services; Intelligent Spend Group; and Qualtrics. The Applications, Technology, and Services segment includes software licenses, cloud subscriptions, and associated services. The Intelligent Spend Group focuses on cloud-based collaborative business networks and related professional services, while Qualtrics specializes in cloud solutions for experience management.</p><p>Over the past decade, SAP has shown robust financial growth, with a compound annual revenue growth rate (CAGR) of approximately 5%. The company's operational efficiency is evident in its high margins, which have averaged around 30% during this period.</p><p>SAP's impressive dividend history underscores its commitment to shareholder value. The company has been paying dividends for 25 years without a reduction and has increased them 14 times in that span, demonstrating strong dividend continuity. The dividend growth rate for the most recent fiscal year is 7.3%, with an average growth rate of 8.1% over the past five years and 8.3% over the past decade.</p><p>This consistent dividend growth, coupled with SAP's solid revenue and margin performance, makes it an attractive option for investors seeking reliable income from an investment in the IT sector.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Nestlé: Sweet as Sugar with 25 Years of Growing Dividends and Steady Growth",
+            "slug": "nestle-sweet-as-sugar-with-25-years-of-growing-dividends-and-steady-growth",
+            "writer": 1,
+            "body": "<p>Nestlé SA, headquartered in Vevey, Switzerland, is a global leader in nutrition, health, and wellness, with a diverse portfolio that spans prepared meals, dairy products, beverages, and pet food. The company operates across several segments, including Europe, North and South America, Asia, Oceania & Africa, Nestlé Waters, Nestlé Nutrition, and Other Businesses, which features Nespresso, Nestlé Health Science, and Nestlé Skin Health.</p><p>Over the past decade, Nestlé has demonstrated consistent revenue growth, with a compound annual growth rate (CAGR) of approximately 3.5%. The company has maintained strong margins, averaging around 15% during this period, reflecting its efficiency in managing production and operational costs.</p><p>Nestlé’s impressive dividend history further highlights its commitment to shareholders. The company has not reduced dividends for the past 16 years, with 16 consecutive increases during that time. The average dividend growth rate over the last five years is 4.1%, while the ten-year average stands at 3.4%, showcasing its reliable and steady approach to dividend payouts.</p><p>Nestlé’s strong dividend performance, coupled with its stable revenue growth and solid margins, makes it an attractive choice for investors seeking both reliable income and a stake in a leading global food and beverage company.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Nike: Swosh Your Way to 25 Years of Soaring Dividends and Strong Growth",
+            "slug": "nike-swosh-your-way-to-25-years-of-soaring-dividends-and-strong-growth",
+            "writer": 1,
+            "body": "<p>Nike, Inc., headquartered in Beaverton, Oregon, is a global leader in the design, development, marketing, and sale of athletic footwear, apparel, equipment, and services. The company operates across multiple segments including North America, Europe, Middle East & Africa, Greater China, Asia-Pacific & Latin America, Global Brand Divisions, and Converse. These segments cover everything from sports shoes and apparel to licensing and casual wear through Converse.</p><p>Over the past decade, Nike has demonstrated impressive financial performance, with a compound annual revenue growth rate (CAGR) of approximately 7%. The company's operational efficiency is reflected in its strong margins, averaging around 43% during this period, showcasing its ability to maintain profitability while scaling its operations globally.</p><p>Nike's dividend history underscores its commitment to shareholder value. The company has been paying dividends for 25 years without a reduction and has increased them 22 times in that span. The average dividend growth rate over the past five years is 11.0%, while the ten-year average stands at 12.0%, highlighting Nike’s dedication to delivering strong and consistent returns to its investors.</p><p>Nike’s robust dividend performance, coupled with its solid revenue growth and high margins, makes it a compelling choice for investors seeking both reliable income and a stake in a leading global brand.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Healthy dividend growth from health development",
+            "slug": "healthy-dividend-growth-from-health-development",
+            "writer": 1,
+            "body": "<p>Novartis AG, headquartered in Basel, Switzerland, is a leading global healthcare company focused on the development, manufacturing, and marketing of innovative health products. The company operates through three main segments: Innovative Medicines, Sandoz, and Corporate. The Innovative Medicines segment includes Novartis Oncology and Novartis Pharmaceuticals, which focus on research, development, and commercialization of patented medicines. The Sandoz segment is dedicated to the development and marketing of generic medicines and biosimilars.</p><p>Over the past decade, Novartis has shown strong financial performance, with a compound annual revenue growth rate (CAGR) of approximately 4%. The company has maintained robust operational margins, averaging around 30% during this period, reflecting its effective cost management and success in patented medication.</p><p>Novartis has paid dividends for 25 years without a reduction and increasing them 25 times in that span. A quarter of a century of dividend growth is the track record that dividend-seeking investors should watch out for as an indication of future dividend growth. The average dividend growth rate over the last five years is 7.0%, while the ten-year average is 5.0%.</p><p>With its strong dividend track record, solid revenue growth, and high margins, Novartis continues to be an attractive option for investors seeking both reliable income and potential for long-term capital appreciation in the healthcare sector.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Henkel: 25 Years of Steady Dividends and Stable Growth in Every Bottle",
+            "slug": "henkel-25-years-of-steady-dividends-and-stable-growth-in-every-bottle",
+            "writer": 1,
+            "body": "<p>Henkel AG & Co. KGaA, based in Düsseldorf, Germany, is a global leader in home and personal care products, as well as adhesive solutions. The company operates across several segments: Consumer Adhesives, Industrial Adhesives, Beauty Care, and Laundry & Home Care. The Consumer Adhesives segment includes well-known brands like Loctite, Pritt, Pattex, and Ceresit, catering to home users, craftsmen, and the construction industry. Industrial Adhesives covers packaging, consumer goods, transportation, and electronics. Beauty Care offers products in hair care, skin care, and personal grooming, while Laundry & Home Care provides detergents, fabric softeners, and other cleaning products.</p><p>Over the past decade, Henkel has demonstrated solid financial stability, with a compound annual revenue growth rate (CAGR) of approximately 3%. The company has maintained strong operational margins, averaging around 15% during this period.</p><p>The company has paid dividends for 25 years without a reduction, showcasing its reliability. While the dividend growth rate over the past five years has been stable at 0.00%, the average growth rate over the past ten years is 4.3%, indicating a consistent approach to dividend payments.</p><p>With its impressive dividend track record and stable revenue and margin performance, Henkel remains a compelling choice for investors seeking reliable income and a steady investment in a globally recognized company.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Extra fries with growing burger paddy for 25 years",
+            "slug": "extra-fries-with-growing-burger-paddy-for-25-years",
+            "writer": 1,
+            "body": "<p>McDonald’s Corp., headquartered in Chicago, Illinois, is a global leader in operating and franchising fast-food restaurants. The company is segmented into the U.S., International Operated Markets, and International Developmental Licensed Markets. While the U.S. segment focuses on domestic operations, International Operated Markets include countries such as Australia, Canada, France, Germany, and the U.K., among others. The International Developmental Licensed Markets segment covers emerging markets and other affiliated areas within the McDonald’s system.</p><p>Over the past decade, McDonald’s has demonstrated a consistent financial performance, with a compound annual revenue growth rate (CAGR) of approximately 6%. The company has maintained strong operational margins, averaging around 30% during this period, reflecting its effective cost management and organic growth.</p><p>McDonald’s has an exceptional dividend history. The company has paid dividends for 25 years without a reduction and has increased its dividend 25 times during this span. The average dividend growth rate over the past five years is 8.3%, while the ten-year average stands at 7.2%, underscoring McDonald’s dedication to delivering value to its investors.</p><p>With a robust dividend track record, solid revenue growth, and strong margins, McDonald’s continues to be a compelling choice for investors seeking both reliable income and long-term growth.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2023-08-08T10:00:00Z"
+        }
+    }
+]
