@@ -30,10 +30,24 @@ The live site deployed on Heroku can be found here: **[Final_Project](https://di
 
  
 ## Site Goal
-	
+The goal of the Dividend Shares Blog App is to provide comprehensive, reliable, and insightful information about companies that have a strong track record of paying dividends. The blog content aims to serve as a resource for investors looking to build or manage a dividend-focused investment portfolio. By delivering short summaries of analysis on dividend-paying companies, the blog content helps users with ideas of potential investments to be investigated further.
+
 ## Targeted Audience
-description of persona(s) needed
-	
+The targeted personas of the blog app are broad and include personas such as long-term investors familiar with the dividend shares investment style, personas seeking information about stocks with higher dividend growth prospects than already owned, or personal investors new to the investment style of dividend shares.
+
+All personas have some or all of the following interests:
+-	Stable income streams through dividend-paying stocks
+-	Accumulation of wealth for retirement
+-	Information about long-term track record of dividend-paying stocks with dividend histories and analyses
+-	Reinvestment of dividend income to achieve compounded returns on investments
+-	Identification of stocks with a track record of increasing dividend payments over prolonged periods
+-	Information about the basics of dividend investing and building financial literacy
+
+The dividend blog app caters to the information needs of users as follows:
+-	Educational content on dividend investing fundamentals
+-	Explains beginner-friendly dividend-paying stocks with low risk
+-	Offers the opportunity to share thoughts on specific dividend investment ideas via a comment function and get engaged in a discussion with other users
+
 ## Wireframes
 	
 ## Database Schema
