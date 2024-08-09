@@ -39,3 +39,20 @@ Documentation of progress:
 ![Milestone_Board_after_Iteration_1](docs/agile/iteration_1_milestone_board_after_iteration_1_completed.png)
 
 
+## Iteration 2 | Milestone 2
+
+With the Iteration 1 completed much faster than anticipated, I decided to make a "mini-sprint" or smaller iteration 2 as a subsequent step.
+Starting with Iteration 2, manual testing and creation of a testing board in an excel spreadsheet will start alongside the user stories assigned to this Iteration 2. The split of user stories is 60% "Must have" und 40% "Could have" user stories from my kanban board to be worked on.
+
+Particular focus during Milestone 2 will be on further testing the deployed version of the blog app.
+
+![Iteration_1_milestone](docs/agile/iteration_2_milestone.png)
+
+Documentation of progress:
+
+- Placeholder to be populated once Iteration 2 is complete/in progress
+- Placeholder to be populated once Iteration 2 is complete/in progress
+  
+![Milestone_Board_after_Iteration_2]
+
+
