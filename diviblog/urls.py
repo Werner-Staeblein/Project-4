@@ -1,11 +1,9 @@
-from django.urls import path, include
 from django.contrib import admin
-from blog import views as index_views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('blog/', index_views.index, name="index"),
+    path('', include('blog.urls')),
 ]
-
 
