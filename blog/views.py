@@ -6,8 +6,8 @@ from .models import DividendPosts
 # I query for published "objects" or blog entries in database that are status of 1 only
 
 def index(request):
-    post_list = DividendPosts.objects.filter(status=1)  
+    post_list = DividendPosts.objects.filter(status=1)
     context = {
         'post_list': post_list,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'blog/index.html', context)
