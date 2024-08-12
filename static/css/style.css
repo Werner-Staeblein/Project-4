@@ -1,0 +1,45 @@
+body {
+    background-color: red;
+}
+
+.brand {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: blue;
+}
+
+/*-------------------------------------------------------------------------
+                        Styling of blog cards
+---------------------------------------------------------------------------*/
+
+.author-bg{
+    background: lightblue;
+}
+
+.author {
+    color: white;
+    font-weight: bold;
+    margin: 4px;    
+}
+
+.link-to-post {
+    text-decoration: none;
+    color: orange;
+}
+
+.link-to-post:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
