@@ -11,3 +11,4 @@ def index(request):
         'post_list': post_list,
     }
     return render(request, 'blog/index.html', context)
+
