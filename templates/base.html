@@ -20,9 +20,11 @@
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}" /> -->
+    <!--  Custom CSS file sits in css/style.css. Connected vai template tag generating the URL to this static CSS file.
+          Use of django "static template tag" with relative path to CSS file-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
+
 
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
