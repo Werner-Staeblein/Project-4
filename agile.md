@@ -52,7 +52,8 @@ Documentation of progress:
 
 - I made the mistake of including in my base.html the full navigation bar even though this was/is not laid out as an AC in the user story number 8. As a result, I had to work on a number of errors messages until I have the blog post database entries (means: everything that is already included in the database as blog content) visible on screen
 - The folder structure of ROOT/TEMPLATES/base.html and DJANGO_APP(not being the djanog project named diviblog but rather the app named blog)/TEMPLATES/BLOG/index.html was time-consuming to set up properly. I revisited LMS learning material several times to grasp the logic of the folder structure
-- Lesson learned in Iteration 2: Don't try to fully grasp every detail of LMS material and subsequently try to code "independently" assuming as if one LMS instruction and revisit of instructions there enable oneself to code the step with no error messages. 
+- Lesson learned in Iteration 2: Don't try to fully grasp every detail of LMS material and subsequently try to code "independently" assuming as if one LMS instruction and revisit of instructions there enable oneself to code the step with no error messages
+- Still working on the first user story of iteration 2, I learned to not have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
   
 ![Milestone_Board_after_Iteration_2]
 

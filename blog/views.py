@@ -2,6 +2,9 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import DividendPosts
 
+def landing(request):
+    return render(request, 'landing.html')  # the view for the landing page
+
 # When path is /blog then index is called / database with blog entries(objects) is queried and stored in post_list
 # database queried data stored in post_list passed on as context to index.html
 # I query for published "objects" or blog entries in database that are status of 1 only
