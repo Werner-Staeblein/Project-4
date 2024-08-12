@@ -1,45 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --headline: rgb(42, 42, 72); /* space-cadet/blue color */
+    --text: rgb(118, 118, 133); /* slate-gray */
+    --text2: rgb(236, 231, 231);
+    --background: rgba(82, 82, 82, 0.2); /* davys-gray */
+    --alternate-bg: rgb(166, 166, 201); /* cool-gray */
+}
+
+
+
 body {
-    background-color: red;
+    background-color: var(--background);
 }
 
 .brand {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: blue;
+    color: var(--headline);
 }
 
 /*-------------------------------------------------------------------------
                         Styling of blog cards
 ---------------------------------------------------------------------------*/
 
-.author-bg{
-    background: lightblue;
+.author-bg {
+    background: var(--alternate-bg);
 }
 
 .author {
-    color: white;
+    color: var(--text);
     font-weight: bold;
-    margin: 4px;    
+    margin: 4px;
+    color: var(--text2);
 }
 
 .link-to-post {
     text-decoration: none;
-    color: orange;
+    color: var(--headline);
 }
 
 .link-to-post:hover,
 .page-link {
-    color: #E84610;
+    color: var(--alternate-bg);
 }
 
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
+    color: var(--headline);
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: var(--text);
 }
-
