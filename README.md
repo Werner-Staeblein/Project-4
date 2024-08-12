@@ -56,6 +56,12 @@ The database model (Entity Relationship Diagram | ERD) describes the connection 
 	
 ## Color Scheme
 
+The dividend blog app uses a color scheme to convey professionalism and trustworthiness. Both are key characteristics of finance-related content.
+The blue color is associated with trust, stability, and professionalism and is widely used in the financial sector. The credibility of the content is supported by the use of this key color for headlines, titles, and important text elements.Gray is used as a contrast color. The gray color is neutral and symbolizes maturity, calmness, and sophistication. The gray colors are used for standard text to ensure readability and to complement and contrast the headline and title color. Gray is also used for background elements to support the main content.
+
+![Color Scheme](docs/readme/coolors_color_palette.png)
+
+
 ## Typography
  
 	
