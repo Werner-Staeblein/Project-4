@@ -1,9 +1,5 @@
-"""
-URL configuration for testproject project.
-
-"""
-from django.contrib import admin
 from django.urls import path, include
+from django.contrib import admin
 from blog import views as index_views
 
 urlpatterns = [
