@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import DividendPosts
 
@@ -7,8 +8,12 @@ from .models import DividendPosts
 
 def index(request):
     post_list = DividendPosts.objects.filter(status=1)
+    paginator = Paginator(post_list, 9)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
-        'post_list': post_list,
+        'post_list': page_obj.object_list,
+        'page_obj': page_obj,
+        'is_paginated': paginator.num_pages > 1,
     }
     return render(request, 'blog/index.html', context)
-
