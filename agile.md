@@ -41,8 +41,8 @@ Documentation of progress:
 
 ## Iteration 2 | Milestone 2
 
-With the Iteration 1 completed much faster than anticipated, I decided to make a "mini-sprint" or smaller iteration 2 as a subsequent step.
-Starting with Iteration 2, manual testing and creation of a testing board in an excel spreadsheet will start alongside the user stories assigned to this Iteration 2. The split of user stories is 60% "Must have" und 40% "Could have" user stories from my kanban board to be worked on.
+With Iteration 1 completed much faster than anticipated, I decided to make a "mini-sprint" or smaller iteration 2 as a subsequent step.
+Starting with Iteration 2, manual testing and the creation of a testing board in an Excel spreadsheet will start alongside the user stories assigned to Iteration 2. The split of user stories is 60% "Must have" and 40% "Could have" user stories from my Kanban board to be worked on.
 
 Particular focus during Milestone 2 will be on further testing the deployed version of the blog app.
 
@@ -50,10 +50,11 @@ Particular focus during Milestone 2 will be on further testing the deployed vers
 
 Documentation of progress:
 
-- I made the mistake of including in my base.html the full navigation bar even though this was/is not laid out as an AC in the user story number 8. As a result, I had to work on a number of errors messages until I have the blog post database entries (means: everything that is already included in the database as blog content) visible on screen
-- The folder structure of ROOT/TEMPLATES/base.html and DJANGO_APP(not being the djanog project named diviblog but rather the app named blog)/TEMPLATES/BLOG/index.html was time-consuming to set up properly. I revisited LMS learning material several times to grasp the logic of the folder structure
-- Lesson learned in Iteration 2: Don't try to fully grasp every detail of LMS material and subsequently try to code "independently" assuming as if one LMS instruction and revisit of instructions there enable oneself to code the step with no error messages
-- Still working on the first user story of iteration 2, I learned to not have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
+- I made the mistake of including in my base.html the full navigation bar even though this was/is not laid out as an AC in the user story number 8. As a result, I had to work on a number of error messages until I had the blog post database entries (which means: everything that is already included in the database as blog content) visible on the screen
+- The folder structure of ROOT/TEMPLATES/base.html and DJANGO_APP(not being the Django project named diviblog but rather the app named blog)/TEMPLATES/BLOG/index.html was time-consuming to set up properly. I revisited LMS learning material several times to grasp the logic of the folder structure
+- Lesson learned in Iteration 2: Don't try to fully grasp every detail of LMS material and subsequently try to code "independently" assuming that one LMS instruction and revisit of instructions there enable oneself to code the step with no error messages
+- Still working on the first user story of iteration 2, I learned not to have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
+- Interim testing on accessibility resulted in lighthouse results of only 95%. As a result: As good as the intentions were to use a certain color scheme, this color scheme had to be adjusted to improve lighthouse scoring on accessibility. The basic idea of using blue/gray colors, as described in the README, however, maintained
   
 ![Milestone_Board_after_Iteration_2]
 
