@@ -5,11 +5,11 @@
 }
 
 :root {
-    --headline: rgb(42, 42, 72); /* space-cadet/blue color */
-    --text: rgb(118, 118, 133); /* slate-gray */
-    --text2: rgb(236, 231, 231);
-    --background: rgba(82, 82, 82, 0.2); /* davys-gray */
-    --alternate-bg: rgb(166, 166, 201); /* cool-gray */
+    --headline: rgb(0,60,120); /*  */
+    --text: rgb(200,200,220); /*  */
+    --text2: rgb(0,0,0);
+    --background: rgba(200,230,255); /*  */
+    --alternate-bg: rgb(120,120,120); /* cool-gray */
 }
 
 
@@ -45,11 +45,6 @@ body {
     color: var(--headline);
 }
 
-.link-to-post:hover,
-.page-link {
-    color: var(--alternate-bg);
-}
-
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
@@ -59,4 +54,33 @@ body {
 .post-subtitle {
     margin-left: 5%;
     color: var(--text);
+}
+
+/*-------------------------------------------------------------------------
+                        Styling of pagination "Next"/"Previous"
+---------------------------------------------------------------------------*/
+
+.page-link{
+    color: var(--headline);
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.page-link:hover {
+    color: var(--headline);
+    text-decoration: none;
+    background: transparent;
+}
+
+.pagination-item{
+    border-radius: 20%;
+    margin: 0 5px;
+    padding: 0.8rem;
+    background-color: var(--background);
+}
+.pagination-item:hover {
+    background-color: var(--background);
+    border: 1px solid var(--headline);
 }
