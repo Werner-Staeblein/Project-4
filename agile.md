@@ -55,6 +55,7 @@ Documentation of progress:
 - Lesson learned in Iteration 2: Don't try to fully grasp every detail of LMS material and subsequently try to code "independently" assuming that one LMS instruction and revisit of instructions there enable oneself to code the step with no error messages
 - Still working on the first user story of iteration 2, I learned not to have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
 - Interim testing on accessibility resulted in lighthouse results of only 95%. As a result: As good as the intentions were to use a certain color scheme, this color scheme had to be adjusted to improve lighthouse scoring on accessibility. The basic idea of using blue/gray colors, as described in the README, however, maintained
+- Half-way through the Iteration 2, I realised that the "mini-sprint" thought to be less time-consuming than Iteration 1 has proven to be more time-consuming than originally thought. Customizing CSS, synchronising CSS-classes and interim testing has taken more time than anticipated
   
 ![Milestone_Board_after_Iteration_2]
 

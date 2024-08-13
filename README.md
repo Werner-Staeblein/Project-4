@@ -129,7 +129,16 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 
 # Bugs and issues
+
+**Erroneously Renaming Django Project Folder**
+
 After the initial set-up of the Django project, I wanted to test the deployment in Heroku using the django project name 'testproject'. It was a fully erroneous assumption that a simple change of the Django project name with a change of the project folder to 'diviblog' will keep my django project running. I learned that hard way that I have to review and adjust the wsgi.py, asgi.py, manage.py and settings.py with the new app name that I assigned to the existing Django project originally named 'testproject'.
+
+**HTML tag rendering in single_post.html for individual posts clicked**
+
+My <b>-tag included in the posts.json in fixtures for the blog body (content) did initially not render on the single_post.html page. I reviewed the |safe filter to ensure that Django is not escaping the HTML-tag for XSS reasons
+
+
 
 
 # Testing
