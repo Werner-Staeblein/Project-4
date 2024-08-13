@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ post.headline }} - Dividend Dynamics
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 jumbotron bg-light rounded">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            
+            <h1 class="card-title my-5">{{ post.headline }}</h1>
+
+            <p class="text-muted">
+                By {{ post.writer.username }} | Published on {{ post.published_date|date:"F j, Y" }}
+            </p>
+
+            <div class="card-text">
+                {{ post.body|safe }}
+            </div>
+
+            <p class="text-muted mt-3">
+                Last updated on {{ post.last_modified|date:"F j, Y, g:i a" }}
+            </p>
+
+            <!-- Custom Button Link Back to Blog | same as landing.html button -->
+            <a href="{% url 'blog_index' %}" class="btn landing-btn my-5 d-block mx-auto w-50">Back to all Posts</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

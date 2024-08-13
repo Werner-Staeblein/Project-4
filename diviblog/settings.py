@@ -18,7 +18,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: FOR PRODUCTION ON HEROKU DEBUG MUST BE FALSE
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['dividend-blog-app-7524309b6f0c.herokuapp.com', 'localhost', '127.0.0.1']
 

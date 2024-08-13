@@ -27,6 +27,7 @@ body {
     background-color: var(--background);
 }
 
+
 .brand {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
@@ -116,4 +117,17 @@ body {
 .pagination-item:hover {
     background-color: var(--background);
     border: 1px solid var(--headline);
+}
+
+/*-------------------------------------------------------------------------
+        Styling of individual blog posts, i.e. single_post.html
+---------------------------------------------------------------------------*/
+
+.container p b {
+    font-weight: 700;
+    color: #333333;
+}
+
+.container p {
+    font-size: 1.4rem;
 }
