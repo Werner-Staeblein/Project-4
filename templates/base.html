@@ -3,28 +3,38 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 <head>
-    <title>{% block title %}Dividend Shares Blog{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
 
-    <!-- Font Awesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+  <title>{% block title %}Welcome to Dividend Dynamics - Maximize Your Income and Growth{% endblock %}</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <!-- Description -->
+  <meta name="description" content="Dividend Dynamics helps you maximize your income and capital growth through insights on dividend stocks, offering strategies for regular income, capital appreciation, reinvestment opportunities, and financial stability.">
 
-    <!--  Custom CSS file sits in css/style.css. Connected vai template tag generating the URL to this static CSS file.
-          Use of django "static template tag" with relative path to CSS file-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <!-- Keywords -->
+  <meta name="keywords" content="dividends, dividend stocks, capital growth, financial stability, investment strategies, income generation">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yourwebsite.com/landing">
+
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="Dividend Dynamics - Maximizing Your Income and Capital Growth">
+  <meta property="og:description" content="Discover how Dividend Dynamics can help you grow your income and capital with our expert insights and strategies on dividend stocks.">
+  
+  <!-- google fonts to customize typography, notably of headlines and titles -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!--  Custom CSS file sits in css/style.css. Connected vai template tag generating the URL to this static CSS file.
+  Use of django "static template tag" with relative path to CSS file-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
-
 
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
