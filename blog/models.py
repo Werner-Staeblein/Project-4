@@ -22,7 +22,7 @@ class DividendPosts(models.Model):
 
 class Discussion(models.Model):
     article = models.ForeignKey(DividendPosts, related_name="discussions", on_delete=models.CASCADE)
-    commentator = models.CharField(max_length=100)
+    commentator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_discussions")
     comment_text = models.TextField()				
     approved = models.BooleanField(default=False)
     comment_date = models.DateTimeField(auto_now_add=True)
