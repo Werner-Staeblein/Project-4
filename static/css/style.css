@@ -8,12 +8,12 @@
                     Custom properties for colors, backgrounds, and typography
 ----------------------------------------------------------------------------------------*/
 
-
 :root {
-    --headline: rgb(0,60,120); /* Navy-blue/deep blue color  */
-    --text: rgb(200,200,220); /* Gray with blue touch */
+    --headline: rgb(0,60,120); /* Yale Blue/deep blue color  */
+    --text: rgb(200,200,220); /* Gray with blue touch, aka French gray */
     --text2: rgb(0,0,0); 
-    --background: rgba(200,230,255); /* A very light blue color */
+    --background: rgba(200,230,255); /* A very light blue color, aka Columbia blue */
+    --background-shade: rgba(200,230,255, 0.5) /* box-shadow and shade effects*/
     --alternate-bg: rgb(120,120,120); /* Medium gray color */
 
     /*Custom properties sans-serif typography*/
@@ -22,7 +22,6 @@
     --font-roboto-regular: 'Roboto', sans-serif; /*must be combined with font-weight of 400*/
     --font-roboto-bold: 'Roboto', sans-serif; /*must be combined with font-weight of 700*/
 }
-
 
 body {
     background-color: var(--background);
@@ -35,9 +34,31 @@ body {
     color: var(--headline);
 }
 
-/*-------------------------------------------------------------------------
-                        Styling of blog cards
----------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------
+                        Styling of landing page
+----------------------------------------------------------------------------------*/
+
+.landing-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.landing-btn{
+    background-color: var(--background);
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 0.4rem 0.7rem black;
+}
+
+.landing-btn:hover {
+    box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+/*---------------------------------------------------------------------------------
+                        Styling of blog content and blog cards
+----------------------------------------------------------------------------------*/
 
 .author-bg {
     background: var(--alternate-bg);
@@ -48,22 +69,23 @@ body {
     font-weight: bold;
     margin: 4px;
     color: var(--text2);
+    font-family: var(--font-roboto-regular);
+    font-weight: 400;
+}
+
+.card-title{
+    font-family: var(--font-roboto-bold);
+    font-weight: 700;
+}
+
+.card-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
 }
 
 .link-to-post {
     text-decoration: none;
     color: var(--headline);
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-    color: var(--headline);
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: var(--text);
 }
 
 /*-------------------------------------------------------------------------
@@ -90,6 +112,7 @@ body {
     padding: 0.8rem;
     background-color: var(--background);
 }
+
 .pagination-item:hover {
     background-color: var(--background);
     border: 1px solid var(--headline);
