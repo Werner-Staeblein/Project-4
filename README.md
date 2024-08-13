@@ -17,6 +17,7 @@
 - [Testing](#testing)
 - [Security Features](#security-features)
 - [Content](#content)
+  - [Data Sources](#data-sources)
 - [Deployment](#deployment)
   - [Steps before deployment | Update code for deployment](#steps-before-deployment--update-code-for-deployment)
   - [Deployment on Heroku (step-by-step guide)](#deployment-on-heroku-step-by-step-guide)
@@ -26,7 +27,7 @@
 This is project milestone 4 for the Code Institute full-stack development program. The project is a full-stack website built using the Django framework.
 
 The live site deployed on Heroku can be found here: **[Final_Project](https://dividend-blog-app-7524309b6f0c.herokuapp.com/)**
-[NAME OF THE BLOG] is .....where users can look for. For logged-in users, a like/unlike functionality for a post is possible. Logged-in users likewise can comment on a post.
+[Dividend Dynamics] is .....where users can look for. For logged-in users, a like/unlike functionality for a post is possible. Logged-in users likewise can comment on a post.
 
  
 ## Site Goal
@@ -57,13 +58,21 @@ The database model (Entity Relationship Diagram | ERD) describes the connection 
 ## Color Scheme
 
 The dividend blog app uses a color scheme to convey professionalism and trustworthiness. Both are key characteristics of finance-related content.
-The blue color is associated with trust, stability, and professionalism and is widely used in the financial sector. The credibility of the content is supported by the use of this key color for headlines, titles, and important text elements.Gray is used as a contrast color. The gray color is neutral and symbolizes maturity, calmness, and sophistication. The gray colors are used for standard text to ensure readability and to complement and contrast the headline and title color. Gray is also used for background elements to support the main content.
+The blue color is associated with trust, stability, and professionalism and is widely used in the financial sector. The credibility of the content is supported by the use of this key color for headlines, titles, and important text elements. Gray is used as a contrast color. The gray color is neutral and symbolizes maturity, calmness, and sophistication. The gray colors are used for standard text to ensure readability and to complement and contrast the headline and title color. Gray is also used for background elements to support the main content.
+
+While developing the app a lighthouse test resulted in a bad score for the initial color scheme. Therefore, the final color scheme as shown below was chosen to ensure sufficient contrast and the est possible accessibility.
 
 ![Color Scheme](docs/readme/coolors_color_palette.png)
 
 
 ## Typography
- 
+
+For my application, I selected Roboto and Times New Roman to enhance both visual appeal and readability. Times New Roman is chosen for body text due to its serif style, which conveys tradition, reliability, and professionalism—key attributes for a finance-related blog.
+
+On the other hand, Roboto is used for headlines and titles. As a modern sans-serif font, Roboto provides a clean and contemporary look, ensuring excellent legibility on screens. Its straightforward design makes it ideal for drawing attention to important information while maintaining a sleek appearance.
+
+The pairing of Times New Roman's traditional reliability with Roboto's modern clarityenhances readability and user engagement, offering a visually appealing and functional design for the financial content.
+
 	
 # Agile Development Process
 
@@ -132,6 +141,13 @@ After the initial set-up of the Django project, I wanted to test the deployment 
 
 
 # Content
+
+## Data Sources
+
+The dividend history and stability information presented in this blog app are sourced from **[Aktien Guide](https://aktien.guide/dividendenadel)**, a comprehensive resource for dividend data. Company descriptions are derived from official company websites and reputable public sources to ensure accuracy and reliability. This approach ensures that the content provided is both informative and up-to-date.
+
+
+
 
 
 # Deployment
