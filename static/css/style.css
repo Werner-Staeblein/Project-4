@@ -266,36 +266,6 @@ body {
     align-items: center;
 }
 
-
-
-
-
-/* This is the style for the success message */
-.alert-success-custom {
-    background-color: var(--background);
-    color: var(--headline);
-    border: 1px solid rgba(0, 60, 120, 0.2);
-}
-  
-/* Error messages are styled with gray color synchronised with custom properties used */
-.alert-error-custom {
-    background-color: rgba(200, 230, 255, 0.2);
-    color: var(--text2);
-    border: 1px solid rgba(120, 120, 120, 0.3);
-}
-  
-.alert-info-custom {
-    background-color: var(--background);
-    color: var(--headline);
-    border: 1px solid rgba(0, 60, 120, 0.2); /* A lighter shade for borders */
-}
-  
-/* Warning messages similar but not identical to error messages */
-.alert-warning-custom {
-    background-color: rgba(200, 230, 255, 0.3);
-    color: var(--text2);
-    border: 1px solid rgba(120, 120, 120, 0.3); 
-}
   
  
 

@@ -2,6 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.shortcuts import redirect
+from django.contrib.auth import logout
 from .models import DividendPosts
 
 def landing(request):
@@ -64,5 +65,6 @@ def single_post(request, post_slug):
 """
 
 def custom_logout_view(request):
+    logout(request)
     messages.success(request, "You have signed out successfully.")
     return redirect('landing')
