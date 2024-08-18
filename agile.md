@@ -46,7 +46,7 @@ Starting with Iteration 2, manual testing and the creation of a testing board in
 
 Particular focus during Milestone 2 will be on further testing the deployed version of the blog app.
 
-![Iteration_1_milestone](docs/agile/iteration_2_milestone.png)
+![Iteration_2_milestone](docs/agile/iteration_2_milestone.png)
 
 Documentation of progress:
 
@@ -56,7 +56,27 @@ Documentation of progress:
 - Still working on the first user story of iteration 2, I learned not to have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
 - Interim testing on accessibility resulted in lighthouse results of only 95%. As a result: As good as the intentions were to use a certain color scheme, this color scheme had to be adjusted to improve lighthouse scoring on accessibility. The basic idea of using blue/gray colors, as described in the README, however, maintained
 - Half-way through the Iteration 2, I realised that the "mini-sprint" thought to be less time-consuming than Iteration 1 has proven to be more time-consuming than originally thought. Customizing CSS, synchronising CSS-classes and interim testing has taken more time than anticipated
+- Iteration 2 was closed with three user stories still open of which two (#12/#8) were "should have" and one was "must have" (# 13 responsinveness). Further responsiveness testing will be done until the end of the project and user story +13 (responsivness) will remain in the backlog and will not be closed
   
-![Milestone_Board_after_Iteration_2]
+![Milestone_Board_after_Iteration_2](docs/agile/iteration_2_milestone_board_after_iteration_2_completed.png)
+
+## Iteration 3 | Milestone 3
+
+Iteration 3 has a major focus on account registration, display of login status for users and log-in/log-out functionalities. The iteration was split to have 50% "must have" user stories with remaining half categorized as "should have/could have". The user stories were moved "in progress" in the Kanban board at the start of iteration 3.
+
+![Iteration_3_milestone](docs/agile/iteration_3_milestone.png)
+
+![Kanban_Board_before_start_iteration_3](docs/agile/kanban_board_at_start_of_iteration_3.png)
+
+Documentation of progress:
+
+- 
+- 
+- 
+- 
+
+![Milestone_Board_after_Iteration_3](docs/agile/)
+
+
 
 
