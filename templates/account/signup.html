@@ -1,21 +1,81 @@
-{% extends "account/base.html" %}
-
+{% extends "base.html" %}
 {% load i18n %}
-
-{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
-
+{% block head_title %}{% trans "Signup" %}{% endblock %}
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<div class="container">
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+      <div class="bg-light p-5 rounded-3 shadow-sm">
+        <h3 class="text-center mb-4">{% trans "Sign Up" %}</h3>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+        <p class="text-center mb-4">{% blocktrans %}
+          Welcome back to Dividend Dynamics blog.<br>
+          Have you already registered with an account? <br>Then please
+          <a class="link" href="{{ login_url }}">sign in</a>
+          instead.
+        {% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+        <form class="signup" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          
+          <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">{% trans "Username:" %}</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+              <div class="alert alert-danger mt-2">
+                {% for error in form.username.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
 
-{% endblock content %}
+          <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">{% trans "Email:" %}</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="alert alert-danger mt-2">
+                {% for error in form.email.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.password1.id_for_label }}">{% trans "Password:" %}</label>
+            {{ form.password1 }}
+            {% if form.password1.errors %}
+              <div class="alert alert-danger mt-2">
+                {% for error in form.password1.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.password2.id_for_label }}">{% trans "Confirm Password:" %}</label>
+            {{ form.password2 }}
+            {% if form.password2.errors %}
+              <div class="alert alert-danger mt-2">
+                {% for error in form.password2.errors %}
+                  <p>{{ error }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+
+          <button class="btn landing-btn mt-4 d-block mx-auto w-25" type="submit">
+            {% trans "Sign Up" %} &raquo;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
