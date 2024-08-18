@@ -40,6 +40,40 @@ body {
 } 
 
 /*---------------------------------------------------------------------------------
+                        Styling of navbar and nav-links
+----------------------------------------------------------------------------------*/
+
+.navbar {
+    background-color: var(--background);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: var(--font-roboto-bold);
+    color: var(--headline);
+}
+
+.nav-link {
+    font-family: var(--font-roboto-regular);
+    color: var(--text2);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: var(--background);
+    border-radius: 0.3rem;
+}
+
+.navbar-toggler {
+    border-color: var(--headline);
+}
+
+
+/*---------------------------------------------------------------------------------
                         Styling of landing page
 ----------------------------------------------------------------------------------*/
 
@@ -136,7 +170,6 @@ body {
     font-size: 1.4rem;
 }
 
-
 /*-------------------------------------------------------------------------
         Styling of sign-up/register form
 ---------------------------------------------------------------------------*/
@@ -145,7 +178,6 @@ body {
     max-width: 100%;
     margin-top: 1rem;
 }
-
 
 .form-group {
     margin-bottom: 1.5rem;
@@ -192,29 +224,32 @@ body {
     background-color: #0056b3;
 }
 
-
-
-
-
-.form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-
-  .form-control {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-  }
-
-  .alert-danger {
+.alert-danger {
     margin-top: 0.5rem;
     font-size: 0.875rem;
-  }
+}
+
+/*-------------------------------------------------------------------------
+        Media Queries / responsiveness
+---------------------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+
+/* Avoid here that first nav-item touches the hamburger on smaller screens  */
+
+.navbar-nav .nav-item:first-child {
+    margin-top: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* Margin left for nav-links as otherwise the background color of nav-link "touched"  */
+
+.navbar-nav .nav-link {
+    margin-left: 0.8rem; 
+}}
 
