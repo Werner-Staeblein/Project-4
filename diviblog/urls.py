@@ -4,9 +4,8 @@ from blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('summernote/', include('django_summernote.urls')),
     path('', views.landing, name='landing'),  # Landing page is in the root, the blog views.py manages the view
     path('blog/', include('blog.urls')),  # Include the blog app's URL configuration
 ]
-
-
