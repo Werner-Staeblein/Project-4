@@ -229,6 +229,77 @@ body {
 }
 
 /*-------------------------------------------------------------------------
+        Styling of login/logout status messages
+---------------------------------------------------------------------------*/
+
+.alert-custom {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text2);
+}
+
+.alert-logout-custom {
+    background-color: var(--alternate-bg);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    margin: 0 auto;
+    border: 1px solid var(-headline);
+}
+
+/* Styling for the close button */
+.alert-logout-custom .btn-close {
+    margin-left: 0.5rem;
+    color: var(--text2);
+    opacity: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* This is the style for the success message */
+.alert-success-custom {
+    background-color: var(--background);
+    color: var(--headline);
+    border: 1px solid rgba(0, 60, 120, 0.2);
+}
+  
+/* Error messages are styled with gray color synchronised with custom properties used */
+.alert-error-custom {
+    background-color: rgba(200, 230, 255, 0.2);
+    color: var(--text2);
+    border: 1px solid rgba(120, 120, 120, 0.3);
+}
+  
+.alert-info-custom {
+    background-color: var(--background);
+    color: var(--headline);
+    border: 1px solid rgba(0, 60, 120, 0.2); /* A lighter shade for borders */
+}
+  
+/* Warning messages similar but not identical to error messages */
+.alert-warning-custom {
+    background-color: rgba(200, 230, 255, 0.3);
+    color: var(--text2);
+    border: 1px solid rgba(120, 120, 120, 0.3); 
+}
+  
+ 
+
+/*-------------------------------------------------------------------------
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
 
