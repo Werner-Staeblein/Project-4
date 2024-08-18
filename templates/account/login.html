@@ -7,33 +7,29 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Log-in" %}</h3>
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+      <div class="bg-light p-5 rounded-3 shadow-sm">
+        <h3 class="text-center mb-4">{% trans "Log-in" %}</h3>
 
-            <p>{% blocktrans %}Welcome to Dividend Dynamics blog. If you want to leave a comment or like a blog post, please log in. 
-                If you do not have an account yet, then <a class="link" href="{{ signup_url }}">Sign up</a>
-                first.{% endblocktrans %}</p>
-        </div>
-    </div> 
-        
-    <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
+        <p class="text-center mb-4">{% blocktrans %}Welcome to Dividend Dynamics blog. If you want to leave a comment or like a blog post, please log in. 
+            If you do not have an account yet, then <a class="link" href="{{ signup_url }}">Sign up</a>
+            first.{% endblocktrans %}</p>
+
         <form method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
-
+          
           {{ form.as_p }}
-                
+          
           {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-      
-        <button class="btn landing-btn mt-5 d-block mx-auto w-25" type="submit">{% trans "Sign In" %}</button>
+          
+          <button class="btn landing-btn mt-4 d-block mx-auto w-25" type="submit">{% trans "Sign In" %}</button>
         </form>
+      </div>
     </div>
-  </div> 
+  </div>
 </div>
-</div>
-</div> 
 
 {% endblock %}
