@@ -138,7 +138,10 @@ After the initial set-up of the Django project, I wanted to test the deployment 
 
 My <b>-tag included in the posts.json in fixtures for the blog body (content) did initially not render on the single_post.html page. I reviewed the |safe filter to ensure that Django is not escaping the HTML-tag for XSS reasons
 
-
+**static/css/style.css only partly working on classes defined in 404.html**
+For my 404.html I defined classes in the markup of the 404.html. I did load static and connect the stylesheet correctly from static/css/style.css. Nevertheless, the styles in
+my style.css were only PARTLY applied to the 404.html. Some styles affected the 404.html, some did not. I change class names in 404.html to be as distinctly different from bootstrap classes as possible to avoid that bootstrap is over-riding my custom CSS for the 404.html page but this did likewise not work. I decided to make the the styles of the 404.html with an internal stylesheet inside the 404.html and everything worked out well. Adds some more complexity maintaining the code as I have defined custom properties in
+my CSS stylesheet and when one of these custom properties such as colors changes, the internal stylesheet of the 404.html would need additional attention to synchronise colors with potentially changed colors of my custom CSS defined in the :root of my CSS stylesheet
 
 
 # Testing

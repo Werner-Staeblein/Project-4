@@ -71,8 +71,8 @@ Iteration 3 has a major focus on account registration, display of login status f
 Documentation of progress:
 
 - "Iteration 3 went very smoothly. The 'must-have' user stories were closed quickly, partly due to greater familiarity with the already established code base.
-
-I conducted interim testing, including validation of CSS, HTML, and responsiveness, to ensure that issues do not arise at the end of the project, thereby 'creating quality in the process.'
+- I conducted interim testing, including validation of CSS, HTML, and responsiveness, to ensure that issues do not arise at the end of the project, thereby 'creating quality in the process.'
+- In Iteration 3 I added the 404.html page. This step was very time-consuming. The reason is that I referenced "landing" in my 404.html rather than root "/". For this reason I struggled for a long time with 500 errors. I tried 404 test pages and still faced 500 errors until I realised that this might be related to the re-routing from the 404 page back to the "homepage". In addition, and as documented in the README.md, I had struggles to style the 404.html page with my static/css/style.css and eventually decided to use an internal stylesheet in the 404.html so that this page has colors, fonts, and typography similar to the rest of the application
 
 ![Milestone_Board_after_Iteration_3](docs/agile/)
 
