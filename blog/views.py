@@ -1,8 +1,5 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
-from django.contrib import messages
-from django.shortcuts import redirect
-from django.contrib.auth import logout
 from .models import DividendPosts
 
 def landing(request):
