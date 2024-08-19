@@ -54,17 +54,3 @@ def single_post(request, post_slug):
         {"post": post},
     )
 
-"""
-    
-    **Template Used:**
-    -   ``: 
-    
-    **Context Provided:**
-    -   
-    -       
-"""
-
-def custom_logout_view(request):
-    logout(request)
-    messages.success(request, "You have signed out successfully.")
-    return redirect('landing')
