@@ -16,6 +16,11 @@
     --background-shade: rgba(200,230,255, 0.5) /* box-shadow and shade effects*/
     --alternate-bg: rgb(120,120,120); /* Medium gray color */
 
+
+    /* Custom properties for success and error messages */
+    --alternate-bg-success: rgb(200,255,200); /* Success with a light green */
+    --alternate-bg-error: rgb(255,200,200); /* Error with a light red */
+
     /*Custom properties sans-serif typography*/
 
     --font-roboto-light: 'Roboto', sans-serif; /*must be combined with font-weight of 300*/
@@ -232,42 +237,48 @@ body {
         Styling of login/logout status messages
 ---------------------------------------------------------------------------*/
 
+/* All the alterts are styled the same (success, error) */
 .alert-custom {
     border-radius: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: var(--text2);
-}
-
-.alert-logout-custom {
-    background-color: var(--alternate-bg);
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--text2);
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 60%;
     margin: 0 auto;
-    border: 1px solid var(-headline);
+    border: 1px solid var(--headline);
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
-/* Styling for the close button */
-.alert-logout-custom .btn-close {
+.alert-success-custom {
+    background-color: var(--alternate-bg-success);
+    color: darkgreen;
+}
+
+.alert-error-custom {
+    background-color: var(--alternate-bg-error);
+    color: darkred;
+}
+
+.alert-logout-custom,
+.alert-signin-custom {
+    background-color: var(--alternate-bg);
+    color: var(--text2);
+}
+
+.alert-custom .btn-close {
     margin-left: 0.5rem;
     color: var(--text2);
     opacity: 1;
-    padding: 0.6rem 1rem;
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
 }
 
-  
- 
 
 /*-------------------------------------------------------------------------
         Media Queries / responsiveness

@@ -99,24 +99,17 @@
       </div>
     </nav>
 
-<!-- Messages success/error for login/logout -->
-<div class="container mt-3">
-  {% if messages %}
-      {% for message in messages %}
-          {% if message.message == "You have signed out successfully." %}
-              <div class="alert alert-logout-custom alert-dismissible fade show" role="alert">
-                  {{ message }}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-          {% else %}
-              <div class="alert alert-custom alert-{{ message.tags }}-custom alert-dismissible fade show" role="alert">
-                  {{ message }}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-          {% endif %}
-      {% endfor %}
-  {% endif %}
-</div>
+  <!-- Messages success/error for login/logout -->
+  <div class="container mt-3">
+      {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-custom alert-{{ message.tags }}-custom alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+  </div>
 
   </div>
 
