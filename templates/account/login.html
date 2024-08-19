@@ -13,7 +13,7 @@
         <h3 class="text-center mb-4">{% trans "Log-in" %}</h3>
 
         <p class="text-center mb-4">{% blocktrans %}Welcome to Dividend Dynamics blog. If you want to leave a comment or like a blog post, please log in. 
-            If you do not have an account yet, then <a class="link" href="{{ signup_url }}">Sign up</a>
+            If you do not have an account yet, then <b><a class="link" href="{{ signup_url }}">Sign up</a></b>
             first.{% endblocktrans %}</p>
 
         <form method="POST" action="{% url 'account_login' %}">
