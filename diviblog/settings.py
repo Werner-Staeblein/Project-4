@@ -6,7 +6,8 @@ import dj_database_url
 from pathlib import Path
 import os
 
-# Loading the environment variables from env.py file as the env.py does exist these will be loaded
+# Loading the environment variables from env.py file as the env.py
+# does exist these will be loaded
 if os.path.exists("env.py"):
     import env
 
@@ -20,7 +21,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: FOR PRODUCTION ON HEROKU DEBUG MUST BE FALSE
 DEBUG = False
 
-ALLOWED_HOSTS = ['dividend-blog-app-7524309b6f0c.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'dividend-blog-app-7524309b6f0c.herokuapp.com',
+    'localhost',
+    '127.0.0.1']
 
 # Configuration of database
 DATABASES = {
@@ -51,7 +55,8 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-# The constants for allauth / redirection to home page when logged in or logged out
+# The constants for allauth / redirection to home page
+# when logged in or logged out
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -59,7 +64,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -107,7 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# This is AUTH_PASSWORD_VALIDATOR / with 'none' Django does not expect email verification in allauth
+# This is AUTH_PASSWORD_VALIDATOR / with 'none' Django does
+# not expect email verification in allauth
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 

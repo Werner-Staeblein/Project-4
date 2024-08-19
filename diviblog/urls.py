@@ -11,5 +11,3 @@ urlpatterns = [
 ]
 
 handler404 = 'diviblog.views.custom_404'
-
-
