@@ -16,7 +16,6 @@
     --background-shade: rgba(200,230,255, 0.5) /* box-shadow and shade effects*/
     --alternate-bg: rgb(120,120,120); /* Medium gray color */
 
-
     /* Custom properties for success and error messages */
     --alternate-bg-success: rgba(0,60,120,0.4); /* */
     --alternate-bg-error: rgb(200,200,220); /*  */
