@@ -18,7 +18,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: FOR PRODUCTION ON HEROKU DEBUG MUST BE FALSE
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dividend-blog-app-7524309b6f0c.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -74,7 +74,7 @@ ROOT_URLCONF = 'diviblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -16,6 +16,10 @@
     --background-shade: rgba(200,230,255, 0.5) /* box-shadow and shade effects*/
     --alternate-bg: rgb(120,120,120); /* Medium gray color */
 
+    /* Custom properties for success and error messages */
+    --alternate-bg-success: rgba(0,60,120,0.4); /* */
+    --alternate-bg-error: rgb(200,200,220); /*  */
+
     /*Custom properties sans-serif typography*/
 
     --font-roboto-light: 'Roboto', sans-serif; /*must be combined with font-weight of 300*/
@@ -27,11 +31,61 @@ body {
     background-color: var(--background);
 }
 
+
 .brand {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--headline);
+}
+
+.jumbotron {
+    background-color: #ffffff !important;
+} 
+
+/*---------------------------------------------------------------------------------
+                        Styling of navbar and nav-links
+----------------------------------------------------------------------------------*/
+
+.navbar {
+    background-color: var(--background);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: var(--font-roboto-bold);
+    color: var(--headline);
+}
+
+.nav-link {
+    font-family: var(--font-roboto-regular);
+    color: var(--text2);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: var(--background);
+    border-radius: 0.3rem;
+}
+
+.navbar-toggler {
+    border-color: var(--headline);
+}
+
+/*---------------------------------------------------------------------------------
+                        Styling of login status in navbar
+----------------------------------------------------------------------------------*/
+
+#login-status {
+    background-color: var(--alternate-bg-error);
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
 }
 
 /*---------------------------------------------------------------------------------
@@ -116,4 +170,174 @@ body {
 .pagination-item:hover {
     background-color: var(--background);
     border: 1px solid var(--headline);
+}
+
+/*-------------------------------------------------------------------------
+        Styling of individual blog posts, i.e. single_post.html
+---------------------------------------------------------------------------*/
+
+.container p b {
+    font-weight: 700;
+    color: #333333;
+}
+
+.container p {
+    font-size: 1.4rem;
+}
+
+/*-------------------------------------------------------------------------
+        Styling of sign-up/register form
+---------------------------------------------------------------------------*/
+
+.signup {
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.form-group .alert {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.signup-container {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-signup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background-color: #0056b3;
+}
+
+.alert-danger {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/*-------------------------------------------------------------------------
+        Styling of login/logout status messages
+---------------------------------------------------------------------------*/
+
+/* All the alterts are styled the same (success, error) */
+.alert-custom {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    margin: 1rem auto 0 auto;
+    border: 1px solid var(--headline);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.alert-success-custom {
+    background-color: var(--alternate-bg-success);
+    color: white;
+}
+
+.alert-error-custom {
+    background-color: var(--alternate-bg-error);
+    color: darkred;
+}
+
+.alert-logout-custom,
+.alert-signin-custom {
+    background-color: var(--alternate-bg);
+    color: var(--text2);
+}
+
+.alert-custom .btn-close {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: white !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 1.2rem;
+    opacity: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/*-------------------------------------------------------------------------
+        Media Queries / responsiveness
+---------------------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+
+/* Avoid here that first nav-item touches the hamburger on smaller screens  */
+
+.navbar-nav .nav-item:first-child {
+    margin-top: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* Margin left for nav-links as otherwise the background color of nav-link "touched"  */
+
+.navbar-nav .nav-link {
+    margin-left: 0.8rem; 
+}
+
+}
+
+/* Media Query for AllAuth messages so that message does not overlap with the closing button */
+
+@media (max-width: 520px) {
+.alert-custom {
+    font-size: 1rem;
+    padding: 0.5rem;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+.alert-custom .btn-close {
+    width: 1.1rem;
+    height: 1.1rem;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 }

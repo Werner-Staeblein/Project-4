@@ -51,3 +51,9 @@ def single_post(request, post_slug):
         {"post": post},
     )
 
+
+def custom_404(request, exception=None):
+    return render(request, '404.html', status=404)
+
+def test_404_view(request):
+    return render(request, '404.html', status=404)
