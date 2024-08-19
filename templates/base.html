@@ -93,9 +93,10 @@
           {% if user.is_authenticated %}
           <span class="navbar-text">
             You are logged in as {{ user.username }}
-          </span>
-          {% endif %}
-
+            {% else %}
+            You are not logged in
+            {% endif %}
+          </span>       
         </div>
       </div>
     </nav>
