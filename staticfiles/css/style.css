@@ -295,6 +295,48 @@ body {
 }
 
 /*-------------------------------------------------------------------------
+        Styles for the 404.html page
+---------------------------------------------------------------------------*/
+
+.error-page {
+    background-color: var(--background);
+    color: var(--text2);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    font-family: var(--font-roboto-regular);
+}
+
+.error-page .container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--background-shade);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-page h1 {
+    font-family: var(--font-roboto-bold);
+    font-size: 12rem;
+    color: var(--headline);
+    margin-bottom: 1rem;
+}
+
+.error-page p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.error-page a {
+    text-decoration: none;
+    color: var(--headline);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/*-------------------------------------------------------------------------
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
 
