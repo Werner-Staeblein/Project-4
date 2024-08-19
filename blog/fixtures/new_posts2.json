@@ -1,0 +1,68 @@
+[
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Automatic Data Processing: 25 Years of Unbroken Dividends and Robust Growth",
+            "slug": "automatic-data-processing-25-years-of-unbroken-dividends-and-robust-growth",
+            "writer": 1,
+            "body": "<p>Automatic Data Processing, Inc. specializes in providing outsourcing solutions for businesses, focusing on cloud-based human capital management. The company operates in the following business segments: Employer Services, Professional Employer Organization Services, and Other. The Employer Services segment offers a range of HR outsourcing and technology-based solutions for managing personnel, from small businesses with just one employee to large corporations with tens of thousands of employees worldwide, including strategic, cloud-based platforms. The Professional Employer Organization Services segment provides small and medium-sized businesses with human resource outsourcing solutions through a co-employment model.</p><p><strong>Continuity</strong></p><p>Automatic Data Processing has been paying dividends for 25 years without a reduction, demonstrating its commitment to shareholders. The dividend has been increased 25 times during this period, reflecting a solid track record of reliability.</p><p><strong>Dividend Growth</strong></p><p>The average dividend growth for Automatic Data Processing over the past 5 years stands at 17.0%, while the 10-year average is 15.0%. This consistent growth underscores the company's strong financial health and dedication to returning value to its investors.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2024-08-13T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Procter & Gamble: 25 Years of Reliable Dividends from Your Favorite Grocery Brands",
+            "slug": "procter-gamble-25-years-of-consistent-dividends-and-steady-growth",
+            "writer": 1,
+            "body": "<p>Procter & Gamble Co. specializes in packaged consumer goods across various segments. The company operates in the following areas: Beauty, Personal Care, Health Care, Fabric & Home Care, and Baby, Feminine & Family Care. The Beauty segment offers hair, skin, and body care products. The Grooming segment includes shaving products such as razors and blades for both men and women, as well as pre- and post-shave products and devices. The Health Care segment features oral care products like toothbrushes and toothpaste, as well as digestive aids, rapid diagnostics, respiratory products, and vitamins, minerals, and supplements. The Fabric and Home Care segment provides fabric enhancers, laundry additives and detergents, as well as air, dish, and surface care products. The Baby, Feminine & Family Care segment sells baby wipes, diapers and training pants, adult incontinence products, feminine care items, paper towels, tissues, and toilet paper.</p><p><strong>Continuity</strong></p><p>Procter & Gamble has maintained a dividend payment for 25 years without any reduction, showcasing its reliable financial practices and commitment to returning value to its shareholders.</p><p><strong>Dividend Growth</strong></p><p>The average dividend growth for Procter & Gamble over the past 5 years is 5.7%, with a 10-year average of 4.6%. This steady growth highlights the company’s strong performance and dedication to providing consistent returns to its investors.</p>",
+            "published_date": "2023-08-08T10:00:00Z",
+            "status": 1,
+            "last_modified": "2024-08-13T10:00:00Z"
+        }
+    },    
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": " Brenntag SE: 14 Years of Uninterrupted Dividends and Impressive Growth",
+            "slug": "brenntag-se-14-years-of-steady-dividends-and-consistent-growth",
+            "writer": 1,
+            "body": "<p>Brenntag SE is engaged in the production and distribution of chemicals. The company operates in the following geographic segments: Brenntag Essentials and Brenntag Specialties. The Brenntag Essentials segment markets a portfolio of process chemicals for various industries and applications. The Brenntag Specialties segment focuses on the sale of ingredients and value-added services for the food, pharmaceutical, personal care/HI&I (Home, Industrial & Institutional), material science (coatings & construction, polymers, rubber), water treatment, and lubricants industries. The company also manages supply chains for both chemical manufacturers and consumers by simplifying market access to products and services.</p><p><strong>Continuity</strong></p><p>Brenntag has been paying dividends for 14 years without a reduction, demonstrating dividend continuity. During this period, the dividend has been increased 14 times.</p><p><strong>Dividend Growth</strong></p><p>The average dividend growth for Brenntag over the past 5 years stands at 11.8%, while the 10-year average is 9.3%. This consistent growth highlights the company's robust financial health and commitment to providing value to its shareholders.</p>",
+            "published_date": "2023-08-12T10:00:00Z",
+            "status": 1,
+            "last_modified": "2024-08-13T10:00:00Z"
+        }
+    },
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": " Münchener Rück: Reassuring Dividend Stability with 25 Years of Unbroken Payouts",
+            "slug": "muenchener-rueck-25-years-of-dividend-stability-with-steady-growth",
+            "writer": 1,
+            "body": "<p>The Münchener Rückversicherungs-Gesellschaft AG is engaged in insurance and reinsurance services. It operates in the following segments: Life and Health Reinsurance, Property-Casualty Reinsurance, ERGO Life and Health Germany, ERGO Property-Casualty Germany, and ERGO International. The Life and Health Reinsurance segment includes the global life and health reinsurance business. The Property-Casualty Reinsurance segment covers the global property and casualty reinsurance business. The ERGO Life and Health Germany segment encompasses the German primary life and health insurance business, the global travel insurance business, and digital ventures. The ERGO Property-Casualty Germany segment includes the German property and casualty insurance business, excluding digital ventures. The ERGO International segment focuses on primary insurance business outside of Germany.</p><p><strong>Continuity</strong></p><p>Münchener Rück has been paying dividends for 25 years without a reduction. Over this period, the dividend has been increased 3 times, showcasing its commitment to shareholders.</p><p><strong>Dividend Growth</strong></p><p>The average dividend growth for Münchener Rück over the past 5 years stands at 10.1%, while the 10-year average is 7.5%. This steady growth reflects the company's strong financial position and ongoing dedication to delivering value to investors.</p>",
+            "published_date": "2023-08-12T10:00:00Z",
+            "status": 1,
+            "last_modified": "2024-08-13T10:00:00Z"
+        }
+    },
+
+    {
+        "model": "blog.dividendposts",
+        "pk": null,
+        "fields": {
+            "headline": "Beiersdorf's Iconic Brands Drive 25 Years of Dividend Stability",
+            "slug": "beiersdorf-25-years-of-reassuring-dividend-stability",
+            "writer": 1,
+            "body": "<p>Beiersdorf AG is engaged in the development, manufacturing, and distribution of skin and body care products. The company operates in the following segments: Consumer and Tesa. The Consumer segment focuses on international skin and body care markets. The Tesa segment manufactures self-adhesive products and solutions for industry, trade, and consumers. It offers its products and system solutions to industries, craftsmen, and consumers. The segment's brands include Eucerin, La Prairie, Labello, and Hansaplast.</p><p><strong>Continuity</strong></p><p>Beiersdorf has been paying dividends for 25 years without a reduction, demonstrating its long-standing commitment to shareholders.</p><p><strong>Dividend Growth</strong></p><p>The average dividend growth for Beiersdorf over the past 5 years is 7.4%, while the 10-year average is 3.6%. This consistent but moderate growth reflects the company's cautious approach to financial management and its focus on stability.</p>",
+            "published_date": "2023-08-12T10:00:00Z",
+            "status": 1,
+            "last_modified": "2024-08-13T10:00:00Z"
+        }
+    }    
+]
