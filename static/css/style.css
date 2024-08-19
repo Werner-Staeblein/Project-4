@@ -80,7 +80,13 @@ body {
                         Styling of login status in navbar
 ----------------------------------------------------------------------------------*/
 
-
+#login-status {
+    background-color: var(--alternate-bg-error);
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+}
 
 /*---------------------------------------------------------------------------------
                         Styling of landing page
