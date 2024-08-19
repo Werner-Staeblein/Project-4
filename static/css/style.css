@@ -18,8 +18,8 @@
 
 
     /* Custom properties for success and error messages */
-    --alternate-bg-success: rgb(200,255,200); /* Success with a light green */
-    --alternate-bg-error: rgb(255,200,200); /* Error with a light red */
+    --alternate-bg-success: rgba(0,60,120,0.4); /* */
+    --alternate-bg-error: rgb(200,200,220); /*  */
 
     /*Custom properties sans-serif typography*/
 
@@ -256,7 +256,7 @@ body {
 
 .alert-success-custom {
     background-color: var(--alternate-bg-success);
-    color: darkgreen;
+    color: white;
 }
 
 .alert-error-custom {
@@ -271,12 +271,17 @@ body {
 }
 
 .alert-custom .btn-close {
-    margin-left: 0.5rem;
-    color: var(--text2);
+    width: 30px;
+    height: 30px;
+    color: white !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 1.2rem;
     opacity: 1;
-    border-radius: 0.3rem;
+    cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
