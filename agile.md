@@ -70,10 +70,9 @@ Iteration 3 has a major focus on account registration, display of login status f
 
 Documentation of progress:
 
-- 
-- 
-- 
-- 
+- "Iteration 3 went very smoothly. The 'must-have' user stories were closed quickly, partly due to greater familiarity with the already established code base.
+
+I conducted interim testing, including validation of CSS, HTML, and responsiveness, to ensure that issues do not arise at the end of the project, thereby 'creating quality in the process.'
 
 ![Milestone_Board_after_Iteration_3](docs/agile/)
 
