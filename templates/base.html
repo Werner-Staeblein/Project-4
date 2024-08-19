@@ -90,13 +90,17 @@
 
           </ul>
 
-          {% if user.is_authenticated %}
-          <span class="navbar-text">
-            You are logged in as {{ user.username }}
-            {% else %}
-            You are not logged in
-            {% endif %}
-          </span>       
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <span id="login-status" class="nav-link">
+                {% if user.is_authenticated %}
+                You are logged in as {{ user.username }}
+                {% else %}
+                You are not logged in
+                {% endif %}
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
