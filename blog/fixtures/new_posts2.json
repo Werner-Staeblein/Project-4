@@ -51,7 +51,6 @@
             "last_modified": "2024-08-13T10:00:00Z"
         }
     },
-
     {
         "model": "blog.dividendposts",
         "pk": null,
