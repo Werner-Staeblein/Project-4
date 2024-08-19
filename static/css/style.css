@@ -248,7 +248,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 60%;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     border: 1px solid var(--headline);
     font-size: 1.3rem;
     font-weight: bold;
@@ -271,8 +271,8 @@ body {
 }
 
 .alert-custom .btn-close {
-    width: 30px;
-    height: 30px;
+    width: 2.1rem;
+    height: 2.1rem;
     color: white !important;
     background-color: transparent !important;
     border: none !important;
@@ -308,5 +308,27 @@ body {
 .navbar-nav .nav-link {
     margin-left: 0.8rem; 
 }
+
 }
 
+/* Media Query for AllAuth messages so that message does not overlap with the closing button */
+
+@media (max-width: 520px) {
+.alert-custom {
+    font-size: 1rem;
+    padding: 0.5rem;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+.alert-custom .btn-close {
+    width: 1.1rem;
+    height: 1.1rem;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+}     
