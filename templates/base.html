@@ -90,9 +90,12 @@
 
           </ul>
 
-          <span class="navbar-text text-muted">
-            Potential banner text
+          {% if user.is_authenticated %}
+          <span class="navbar-text">
+            You are logged in as {{ user.username }}
           </span>
+          {% endif %}
+
         </div>
       </div>
     </nav>
