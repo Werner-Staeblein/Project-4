@@ -11,13 +11,19 @@
   - [Typography](#typography)
 - [Agile Development Process](#agile-development-process)
 - [Features](#features)
+  - [Customized 404 Error Page](#customized-404-error-page)
+    - [Key Features of the Customized 404 Page:](#key-features-of-the-customized-404-page)
 - [Technologies](#technologies)
   - [Django-based technologies](#django-based-technologies)
 - [Bugs and issues](#bugs-and-issues)
 - [Testing](#testing)
+  - [Automated Testing](#automated-testing)
+  - [Manual Testing](#manual-testing)
 - [Security Features](#security-features)
-- [Content](#content)
-  - [Data Sources](#data-sources)
+  - [SECURITY](#security)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Content Data Sources](#content-data-sources)
 - [Deployment](#deployment)
   - [Steps before deployment | Update code for deployment](#steps-before-deployment--update-code-for-deployment)
   - [Deployment on Heroku (step-by-step guide)](#deployment-on-heroku-step-by-step-guide)
@@ -81,6 +87,28 @@ Details on the agile development process can be found here **[AGILE.md](agile.md
 # Features
 
 
+
+
+
+## Customized 404 Error Page
+
+**<span style="color:red">Reminder: Screenshot still needed for the 404 page</span>**
+
+To enhance user engagement and experience, a customized 404 error page has been implemented. This approach prevents the display of generic error messages and ensures that users encountering errors are provided with a more informative and user-friendly response.
+
+### Key Features of the Customized 404 Page:
+
+- **User Engagement and Experience**:
+  - The customized 404 page is designed to support user engagement by providing a more tailored response to errors, avoiding the display of a generic error message.
+  - It helps maintain user satisfaction by offering clear and helpful feedback when an error occurs.
+
+- **Design Integration**:
+  - The 404 page design is fully integrated with the overall design of the website, ensuring a consistent look and feel. 
+  - It allows users to easily navigate back to the page where the error was encountered, minimizing disruption to their experience.
+
+- **User-Centric Approach**:
+  - This user-centric design reinforces the website’s commitment to providing a good user experience.
+
 # Technologies
 
 This is a full-stack (front-end/back-end) project with the primary use of HTML, CSS, and Python. The backend uses the Python framework Django.
@@ -136,7 +164,7 @@ After the initial set-up of the Django project, I wanted to test the deployment 
 
 **HTML tag rendering in single_post.html for individual posts clicked**
 
-My <b>-tag included in the posts.json in fixtures for the blog body (content) did initially not render on the single_post.html page. I reviewed the |safe filter to ensure that Django is not escaping the HTML-tag for XSS reasons
+My 'bold' HTML -tag included in the posts.json in fixtures for the blog body (content) did initially not render on the single_post.html page. I reviewed the |safe filter to ensure that Django is not escaping the HTML-tag for XSS reasons
 
 **static/css/style.css only partly working on classes defined in 404.html**
 For my 404.html I defined classes in the markup of the 404.html. I did load static and connect the stylesheet correctly from static/css/style.css. Nevertheless, the styles in
@@ -146,21 +174,75 @@ my CSS stylesheet and when one of these custom properties such as colors changes
 
 # Testing
 
+## Automated Testing
+
+1. **[W3C Markup Validation Service](https://validator.w3.org/) - HTML Validation**
+The W3 HTML validator was used throughout the developmeht phase to ensure consistency with HTML standards. All site pages were tested with official W3C validator for both users logged in and those not logged in. HTML validation was done with the renedered pages. The reason for this is that W3C validation does not recognize Django template language (DTL).
+
+This is/will be several screenshots of all the respective pages / subfolder needed
+
+![HTML Validator](docs/readme/)
+
+2. **[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
+
+The CSS stylesheet was tested with the W3C CSS validator. No error messages or syntactical errors.
+
+![Jigsaw CSS valiation](docs/readme/coolors_color_palette.png)
+
+3. **[CI Python Linter](https://pep8ci.herokuapp.com/)** The Code Institute Python Linter was used to validate Python code
+
+This is/will be several screenshots of all the respective pages / subfolder needed
+
+![Python Validation](docs/readme/)
+
+4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
+
+Performance of pages, best practices and SEO was tested for every page with Lighthouse.
+
+This is/will be several screenshots of all the respective pages / subfolder needed
+
+
+## Manual Testing
+
+
+
 
 
 # Security Features
 
+## SECURITY
+
+- **User Authentication**:
+  - Only superusers can access the admin panel; normal users do not have access.
+
+- **Secret Keys Management**:
+  - All `SECRET_KEY` values are stored separately in an `env.py` file and in config vars on Heroku.
+  - The `env.py` file is excluded from version control using `.gitignore`, ensuring that sensitive information is not exposed on GitHub.
+  - A new `SECRET_KEY` was generated using a `secret_key` generator after the initial setup of the `.gitignore` and `env.py` file for enhanced security.
+
+- **Environment Variables**:
+  - Critical environment variables such as `DATABASE_URL` and `CLOUDINARY_URL` are stored in the `env.py` file and as config vars on Heroku for secure access.
+
+# Credits
+
+## Code
 
 
-# Content
 
-## Data Sources
+The custom `404.html` page was created using the guidance from **[Create_Custom_404_error_page](https://www.makeuseof.com/create-custom-404-error-page-django/).**
+
+The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
+
+The video titled "README.md - Manual Testing Write Up Overview" **[README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy to structure the README section on testing.
+
+The video titled **[Community Q&A: PP4 Project FAQ's](https://www.youtube.com/watch?v=Q5cdZXomzVg)** was used to have some more clarity about the project requirements.
+
+Notes from the call **"Community Q&A: Mastering Full Stack Applications: Your Way to PP4 Success"** webinar held on July 30, 2024.
+
+
+## Content Data Sources
 
 The dividend history and stability information presented in this blog app are sourced from **[Aktien Guide](https://aktien.guide/dividendenadel)**, a comprehensive resource for dividend data. Company descriptions are derived from official company websites and reputable public sources to ensure accuracy and reliability. This approach ensures that the content provided is both informative and up-to-date.
-
-
-
-
 
 # Deployment
 
@@ -202,7 +284,7 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
     
 ## Deployment on Heroku (step-by-step guide)
     
-1. Log in to Heroku under.
+1. Log in to Heroku under **[Heroku](https://id.heroku.com/login)**
 2. In the Heroku dashboard, click the button **"Create new app"**.
 3. Assign a unique name to your app. Names of apps existing already are not considered unique.
 4. Select the region (for this project, Europe was selected).
