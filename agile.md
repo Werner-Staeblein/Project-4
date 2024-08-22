@@ -15,7 +15,7 @@ GitHub projects was used to create the Kanban board to track the development of 
 ![Initial_Kanban_Board](docs/agile/initial_kanban_board_at_start_of_project.png)
 
 The Kanban board can be found here: 
-[Project 24 by Werner-Staeblein](https://github.com/users/Werner-Staeblein/projects/24)
+**[Project 4 by Werner-Staeblein](https://github.com/users/Werner-Staeblein/projects/24)**
 
 ![Initial_Labeling](docs/agile/initial_labeling_at_start_of_project_part1.png)
 ![Initial_Labeling](docs/agile/initial_labeling_at_start_of_project_part2.png)
@@ -25,6 +25,8 @@ The Kanban board can be found here:
 My first sprint was planned to take place between Aug. 5, 2024 and Aug. 12, 2024. For my first iteration I created milestone 1 with a total of 8 users stories from my kanban board to be worked on.
 The distribution of "must have" to "could have"/"should have" was not the perfect 60%/40% at this stage but three of eight user stories were assigned could have/should have for iteration 1 as it was
 not perfectly clear at the start of the iteration whether users stories 6,7, and 8 can be completed in the timeframe set for the first sprint (iteration 1).
+
+**Iteration 1 | Milestone 1 at the start of Iteration 1**
 
 ![Iteration_1_milestone](docs/agile/iteration_1_milestone.png)
 
@@ -36,6 +38,8 @@ Documentation of progress:
 - Iteration 1 was completed on Aug. 8, 2024 and much faster than expected. The intial "could have"/"should have" user stories have proven to be less time-consuming than planned
 - User Story 8 was moved back to the Kanban board to be worked on with the remaining user stories in subsequent iterations. User Story 8 covers the creation of content for the blog app and further content in addition to that already uploaded via fixtures/posts.json in iteraion 1 may be added in upcomin iterations
 
+**Iteration 1 | Milestone 1 at the end of Iteration 1**
+
 ![Milestone_Board_after_Iteration_1](docs/agile/iteration_1_milestone_board_after_iteration_1_completed.png)
 
 
@@ -45,6 +49,8 @@ With Iteration 1 completed much faster than anticipated, I decided to make a "mi
 Starting with Iteration 2, manual testing and the creation of a testing board in an Excel spreadsheet will start alongside the user stories assigned to Iteration 2. The split of user stories is 60% "Must have" and 40% "Could have" user stories from my Kanban board to be worked on.
 
 Particular focus during Milestone 2 will be on further testing the deployed version of the blog app.
+
+**Iteration 2 | Milestone 2 at the start of Iteration 2**
 
 ![Iteration_2_milestone](docs/agile/iteration_2_milestone.png)
 
@@ -57,14 +63,20 @@ Documentation of progress:
 - Interim testing on accessibility resulted in lighthouse results of only 95%. As a result: As good as the intentions were to use a certain color scheme, this color scheme had to be adjusted to improve lighthouse scoring on accessibility. The basic idea of using blue/gray colors, as described in the README, however, maintained
 - Half-way through the Iteration 2, I realised that the "mini-sprint" thought to be less time-consuming than Iteration 1 has proven to be more time-consuming than originally thought. Customizing CSS, synchronising CSS-classes and interim testing has taken more time than anticipated
 - Iteration 2 was closed with three user stories still open of which two (#12/#8) were "should have" and one was "must have" (# 13 responsinveness). Further responsiveness testing will be done until the end of the project and user story +13 (responsivness) will remain in the backlog and will not be closed
-  
+
+**Iteration 2 | Milestone 2 at the end of Iteration 2**
+
 ![Milestone_Board_after_Iteration_2](docs/agile/iteration_2_milestone_board_after_iteration_2_completed.png)
 
 ## Iteration 3 | Milestone 3
 
 Iteration 3 has a major focus on account registration, display of login status for users and log-in/log-out functionalities. The iteration was split to have 50% "must have" user stories with remaining half categorized as "should have/could have". The user stories were moved "in progress" in the Kanban board at the start of iteration 3.
 
+**Iteration 3 | Milestone 3 at the start of Iteration 3**
+
 ![Iteration_3_milestone](docs/agile/iteration_3_milestone.png)
+
+**Kanban board before start of Iteration 3**
 
 ![Kanban_Board_before_start_iteration_3](docs/agile/kanban_board_at_start_of_iteration_3.png)
 
@@ -73,8 +85,17 @@ Documentation of progress:
 - "Iteration 3 went very smoothly. The 'must-have' user stories were closed quickly, partly due to greater familiarity with the already established code base.
 - I conducted interim testing, including validation of CSS, HTML, and responsiveness, to ensure that issues do not arise at the end of the project, thereby 'creating quality in the process.'
 - In Iteration 3 I added the 404.html page. This step was very time-consuming. The reason is that I referenced "landing" in my 404.html rather than root "/". For this reason I struggled for a long time with 500 errors. I tried 404 test pages and still faced 500 errors until I realised that this might be related to the re-routing from the 404 page back to the "homepage". In addition, and as documented in the README.md, I had struggles to style the 404.html page with my static/css/style.css and eventually decided to use an internal stylesheet in the 404.html so that this page has colors, fonts, and typography similar to the rest of the application
+- Iteration 3 also included an interim deployment testing to ensure that the app is properly "deployable" at this stage
+- I defined a new user story (#24) at the end of Iteration 3. This new user story mainly covers topics of the UI that I found to not have been defined properly at the beginning of the project (images, footer, clickable logo)
+- What is left in the Kanban board after Iteration 3 is the user story for responsiveness. Responsiveness testing was done throughout Iteration 2 but further respononsiveness testing to continue in all subsequent iterations. For this reason, this user story will be picked up again in a subsequent iteration.
 
-![Milestone_Board_after_Iteration_3](docs/agile/)
+**Iteration 3 | Milestone 3 at the end of Iteration 3**
+
+![Milestone_Board_after_Iteration_3](docs/agile/iteration_3_milestone_board_after_iteration_3_completed.png)
+
+**Kanban board at the end ofIteration 3**
+
+![Kanban_Board_after_iteration_3](docs/agile/kanban_board_at_end_of_iteration_3.png)
 
 
 
