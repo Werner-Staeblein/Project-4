@@ -2,6 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import DividendPosts
 from .forms import CommentForm
+from django.contrib import messages
 
 
 def landing(request):
@@ -13,7 +14,7 @@ def landing(request):
 # entries in database that are status of 1 only
 
 
-def index(request):
+def blog_index(request):
     post_list = DividendPosts.objects.filter(status=1)
     paginator = Paginator(post_list, 9)
     page_number = request.GET.get('page')
@@ -25,59 +26,63 @@ def index(request):
     }
     return render(request, 'blog/index.html', context)
 
-
-def single_post(request, post_slug):
+  
+def blogpost_detail(request, slug):
     """
-    Show the details of a specific blog post.
-
-    This view is doing the following:
-    -   Look up a blog post based on its unique identifier (the slug).
-    -   Find the post from the database that is published (queryset has
-        status of 1 which means that only published blog posts are searched
-        for in the database)
-    -   Pass this post to a page where it will be displayed.
-
-    **Template Used:**
-    -   `blog/post_detail.html`: This is the web page where detals of a
-        specific clicked post are shown.
+    Show the details of a specific blog post and handle comment submissions.
 
     **Context Provided:**
-    -   `post`: This contains all the information about this individual
-        blog post clicked (title and content).
-    -   "context" is what is passed on to the post_detail.html to be displayed
-        in this post_detai.html
-    """
-    queryset = DividendPosts.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=post_slug)
+    - `post`: The blog post object.
+    - `comments`: All approved comments associated with the post.
+    - `comment_count`: The number of approved comments.
+    - `comment_form`: The form for submitting a new comment.
 
+    **Template:**
+    - `blog/single_post.html`: The template displaying the post details and comments.
+    """
+    # Get the post object, ensuring it has a status of 1 (published)
+    queryset = DividendPosts.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+
+    # Get all approved comments related to the post, ordered by creation date
+    comments = post.discussions.filter(approved=True).order_by("-comment_date")
+
+    # Count the number of approved comments
+    comment_count = post.discussions.filter(approved=True).count()
+
+    # Handle the comment form submission
+    if request.method == "POST":
+        print("Received a POST request for comment submission")
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.commentator = request.user  # Set the current user as the commentator
+            new_comment.article = post  # Associate the comment with the post
+            new_comment.save()  # Save the comment
+
+            # Display a success message to the user
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval.'
+            )
+            return redirect('blogpost_detail', slug=slug)  # Redirect to the same post
+
+    # If not a POST request, initialize an empty comment form
+    comment_form = CommentForm()
+
+    print("Rendering the template with context data")
+
+    # Render the template with the provided context
     return render(
         request,
         "blog/single_post.html",
-        {"post": post},
+        {
+            "post": post,
+            "comments": comments,
+            "comment_count": comment_count,
+            "comment_form": comment_form
+        },
     )
-   
-def blogpost_detail(request, slug):
-    post = get_object_or_404(DividendPosts, slug=slug, status=1)  # Ensure the post is published
-    comments = post.discussions.filter(approved=True)  # Fetch only approved comments
-    comment_form = CommentForm()
-
-    if request.method == "POST":
-        comment_form = CommentForm(request.POST)
-        if comment_form.is_valid():
-            new_comment = comment_form.save(commit=False)
-            new_comment.article = post  # Associate the comment with the post
-            new_comment.commentator = request.user  # Associate the comment with the logged-in user
-            new_comment.save()
-            # Redirect or reload the page to show the new comment
-            return redirect('single_post.html', slug=post.slug)
-
-    context = {
-        'post': post,
-        'comments': comments,
-        'comment_form': comment_form,
-    }
-    return render(request, 'blog/single_post.html', context)
-
 
 def custom_404(request, exception=None):
     return render(request, '404.html', status=404)

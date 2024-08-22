@@ -50,7 +50,7 @@
       <div class="container">
         <a class="navbar-brand" href="{% url 'landing' %}" title="Click to return to the homepage">
           <img src="{% static 'images/logo.png' %}" alt="Site Logo">
-        </a>   
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -62,7 +62,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -72,58 +72,43 @@
                 href="{% url 'landing' %}"
               >Home</a>
             </li>
-            
+    
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}"
-              href="{% url 'blog_index' %}"
-              >Blog</a>           
+              href="{% url 'blog_index' %}">Blog</a>           
             </li>
-
+    
+            <!-- Loop through all posts to create links -->
+            {% if posts %}
+              {% for post in posts %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blogpost_detail' post.slug %}">{{ post.headline }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+    
+            <!-- Display the logged-in user's name -->
             {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-
+              <li class="nav-item">
+                <span class="navbar-text">You are logged in as {{ user.username }}</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+              </li>
             {% else %}
-
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_signup' %}">Register</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                  href="{% url 'account_signup' %}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+              </li>
             {% endif %}         
-
-          </ul>
-
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <span id="login-status" class="nav-link">
-                {% if user.is_authenticated %}
-                You are logged in as {{ user.username }}
-                {% else %}
-                You are not logged in
-                {% endif %}
-              </span>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
-
-  <!-- Messages success/error for login/logout -->
-  <div class="container mt-3">
-      {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-custom alert-{{ message.tags }}-custom alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        {% endfor %}
-    {% endif %}
-  </div>
+    
 
   <!-- Main content -->
     <main class="flex-shrink-0">

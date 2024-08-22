@@ -81,7 +81,7 @@ body {
 ----------------------------------------------------------------------------------*/
 
 #login-status {
-    background: var(--background);
+    background: var(--background) !important;
     color: black;
     font-weight: bold;
     padding: 0.5rem 1rem;

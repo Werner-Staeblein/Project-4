@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Column for Blog Posts -->
+        <!-- These are the columns where the blogposts are shown -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
@@ -17,12 +17,11 @@
                                     <p class="author">Author: {{ post.writer }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'single_post' post_slug=post.slug %}" class="link-to-post">
+                            <a href="{% url 'single_post' slug=post.slug %}" class="link-to-post">
                                 <h2 class="card-title">{{ post.headline }}</h2>
                             </a>
-
                             <hr>
-                            <p class="card-text">{{ post.published_date}}</p>
+                            <p class="card-text">{{ post.published_date }}</p>
                         </div>
                     </div>
                 </div>
@@ -55,5 +54,5 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
+
 {% endblock %}
