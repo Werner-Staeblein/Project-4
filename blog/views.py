@@ -54,6 +54,33 @@ def single_post(request, post_slug):
         "blog/single_post.html",
         {"post": post},
     )
+   
+
+def blogpost_detail(request, slug):
+    """
+    Show the details of a specific blog post TOEGETHER with its comments.
+
+    This view is doing the following:
+    -   Look up a blog post based on its unique identifier (the slug).
+    -   Fetch the post from the database that is published (only retrieves posts with a status of 1).
+    -   Retrieve all approved comments related to the post.
+    -   Pass the blog post and its associated comments to a page for display.
+
+    **Template Used:**
+    -   `blogpost_details.html`: This is the web page where details of a specific clicked post and its comments are shown.
+
+    **Context Provided:**
+    -   `post`: This contains all the information about the individual blog post clicked (title, content, author, published date, etc.).
+    -   `comments`: This contains all approved comments associated with the blog post, which can be displayed on the details page.
+    -   'comments' is passed on as context. 'context' is what is passed on to the blogpost_details.html to be displayed in this template.
+    """
+    post = get_object_or_404(DividendPosts, slug=slug)
+    comments = post.discussions.filter(approved=True)
+
+    return render(request, 'blogpost_details.html', {
+        'post': post,
+        'comments': comments,
+    })
 
 
 def custom_404(request, exception=None):
