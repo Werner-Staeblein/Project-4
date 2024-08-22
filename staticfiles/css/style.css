@@ -81,7 +81,7 @@ body {
 ----------------------------------------------------------------------------------*/
 
 #login-status {
-    background-color: var(--alternate-bg-error);
+    background: var(--background);
     color: black;
     font-weight: bold;
     padding: 0.5rem 1rem;

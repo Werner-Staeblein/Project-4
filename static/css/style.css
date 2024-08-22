@@ -12,7 +12,7 @@
     --headline: rgb(0,60,120); /* Yale Blue/deep blue color  */
     --text: rgb(200,200,220); /* Gray with blue touch, aka French gray */
     --text2: rgb(0,0,0); 
-    --background: rgba(200,230,255); /* A very light blue color, aka Columbia blue */
+    --background: rgb(200,230,255); /* A very light blue color, aka Columbia blue */
     --background-shade: rgba(200,230,255, 0.5) /* box-shadow and shade effects*/
     --alternate-bg: rgb(120,120,120); /* Medium gray color */
 
@@ -81,7 +81,7 @@ body {
 ----------------------------------------------------------------------------------*/
 
 #login-status {
-    background-color: var(--alternate-bg-error);
+    background-color: red;
     color: black;
     font-weight: bold;
     padding: 0.5rem 1rem;
