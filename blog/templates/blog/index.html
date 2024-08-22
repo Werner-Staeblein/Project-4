@@ -17,7 +17,7 @@
                                     <p class="author">Author: {{ post.writer }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'single_post' slug=post.slug %}" class="link-to-post">
+                            <a href="{% url 'blogpost_detail' slug=post.slug %}" class="link-to-post">
                                 <h2 class="card-title">{{ post.headline }}</h2>
                             </a>
                             <hr>
