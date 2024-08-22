@@ -98,5 +98,38 @@ Documentation of progress:
 ![Kanban_Board_after_iteration_3](docs/agile/kanban_board_at_end_of_iteration_3.png)
 
 
+## Iteration 4 | Milestone 4
+
+Iteration 4 has a major focus on the CRUD functionality for registered users. Split of user stories with three "must-have" and two "should-have". User story #13 and #24 moved to "In Progress" in Kanban board immediately at beginning.
+
+**Iteration 4 | Milestone 4 at the start of Iteration 4**
+
+![Iteration_3_milestone](docs/agile/iteration_4_milestone_board_before_iteration_4.png)
+
+**Kanban board before start of Iteration 4**
+
+![Kanban_Board_before_start_iteration_3](docs/agile/kanban_board_at_start_of_iteration_4.png)
+
+Documentation of progress:
+
+- 
+- 
+- 
+- 
+- 
+- 
+
+**Iteration 4 | Milestone 4 at the end of Iteration 4**
+
+![Milestone_Board_after_Iteration_3](docs/agile/)
+
+**Kanban board at the end ofIteration 4**
+
+![Kanban_Board_after_iteration_3](docs/agile)
+
+
+
+
+
 
 
