@@ -4,7 +4,6 @@ from .models import DividendPosts
 from .forms import CommentForm
 from django.contrib import messages
 
-
 def landing(request):
     return render(request, 'landing.html')  # the view for the landing page
 
@@ -25,7 +24,6 @@ def blog_index(request):
         'is_paginated': paginator.num_pages > 1,
     }
     return render(request, 'blog/index.html', context)
-
 
 def blogpost_detail(request, slug):
     """

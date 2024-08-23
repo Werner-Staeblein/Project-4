@@ -270,28 +270,18 @@ body {
     color: white;
 }
 
-.alert-error-custom {
-    background-color: var(--alternate-bg-error);
-    color: darkred;
-}
-
-.alert-logout-custom,
-.alert-signin-custom {
-    background-color: var(--alternate-bg);
-    color: var(--text2);
-}
-
-.alert-custom .btn-close {
-    width: 1.3rem;
-    height: 1.3rem;
+.custom-close{
+    margin-left: 1rem;
     color: white !important;
-    background-color: transparent !important;
-    border: none !important;
-    font-size: 1.2rem;
-    opacity: 1;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
     cursor: pointer;
+    height: 1.5rem;
     display: flex;
     align-items: center;
+    line-height: 1;
+    padding-bottom: 4%;
 }
 
 /*-------------------------------------------------------------------------
@@ -327,14 +317,14 @@ body {
 /* Media Query for AllAuth messages so that message does not overlap with the closing button */
 
 @media (max-width: 520px) {
-.alert-custom {
+/* .alert-custom {
     font-size: 1rem;
     padding: 0.5rem;
     max-width: 90%;
     line-height: 1.4;
-}
+} */
 
-.alert-custom .btn-close {
+/* .alert-custom .btn-close {
     width: 1.1rem;
     height: 1.1rem;
     font-size: 1rem;
@@ -343,5 +333,5 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} */
 }
