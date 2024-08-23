@@ -115,6 +115,12 @@ body {
     color: white;
 }
 
+.common-btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
 .landing-btn:hover,
 .landing-btn-1:hover {
     box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.3);
@@ -329,6 +335,12 @@ body {
     margin-top: 1rem;
 }
 
+}
+
+@media (max-width: 926px) {
+    .alert-custom {
+        font-size: 1rem;
+    }
 }
 
 /* Media Query for AllAuth messages so that message does not overlap with the closing button */

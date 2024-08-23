@@ -59,7 +59,7 @@
 
                             <!-- Edit previous comment button -->
                             {% if comment.commentator == user %}
-                                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link">Edit</a>
+                                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
                             {% endif %}
                         </div>
                     {% empty %}
@@ -80,7 +80,7 @@
                         <form id="commentForm" method="post" style="margin-top: 1.3em;">
                             {% csrf_token %}
                             <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here..."></textarea>
-                            <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100">Submit</button>
+                            <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
                         </form>
                     {% else %}
                         <p>Log in to leave a comment</p>
@@ -98,14 +98,14 @@
                     {% csrf_token %}
                     <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here...">{{ comment_to_edit.comment_text }}</textarea>
                     <button type="submit" class="btn btn-primary">Update Comment</button>
-                    <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
+                    <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary common-btn">Cancel</a>
                 </form>
             </div>
         </div>
     {% endif %}
 
     <!-- Button Link Back to Blog -->
-    <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5">Back to all Posts</a>
+    <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5 common-btn">Back to all Posts</a>
 </div>
 
 <!-- {% block extras %} -->
