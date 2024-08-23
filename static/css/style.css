@@ -309,6 +309,11 @@ body {
     margin-left: 0.8rem; 
 }
 
+.custom-link {
+    width: 80% !important;
+    font-size: 0.8rem !important;
+}
+
 }
 
 /* Media Query for AllAuth messages so that message does not overlap with the closing button */
