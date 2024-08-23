@@ -27,10 +27,27 @@
         <!-- Comments Section -->
         
         <div class="row">
-            <div class="col-md-8 card mb-4 mt-3">
+            <div class="col-md-6 card mb-4 mt-3">
                 <h3>Comments:</h3>
                 <div class="card-body">
-                    <!-- Comments that have already been approved by admin are shown here -->
+        
+                <!-- Django messages framework for message "comment is awaiting approval" -->
+                {% if messages %}
+                <div class="alert alert-info" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <!-- Comments that have been submitted BUT HAVE NOT been approved -->
+                {% if comment_submitted %}
+                    <div class="alert alert-info" role="alert">
+                        Your comment is awaiting approval.
+                    </div>
+                {% endif %}            
+                
+                <!-- Comments that have already been approved by admin are shown here -->
                     {% for comment in comments %}
                     <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
                         <p class="font-weight-bold">
@@ -45,7 +62,7 @@
             </div>
         
             <!-- Only logged-in users can create a new comment -->
-            <div class="col-md-4 card mb-4 mt-3">
+            <div class="col-md-6 card mb-4 mt-3">
                 <div class="card-body">
                     {% if user.is_authenticated %}
                     <h3>Leave a comment:</h3>
@@ -53,7 +70,7 @@
                     <form id="commentForm" method="post" style="margin-top: 1.3em;">
                         {% csrf_token %}
                         <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here..."></textarea>
-                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg mt-2">Submit</button>
+                        <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100">Submit</button>
                     </form>
                     {% else %}
                     <p>Log in to leave a comment</p>
@@ -68,5 +85,5 @@
             <a href="{% url 'blog_index' %}" class="btn landing-btn my-5 d-block mx-auto w-50">Back to all Posts</a>
         </div>
     </div>
-</div>
+
 {% endblock %}

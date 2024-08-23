@@ -46,13 +46,14 @@ def blogpost_detail(request, slug):
 
     # Get all approved comments related to the post, ordered by creation date
     comments = post.discussions.filter(approved=True).order_by("-comment_date")
+    comment_submitted = False
 
     # Count the number of approved comments
     comment_count = post.discussions.filter(approved=True).count()
 
     # Handle the comment form submission
     if request.method == "POST":
-        print("Received a POST request for comment submission")
+        
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
@@ -65,12 +66,17 @@ def blogpost_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval.'
             )
-            return redirect('blogpost_detail', slug=slug)  # Redirect to the same post
 
-    # If not a POST request, initialize an empty comment form
-    comment_form = CommentForm()
+            # render the post detail page with the message
+            return render(request, 'blog/single_post.html', {
+                'post': post,
+                'comments': comments,
+                'comment_submitted': comment_submitted,            
+            })
 
-    print("Rendering the template with context data")
+    else:
+        comment_form = CommentForm()  # Handle GET request
+
 
     # Render the template with the provided context
     return render(
