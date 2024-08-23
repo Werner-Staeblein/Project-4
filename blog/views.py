@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import DividendPosts, Discussion
 from .forms import CommentForm
 from django.contrib import messages
@@ -90,16 +90,6 @@ def blogpost_detail(request, slug):
         },
     )
 
-
-from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
-from .models import DividendPosts, Discussion
-from .forms import CommentForm
-from django.contrib import messages
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-
-
 def landing(request):
     return render(request, 'landing.html')  # the view for the landing page
 
@@ -172,17 +162,20 @@ def blogpost_detail(request, slug):
 def comment_edit(request, slug, comment_id):
     """View to allow users to edit their own comments."""
     
-    # Step 1: Fetch the post using the slug
+    # Fetch the post using the slug
     post = get_object_or_404(DividendPosts, slug=slug)
     
-    # Step 2: Fetch the comment using the comment_id
+    # Fetch the comment using the comment_id
     comment = get_object_or_404(Discussion, pk=comment_id, commentator=request.user)
     
     # Ensure the user is the author of the comment
     if comment.commentator != request.user:
         messages.error(request, "You do not have permission to edit this comment.")
         return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
-    
+
+    # Pre-fill the form with the existing comment for GET requests
+    comment_form = CommentForm(instance=comment)
+
     if request.method == "POST":
         # Populate the form with the new data and the existing comment instance
         comment_form = CommentForm(request.POST, instance=comment)
@@ -193,12 +186,7 @@ def comment_edit(request, slug, comment_id):
             updated_comment.save()
             messages.success(request, "Comment updated successfully and is awaiting approval.")
             return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
-        else:
-            messages.error(request, "Error updating comment. Please correct the issues below.")
-    else:
-        # Pre-fill the form with the existing comment for GET requests
-        comment_form = CommentForm(instance=comment)
-    
+
     return render(request, 'blog/edit_comment.html', {
         'post': post,
         'comment': comment,

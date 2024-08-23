@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}
+    Edit Comment - {{ post.headline }}
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded w-75 mt-5 mx-auto">
+    <h1>Edit Your Comment</h1>
+    
+    <div class="original-comment mb-3">
+        <h5>Your Original Comment:</h5>
+        <p>{{ comment.comment_text }}</p>
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="comment_text">Edit Your Comment</label>
+            <!-- The textarea first shows the comment that is about to be edited -->
+            <textarea id="comment_text" name="comment_text" class="form-control" rows="4" required>{{ comment.comment_text }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn landing-btn mt-5 d-block mx-auto w-50 custom-link">Update Comment</button>
+        <a href="{% url 'blogpost_detail' post.slug %}" class="btn landing-btn-1 mt-5 d-block mx-auto w-50 custom-link">Cancel</a>
+    </form>
+</div>
+{% endblock %}

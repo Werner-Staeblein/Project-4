@@ -106,8 +106,21 @@ body {
     box-shadow: 0 0.4rem 0.7rem black;
 }
 
-.landing-btn:hover {
+.landing-btn-1{
+    background-color: var(--headline);
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 0.4rem 0.7rem black;
+    color: white;
+}
+
+.landing-btn:hover,
+.landing-btn-1:hover {
     box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.landing-btn-1:hover {
+    color: white;
 }
 
 /*---------------------------------------------------------------------------------
