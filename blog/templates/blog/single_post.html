@@ -59,7 +59,7 @@
 
                             <!-- Edit previous comment button -->
                             {% if comment.commentator == user %}
-                                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn btn-sm btn-secondary mt-2">Edit</a>
+                                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link">Edit</a>
                             {% endif %}
                         </div>
                     {% empty %}
@@ -105,7 +105,7 @@
     {% endif %}
 
     <!-- Button Link Back to Blog -->
-    <a href="{% url 'blog_index' %}" class="btn landing-btn my-5 d-block mx-auto w-50 custom-link">Back to all Posts</a>
+    <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5">Back to all Posts</a>
 </div>
 
 <!-- {% block extras %} -->

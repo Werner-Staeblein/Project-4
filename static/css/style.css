@@ -41,6 +41,7 @@ body {
 
 .jumbotron {
     background-color: #ffffff !important;
+    padding-bottom: 1rem;
 } 
 
 /*---------------------------------------------------------------------------------
@@ -325,6 +326,7 @@ body {
 .custom-link {
     width: 80% !important;
     font-size: 0.8rem !important;
+    margin-top: 1rem;
 }
 
 }
