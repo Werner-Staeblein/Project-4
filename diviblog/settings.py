@@ -57,8 +57,8 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-
-CRISPY_TEMPLATE_PACK = 'bootstrap5'  # bootstrap 5 as I use Bootstrap CDN with version 5
+# bootstrap 5 as I use Bootstrap CDN with version 5
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 
 # The constants for allauth / redirection to home page
@@ -105,16 +105,28 @@ WSGI_APPLICATION = 'diviblog.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+            ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+            ),
     },
 ]
 
