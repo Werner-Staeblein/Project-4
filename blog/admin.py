@@ -8,6 +8,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import DividendPosts, Discussion
 
+
 @admin.register(DividendPosts)
 class DividendPostsAdmin(SummernoteModelAdmin):
     list_display = ('headline', 'slug', 'writer', 'status', 'published_date')
@@ -17,6 +18,7 @@ class DividendPostsAdmin(SummernoteModelAdmin):
     date_hierarchy = 'published_date'
     ordering = ['status', 'published_date']
 
+
 @admin.register(Discussion)
 class DiscussionAdmin(admin.ModelAdmin):
     list_display = ('article', 'commentator', 'approved', 'comment_date')
@@ -24,17 +26,3 @@ class DiscussionAdmin(admin.ModelAdmin):
     list_filter = ['approved', 'comment_date']
     date_hierarchy = 'comment_date'
     ordering = ['approved', 'comment_date']
-
-
-
-
-
-
-
-
-
-
-
-
-
-

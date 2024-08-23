@@ -26,7 +26,7 @@ def blog_index(request):
     }
     return render(request, 'blog/index.html', context)
 
-  
+
 def blogpost_detail(request, slug):
     """
     Show the details of a specific blog post and handle comment submissions.
@@ -53,7 +53,7 @@ def blogpost_detail(request, slug):
 
     # Handle the comment form submission
     if request.method == "POST":
-        
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
@@ -71,12 +71,11 @@ def blogpost_detail(request, slug):
             return render(request, 'blog/single_post.html', {
                 'post': post,
                 'comments': comments,
-                'comment_submitted': comment_submitted,            
+                'comment_submitted': comment_submitted,
             })
 
     else:
         comment_form = CommentForm()  # Handle GET request
-
 
     # Render the template with the provided context
     return render(
@@ -90,6 +89,6 @@ def blogpost_detail(request, slug):
         },
     )
 
+
 def custom_404(request, exception=None):
     return render(request, '404.html', status=404)
-

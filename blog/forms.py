@@ -1,7 +1,10 @@
-from .models import Discussion # My model is named "Discussion" and sites in the same folder, therefore the dot before models
+# My model is named "Discussion" and sits in the same folder.
+# #Therefore the dot before models
+from .models import Discussion
 from django import forms
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = Discussion  
-        fields = ('comment_text',)  
+        model = Discussion
+        fields = ('comment_text',)
