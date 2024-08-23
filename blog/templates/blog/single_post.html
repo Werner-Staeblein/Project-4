@@ -49,7 +49,7 @@
                 {% endif %}            
                 
                 <!-- Comments that have already been approved by admin are shown here -->
-                    {% for comment in comments %}
+                {% for comment in comments %}
                     <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
                         <p class="font-weight-bold">
                             {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
@@ -57,8 +57,14 @@
                         <div id="comment{{ comment.id }}">
                             {{ comment.comment_text|linebreaks }}
                         </div>
+
+                    <!-- Edit previous comment button -->
+                        {% if comment.commentator == user %}
+                            <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn btn-sm btn-secondary mt-2">Edit</a>
+                        {% endif %}
                     </div>
-                    {% endfor %}
+                </div>
+                {% endfor %}
                 </div>
             </div>
         
@@ -79,6 +85,21 @@
                 </div>
             </div>
         </div>
+
+        {% if comment_to_edit %}
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h3>Edit Comment</h3>
+                <form method="post" action="{% url 'comment_edit' post.slug comment_to_edit.id %}">
+                    {% csrf_token %}
+                    {{ comment_form.as_p }}
+                    <button type="submit" class="btn btn-primary">Update Comment</button>
+                    <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary">Cancel</a>
+                </form>
+        </div>
+</div>
+{% endif %}
+
 
 <!-- Button Link Back to Blog | same as landing.html button -->
 
