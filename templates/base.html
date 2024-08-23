@@ -45,7 +45,8 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-    <!-- Navigation -->
+    
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand" href="{% url 'landing' %}" title="Click to return to the homepage">
@@ -66,57 +67,49 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == '/' %}active{% endif %}"
-                aria-current="page"
-                href="{% url 'landing' %}"
-              >Home</a>
+              <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'landing' %}">Home</a>
             </li>
     
             <li class="nav-item">
-              <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}"
-              href="{% url 'blog_index' %}">Blog</a>           
+              <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}" href="{% url 'blog_index' %}">Blog</a>
             </li>
     
-            <!-- Loop through all posts to create links -->
-            {% if posts %}
-              {% for post in posts %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'blogpost_detail' post.slug %}">{{ post.headline }}</a>
-                </li>
-              {% endfor %}
-            {% endif %}
-    
-            <!-- Display the logged-in user's name -->
+<!-- Display the nav based on login-status/registration status of user. If logged in, the logout button shown, if not registered then register and login  -->
             {% if user.is_authenticated %}
-              <li class="nav-item">
-                <span class="navbar-text">You are logged in as {{ user.username }}</span>
-              </li>
               <li class="nav-item">
                 <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
               </li>
             {% else %}
               <li class="nav-item">
-                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                  href="{% url 'account_signup' %}">Register</a>
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
               </li>
-            {% endif %}         
+            {% endif %}
+          </ul>
+    
+<!-- Message to user on login status in the same div navbar-collapse-->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li id="login-status" style="background-color: rgb(200, 230, 255); color: black; font-weight: bold; padding: 0.5rem 1rem; border-radius: 0.4rem; margin-left: 1rem;">
+              {% if user.is_authenticated %}
+                <span>You are logged in as {{ user.username }}</span>
+              {% else %}
+                <span>You are not logged in</span>
+              {% endif %}
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    
 
-  <!-- Main content -->
+<!-- Main content -->
     <main class="flex-shrink-0">
         {% block content %}
         {% endblock %}
     </main>
 
-  <!-- Footer -->
+<!-- Footer -->
     <footer class="footer mt-auto py-3">
       <div class="container text-center py-4">
           <div class="row">
