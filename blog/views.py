@@ -3,6 +3,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import DividendPosts
 from .forms import CommentForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 
 def landing(request):
     return render(request, 'landing.html')  # the view for the landing page
@@ -87,6 +89,24 @@ def blogpost_detail(request, slug):
         },
     )
 
+
+@login_required
+def update_post(request, slug):
+    post = get_object_or_404(DividendPosts, slug=slug)
+
+    # Test if user requesting Update of post is user who made the post
+    if request.user != post.writer:
+        return redirect('blogpost_detail', slug=slug)
+
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('blogpost_detail', slug=slug)
+    else:
+        form = CommentForm(instance=post)
+
+    return render(request, 'blog/update_post.html', {'form': form, 'post': post})
 
 def custom_404(request, exception=None):
     return render(request, '404.html', status=404)
