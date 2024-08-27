@@ -5,7 +5,7 @@ from .forms import CommentForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
+from blog.models import Discussion
 
 def landing(request):
     return render(request, 'landing.html')  # the view for the landing page
@@ -45,7 +45,7 @@ def blogpost_detail(request, slug):
     queryset = DividendPosts.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
 
-    # Get all approved comments related to the post, ordered by creation date
+    # Get all approved comments related to the post, ordered by the date the comment was created
     comments = post.discussions.filter(approved=True).order_by("-comment_date")
     comment_submitted = False
 
@@ -62,10 +62,10 @@ def blogpost_detail(request, slug):
             new_comment.article = post  # Associate the comment with the post
             new_comment.save()  # Save the comment
 
-            # Display a success message to the user
+            # Display a success message to the user once comment is submitted
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval.'
+                'Your comment was submitted and awaits approval.'
             )
 
             # render the post detail page with the message
@@ -114,6 +114,15 @@ def blog_index(request):
 def blogpost_detail(request, slug):
     """
     Show the details of a specific blog post and handle comment submissions.
+
+    This function retrieves a blog post that is identified by its slug. The first check
+    is for the stauts to be published/approved. Comments sbumitted by users are likewise
+    handled. The approved comments are visible to ALL users while comments pending 
+    approval are only displayed to the user who submitted the comment. 
+
+    Use of Django messaging framework to notfiy users about the status of the comments
+    submitted (approved/pending approval)  
+
     """
     # Get the post object, ensuring it has a status of 1 (published)
     queryset = DividendPosts.objects.filter(status=1)
@@ -125,6 +134,9 @@ def blogpost_detail(request, slug):
     # Count the number of approved comments
     comment_count = comments.count()
 
+    # all user comments retrived and stored where logged-in user is the one to have made a comment before
+    user_comments = post.discussions.filter(commentator=request.user)
+
     # Handle the comment form submission
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -132,7 +144,8 @@ def blogpost_detail(request, slug):
             new_comment = comment_form.save(commit=False)
             new_comment.commentator = request.user  # Set the current user as the commentator
             new_comment.article = post  # Associate the comment with the post
-            new_comment.save()  # Save the comment
+            new_comment.approved = False
+            new_comment.save()  # Comment is saved
 
             # Display a success message to the user
             messages.add_message(
@@ -155,6 +168,7 @@ def blogpost_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "user_comments": user_comments,
         },
     )
 
@@ -187,10 +201,18 @@ def comment_edit(request, slug, comment_id):
             messages.success(request, "Comment updated successfully and is awaiting approval.")
             return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
 
+    # This line picks all comments by a user whether approved or not approved
+    # but the comments NOT approved are still visible to the user who made the comment
+    # while this comment submitted BUT NOT approved is not visible to users other than the
+    # user who submitted the comment and is still awaiting approval on the comment
+
+    user_comments = Discussion.objects.filter(commentator=request.user)
+
     return render(request, 'blog/edit_comment.html', {
         'post': post,
         'comment': comment,
         'comment_form': comment_form,
+        'user_comments': user_comments,
     })
 
 def custom_404(request, exception=None):

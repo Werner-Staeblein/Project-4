@@ -306,6 +306,30 @@ body {
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
+        Styles for approval messages to users (approved or pending approval)
+---------------------------------------------------------------------------*/
+
+/* Success message for an approved comment to the user who made the comment */
+.approval-success {
+    background-color: var(--alternate-bg-success);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Message to a user who made a comment that comment is still pending approval */
+.pending-approval {
+    background-color: var(--alternate-bg-error);
+    color: black;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/*-------------------------------------------------------------------------
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
 

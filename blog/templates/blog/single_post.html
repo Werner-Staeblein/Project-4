@@ -31,69 +31,74 @@
 
     <!-- Comments and Comment Form Section -->
     <div class="row mt-4">
-        <!-- Comments Section -->
-        <div class="col-md-6"> <!-- This is the FIRST column on the left for the comments in the comment form -->
-            <h3>Comments:</h3>
-            <div class="card mb-4">
-                <div class="card-body">
-                    <!-- Django messages framework for message "comment is awaiting approval" -->
-                    {% if messages %}
-                    <div class="alert alert-info" role="alert">
-                        {% for message in messages %}
-                            {{ message }}
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    
-                    <!-- Comments that have been submitted BUT HAVE NOT been approved -->
-                    {% if comment_submitted %}
-                        <div class="alert alert-info" role="alert">
-                            Your comment is awaiting approval.
-                        </div>
-                    {% endif %}            
-                    
-                    <!-- Comments that have already been approved by admin are shown here -->
-                    {% for comment in comments %}
-                        <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                            <p class="font-weight-bold">
-                                {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
-                            </p>
-                            <div id="comment{{ comment.id }}">
-                                {{ comment.comment_text|linebreaks }}
-                            </div>
-
-                            <!-- Edit previous comment button -->
-                            {% if comment.commentator == user %}
-                                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
-                            {% endif %}
-                        </div>
-                    {% empty %}
-                        <p>No comments yet. Be the first to comment!</p>
+    
+    <!-- Comments Section -->
+    <div class="col-md-6"> <!-- This is the FIRST column on the left for the comments in the comment form -->
+        <h3>Comments:</h3>
+        <div class="card mb-4">
+            <div class="card-body">
+                <!-- Django messages framework for message "comment is awaiting approval" -->
+                {% if messages %}
+                <div class="alert alert-info" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
                     {% endfor %}
                 </div>
-            </div>
-        </div>
+                {% endif %}
+                
+                <!-- Comments that have already been approved by admin are shown here -->
+                {% for comment in comments %}
+                    <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font-weight-bold">
+                            {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
+                        </p>
+                        <div id="comment{{ comment.id }}">
+                            {{ comment.comment_text|linebreaks }}
+                        </div>
 
-        <!-- Comment Form Section / here new comments can be made -->
-
-        <div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
-            <h3>Leave a comment:</h3>
-            <div class="card mb-4">
-                <div class="card-body">
-                    {% if user.is_authenticated %}
-                        <p>Posting as: {{ user.username }}</p>
-                        <form id="commentForm" method="post" style="margin-top: 1rem;">
-                            {% csrf_token %}
-                            <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here..."></textarea>
-                            <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
-                        </form>
-                    {% else %}
-                        <p>Please register or log in to create a comment</p>
-                    {% endif %}
-                </div>
+                        <!-- Edit previous comment button -->
+                        {% if comment.commentator == user %}
+                            <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <p>No comments yet. Be the first to comment!</p>
+                {% endfor %}
             </div>
         </div>
     </div>
+
+    <!-- Comment Form Section / here new comments can be made -->
+    <div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
+        <h3>Leave a comment:</h3>
+        <div class="card mb-4">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                    <p>Posting as: {{ user.username }}</p>
+                    <form id="commentForm" method="post" style="margin-top: 1rem;">
+                        {% csrf_token %}
+                        <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here..."></textarea>
+                        <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
+                    </form>
+
+                    <!-- Display comments by a user regardless of the approval status and only user who submitted can see the comment -->
+                    {% for comment in user_comments %}
+                        <div class="comment">
+                            <p>{{ comment.comment_text }}</p>
+                            {% if comment.approved %}
+                                <p class="approval-success">Approved</p>
+                            {% else %}
+                                <p class="pending-approval">Pending Approval</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>Please register or log in to create a comment</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
     {% if comment_to_edit %}
         <div class="row mt-4">
