@@ -104,11 +104,11 @@ Iteration 4 has a major focus on the CRUD functionality for registered users. Sp
 
 **Iteration 4 | Milestone 4 at the start of Iteration 4**
 
-![Iteration_3_milestone](docs/agile/iteration_4_milestone_board_before_iteration_4.png)
+![Iteration_4_milestone](docs/agile/iteration_4_milestone_board_before_iteration_4.png)
 
 **Kanban board before start of Iteration 4**
 
-![Kanban_Board_before_start_iteration_3](docs/agile/kanban_board_at_start_of_iteration_4.png)
+![Kanban_Board_before_start_iteration_4](docs/agile/kanban_board_at_start_of_iteration_4.png)
 
 Documentation of progress:
 
@@ -121,15 +121,38 @@ Documentation of progress:
 
 **Iteration 4 | Milestone 4 at the end of Iteration 4**
 
-![Milestone_Board_after_Iteration_3](docs/agile/iteration_4_milestone_board_after_iteration_4_completed.png)
+![Milestone_Board_after_Iteration_4](docs/agile/iteration_4_milestone_board_after_iteration_4_completed.png)
 
 **Kanban board at the end of Iteration 4**
 
-![Kanban_Board_after_iteration_3](docs/agile/kanban_board_at_end_of_iteration_4.png)
+![Kanban_Board_after_iteration_4](docs/agile/kanban_board_at_end_of_iteration_4.png)
 
 
+## Iteration 5 | Milestone 5
 
+Iteration 5 ...is about 
 
+**Iteration 5 | Milestone 5 at the start of Iteration 4**
 
+![Iteration_5_milestone](docs/agile/)
+
+**Kanban board before start of Iteration 4**
+
+![Kanban_Board_before_start_iteration_5](docs/agile/)
+
+Documentation of progress:
+
+-
+-
+-
+-
+
+**Iteration 5 | Milestone 5 at the end of Iteration 5**
+
+![Milestone_Board_after_Iteration_5](docs/agile/)
+
+**Kanban board at the end of Iteration 5**
+
+![Kanban_Board_after_iteration_5](docs/agile/)
 
 
