@@ -116,16 +116,16 @@ Documentation of progress:
 - The last user story (implementing edit and delete) was time-consuming with all the custom CSS styles I have defined before. I made a makeover of the comment functionality for registered users to ensure that registered users can see the comments submitted but not yet approved
 - Using crispy forms and building crispy forms into my codebase has turned out to be much more difficult than the learning material for crispy suggested
 - On my final day of Iteration 4 I struggled with an error message "ERROR:  Failed to acquire permit to connect to the database. Too many database connection attempts are currently ongoing." for a few hours. I was not able to resolve the connection to the database myself and patiently used python manage.py runserver numerous times to have my code running locally
-- 
-- 
+- Iteration 4 was closed on Aug. 27, 2024 as planned for this sprint leaving two user stories open. Both users stories were "should have" for Iteration 4. Both user stories will be rolled forward to Iteration 5. Some of the user story #18 (edit comments) was completed in Iteration 4 leaving only the functionality of "delete comment" to be worked on in Iteration 5
+- Regular manual testing and validation of python code/html/css was done during Iteration 4 so that potential mistakes in the codebase can be spotted as eaerly as possible
 
 **Iteration 4 | Milestone 4 at the end of Iteration 4**
 
-![Milestone_Board_after_Iteration_3](docs/agile/)
+![Milestone_Board_after_Iteration_3](docs/agile/iteration_4_milestone_board_after_iteration_4_completed.png)
 
-**Kanban board at the end ofIteration 4**
+**Kanban board at the end of Iteration 4**
 
-![Kanban_Board_after_iteration_3](docs/agile)
+![Kanban_Board_after_iteration_3](docs/agile/kanban_board_at_end_of_iteration_4.png)
 
 
 
