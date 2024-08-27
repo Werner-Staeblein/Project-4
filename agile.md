@@ -130,15 +130,16 @@ Documentation of progress:
 
 ## Iteration 5 | Milestone 5
 
-Iteration 5 ...is about 
+Iteration 5 has its primary focus on finishing the CRUD functionality with the "D" (delete) from user story #18 still open and already placed into "in progress" in the Kanban board at the start of Iteration 5. The split of user stories again 60% must have 40% should have/could have. Further focus in Iteration 5 is on the
+creation of original models that are not included in the CI walkthrough material. This is to address a key specification and requirement of PP-4.
 
 **Iteration 5 | Milestone 5 at the start of Iteration 4**
 
-![Iteration_5_milestone](docs/agile/)
+![Iteration_5_milestone](docs/agile/iteration_5_milestone_board_before_iteration_5.png)
 
-**Kanban board before start of Iteration 4**
+**Kanban board before start of Iteration 5**
 
-![Kanban_Board_before_start_iteration_5](docs/agile/)
+![Kanban_Board_before_start_iteration_5](docs/agile/kanban_board_at_start_of_iteration_5.png)
 
 Documentation of progress:
 
