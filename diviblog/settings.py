@@ -60,7 +60,6 @@ INSTALLED_APPS = [
 # bootstrap 5 as I use Bootstrap CDN with version 5
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-
 # The constants for allauth / redirection to home page
 # when logged in or logged out
 

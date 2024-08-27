@@ -125,6 +125,8 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[CrispyForms](https://pypi.org/project/django-crispy-forms/)** Crispy Forms is a third-party Django app to manage Django forms with Bootstrap styles		
 
+**[Crispy Bootstrap5](https://pypi.org/project/crispy-bootstrap5/)** Crispy Bootstrap5 is a Bootstrap template pack for Django Crispy Forms
+
 **[Summernote](https://summernote.org/)** Summernote is a JavaScript library that allows to create a WYSIWYG (What You See Is What You Get) editor
 
 **[Gunicorn](https://gunicorn.org/)** Gunicorn is a Python WSGI HTTP Server for UNIX. WSGI stands for Web Server Gateway Interface and is a specification for communication between web servers and Python web applications. Gunicorn is the equivalent of 'manage.py runserver' used in the development but with speed and security optimization
