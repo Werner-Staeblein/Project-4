@@ -7,5 +7,3 @@ urlpatterns = [
     path('post/<slug:slug>/edit_comment/<int:comment_id>/', comment_edit, name='comment_edit'),
     # path('blog/<slug:slug>/delete/', delete_post, name='delete_post'),
 ]
-
-

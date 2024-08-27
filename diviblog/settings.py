@@ -52,13 +52,15 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
-    'crispy_bootstrap5',
     'crispy_forms',
+    'crispy_bootstrap5',
     'blog',
 ]
 
 # bootstrap 5 as I use Bootstrap CDN with version 5
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 # The constants for allauth / redirection to home page
 # when logged in or logged out
