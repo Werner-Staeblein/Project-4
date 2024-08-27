@@ -44,45 +44,46 @@ def blogpost_detail(request, slug):
     -   `blog/single_post.html`: The template displaying the post details
         and comments.
     """
-    # Get the post object, ensuring it has a status of 1 (published)
+
     queryset = DividendPosts.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
 
-    # Get all approved comments related to the post, ordered
-    # by the date the comment was created
+    # Get approved comments
     comments = post.discussions.filter(approved=True).order_by("-comment_date")
-    comment_submitted = False
+    comment_count = comments.count()
 
-    # Count the number of approved comments
-    comment_count = post.discussions.filter(approved=True).count()
+    # Initialize user_comments
+    user_comments = []
+
+    # Check if the user is authenticated and get their comments
+    if request.user.is_authenticated:
+        user_comments = post.discussions.filter(commentator=request.user)
+
+    comment_form = CommentForm()
 
     # Handle the comment form submission
     if request.method == "POST":
+        if request.user.is_authenticated:
+            comment_form = CommentForm(data=request.POST)
+            if comment_form.is_valid():
+                new_comment = comment_form.save(commit=False)
+                new_comment.commentator = request.user
+                new_comment.article = post
+                new_comment.save()
 
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            new_comment = comment_form.save(commit=False)
-            new_comment.commentator = request.user  # Current user=commentator
-            new_comment.article = post  # Associate the comment with the post
-            new_comment.save()  # Save the comment
-
-            # Display a success message to the user once comment is submitted
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Your comment was submitted and awaits approval.'
+                messages.success(
+                    request,
+                    'Your comment was submitted and awaits approval.'
+                )
+                return redirect('blogpost_detail', slug=post.slug)
+        else:
+            messages.error(
+                request,
+                "You must be logged in to submit a comment."
             )
+            return redirect('blogpost_detail', slug=post.slug)
 
-            # render the post detail page with the message
-            return render(request, 'blog/single_post.html', {
-                'post': post,
-                'comments': comments,
-                'comment_submitted': comment_submitted,
-            })
-
-    else:
-        comment_form = CommentForm()  # Handle GET request
-
-    # Render the template with the provided context
+    # Render template context
     return render(
         request,
         "blog/single_post.html",
@@ -90,7 +91,8 @@ def blogpost_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "comment_form": comment_form,
+            "user_comments": user_comments,
         },
     )
 
@@ -141,9 +143,14 @@ def blogpost_detail(request, slug):
     # Count the number of approved comments
     comment_count = comments.count()
 
-    # all user comments retrived and stored where logged-in user is
-    # the one to have made a comment before
-    user_comments = post.discussions.filter(commentator=request.user)
+    # Initialize user_comments to an empty queryset
+    user_comments = post.discussions.none()
+
+    # Only filter user comments if the user is authenticated
+    if request.user.is_authenticated:
+        user_comments = post.discussions.filter(commentator=request.user)
+
+    comments = post.discussions.filter(approved=True)
 
     # Handle the comment form submission
     if request.method == "POST":

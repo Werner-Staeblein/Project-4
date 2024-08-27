@@ -112,10 +112,10 @@ Iteration 4 has a major focus on the CRUD functionality for registered users. Sp
 
 Documentation of progress:
 
-- 
-- 
-- 
-- 
+- Iteration 4 went well for the first user stories. I did review the learning material again for 15 hours to see where my code can be improved and to try to understand that my codebase is written well enough for someone to read
+- The last user story (implementing edit and delete) was time-consuming with all the custom CSS styles I have defined before. I made a makeover of the comment functionality for registered users to ensure that registered users can see the comments submitted but not yet approved
+- Using crispy forms and building crispy forms into my codebase has turned out to be much more difficult than the learning material for crispy suggested
+- On my final day of Iteration 4 I struggled with an error message "ERROR:  Failed to acquire permit to connect to the database. Too many database connection attempts are currently ongoing." for a few hours. I was not able to resolve the connection to the database myself and patiently used python manage.py runserver numerous times to have my code running locally
 - 
 - 
 

@@ -68,34 +68,34 @@
         </div>
     </div>
 
-    <!-- Comment Form Section / here new comments can be made -->
-    <div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
-        <h3>Leave a comment:</h3>
-        <div class="card mb-4">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                    <p>Posting as: {{ user.username }}</p>
-                    <form id="commentForm" method="post" style="margin-top: 1rem;">
-                        {% csrf_token %}
-                        {{ comment_form|crispy }}
-                        <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
-                    </form>
-                    
-                    <!-- Display comments by a user regardless of the approval status and only user who submitted can see the comment -->
-                    {% for comment in user_comments %}
-                        <div class="comment">
-                            <p>{{ comment.comment_text }}</p>
-                            {% if comment.approved %}
-                                <p class="approval-success">Approved</p>
-                            {% else %}
-                                <p class="pending-approval">Pending Approval</p>
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                {% else %}
-                    <p>Please register or log in to create a comment</p>
-                {% endif %}
-            </div>
+<!-- Comment Form Section / here new comments can be made -->
+<div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
+    <h3>Leave a comment:</h3>
+    <div class="card mb-4">
+        <div class="card-body">
+            {% if user.is_authenticated %}
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1rem;">
+                    {% csrf_token %}
+                    {{ comment_form|crispy }}
+                    <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
+                </form>
+                
+                <!-- Display comments by a user regardless of the approval status and only user who submitted can see the comment -->
+                {% for comment in user_comments %}
+                    <div class="comment">
+                        <p>{{ comment.comment_text }}</p>
+                        {% if comment.approved %}
+                            <p class="approval-success">Approved</p>
+                        {% else %}
+                            <p class="pending-approval">Pending Approval</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                
+                <p>Please register or log in to create a comment.</p>
+            {% endif %}
         </div>
     </div>
 </div>
