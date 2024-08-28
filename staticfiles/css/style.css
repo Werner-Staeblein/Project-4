@@ -41,6 +41,7 @@ body {
 
 .jumbotron {
     background-color: #ffffff !important;
+    padding-bottom: 1rem;
 } 
 
 /*---------------------------------------------------------------------------------
@@ -80,8 +81,8 @@ body {
                         Styling of login status in navbar
 ----------------------------------------------------------------------------------*/
 
-#navbar-container #login-status {
-    background: var(-background) !important;
+#login-status {
+    background-color: red;
     color: black;
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -106,8 +107,32 @@ body {
     box-shadow: 0 0.4rem 0.7rem black;
 }
 
-.landing-btn:hover {
+.landing-btn-1{
+    background-color: var(--headline);
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 0.4rem 0.7rem black;
+    color: white;
+}
+
+.landing-btn-1:hover{
+    background-color: var(--headline);
+    color: black;
+}
+
+.common-btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.landing-btn:hover,
+.landing-btn-1:hover {
     box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.landing-btn-1:hover {
+    color: white;
 }
 
 /*---------------------------------------------------------------------------------
@@ -270,28 +295,15 @@ body {
     color: white;
 }
 
-.alert-error-custom {
-    background-color: var(--alternate-bg-error);
-    color: darkred;
-}
-
-.alert-logout-custom,
-.alert-signin-custom {
-    background-color: var(--alternate-bg);
-    color: var(--text2);
-}
-
-.alert-custom .btn-close {
-    width: 1.3rem;
-    height: 1.3rem;
+.btn-close.custom-close{
+    margin-left: 1rem;
     color: white !important;
-    background-color: transparent !important;
-    border: none !important;
-    font-size: 1.2rem;
-    opacity: 1;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    opacity: 1;
 }
 
 /*-------------------------------------------------------------------------
@@ -299,8 +311,82 @@ body {
 ---------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------
+        Styles for approval messages to users (approved or pending approval)
+---------------------------------------------------------------------------*/
+
+/* Success message for an approved comment to the user who made the comment */
+.approval-success {
+    background-color: var(--alternate-bg-success);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin: 1rem auto 0 auto;
+    font-weight: bold;
+    font-size: 0.7rem;
+    max-width: 50%;
+    text-align: center;
+}
+
+/* Message to a user who made a comment that comment is still pending approval */
+.pending-approval {
+    background-color: var(--alternate-bg-error);
+    color: black;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin: 1rem auto 0 auto;
+    font-weight: bold;
+    max-width: 50%;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------
+        Customize the delete modal on size, button and font-size
+---------------------------------------------------------------------------*/
+
+.custom-modal {
+    max-width: 50% !important;
+}
+
+.modal-content {
+    height: 50vh !important;
+}
+
+.delete-confirm-btn{
+    background-color: var(--headline);
+    color: white;
+    margin-left: 1rem;
+    max-width: 40%;
+}
+
+.close-confirm-btn{
+    max-width: 40%;
+}
+
+.modal-body {
+    font-size: 1.4rem;
+}
+
+
+/*-------------------------------------------------------------------------
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
+
+@media (max-width: 1100px) {
+
+    .approval-success {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        max-width: 75%;
+    }
+        
+    .pending-approval {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        max-width: 75%;
+    } 
+}
+
 
 @media (max-width: 991px) {
 
@@ -322,26 +408,71 @@ body {
     margin-left: 0.8rem; 
 }
 
+.custom-link {
+    width: 80% !important;
+    font-size: 0.8rem !important;
+    margin-top: 1rem;
+}
+
+}
+
+@media (max-width: 926px) {
+    .alert-custom {
+        font-size: 1rem;
+    }
+
+    .approval-success {
+        padding: 0.4rem;
+        font-size: 0.4rem;
+        max-width: 95%;
+    }
+        
+    .pending-approval {
+        padding: 0.4rem;
+        font-size: 0.4rem;
+        max-width: 95%;
+    } 
+}
+
+@media (max-width: 860px) {
+
+.comment-submit {
+    width: 80% !important;
+    font-size: 0.9rem !important;
+}
 }
 
 /* Media Query for AllAuth messages so that message does not overlap with the closing button */
 
-@media (max-width: 520px) {
-.alert-custom {
-    font-size: 1rem;
-    padding: 0.5rem;
-    max-width: 90%;
-    line-height: 1.4;
+@media (max-width: 576px) {
+    .alert-custom {
+        font-size: 1.1rem;
+        padding: 0.75rem;
+    }
+
+    .btn-close {
+        font-size: 1.2rem;
+    }
 }
 
-.alert-custom .btn-close {
-    width: 1.1rem;
-    height: 1.1rem;
-    font-size: 1rem;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/*  Media Query for AllAuth messages so that message does not overlap 
+    with the closing button + smaller buttons */
+
+
+@media (max-width: 400px) {
+    .custom-link {
+        width: 80% !important;
+        font-size: 0.8rem !important;
+    }
+
+    .alert-custom {
+        font-size: 0.8rem;
+        padding: 0.75rem;
+    }
+
+    .btn-close {
+        font-size: 1rem;
+    }
 }
-}
+
+
