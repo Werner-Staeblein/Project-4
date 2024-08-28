@@ -48,34 +48,34 @@
                 {% endif %}
                 
                 <!-- Comments that have already been approved by admin are shown here -->
-                {% for comment in comments %}
-                    <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                        <p class="font-weight-bold">
-                        {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
-                        </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.comment_text|linebreaks }}
-                    </div>
+            {% for comment in comments %}
+        <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+    <p class="font-weight-bold">
+        {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
+    </p>
+    <div id="comment{{ comment.id }}">
+        {{ comment.comment_text|linebreaks }}
+    </div>
 
-                <!-- Edit button to edit comment previously made -->
-                {% if comment.commentator == user %}
-                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
-            
-                <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
-                 javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
-                 "where the user came from" and the comment for deletion has now been deleted -->
-                
-                <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" 
-                data-comment-id="{{ comment.id }}" data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
-                Delete
-                </button>
+    <!-- Edit button to edit comment previously made -->
+    {% if comment.commentator == user %}
+        <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
 
-                {% endif %}
-            </div> 
+        <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
+        javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
+        "where the user came from" and the comment for deletion has now been deleted -->
+        <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" 
+            data-comment-id="{{ comment.id }}" 
+            data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
+            Delete
+        </button>
+    {% endif %}
+</div> 
 
-            {% empty %}
-            <p>No comments yet. Be the first to comment!</p>
-            {% endfor %}
+{% empty %}
+<p>No comments yet. Be the first to comment!</p>
+{% endfor %}
+
 
         </div>
     </div>

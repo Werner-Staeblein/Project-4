@@ -190,45 +190,36 @@ def blogpost_detail(request, slug):
 
 
 def comment_edit(request, slug, comment_id):
-    """View to allow users to edit their own comments."""
+    """View to allow users to edit their own comments regardless of
+    approval status."""
 
-    # Fetch the post using the slug
+    # Obtain the post using the slug / starting point
     post = get_object_or_404(DividendPosts, slug=slug)
 
-    # Filter for specific comment by its ID and the logged-in user
-    query = Discussion.objects.filter(pk=comment_id, commentator=request.user)
+    # Obtain the comment that belongs to a specific
+    # logged-in user and blogpost
+    comment = get_object_or_404(
+        Discussion, pk=comment_id, commentator=request.user)
 
-    # Retrieve the comment or return a 404 error if inexistent
-    comment = get_object_or_404(query)
-
-    # Ensure the user is the author of the comment
-    if comment.commentator != request.user:
-        messages.error(request, "You have no permission to edit this comment.")
-        return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
-
-    # Pre-fill the form with the existing comment for GET requests
+    # This is for GET request. Form shows existing comments
     comment_form = CommentForm(instance=comment)
 
     if request.method == "POST":
-        # Populate the form with the new data and the
-        # existing comment instance
+
         comment_form = CommentForm(request.POST, instance=comment)
 
         if comment_form.is_valid():
             updated_comment = comment_form.save(commit=False)
-            updated_comment.approved = False  # Reset approval (comment edited)
+            # Comment not approved AFTER editing
+            updated_comment.approved = False
             updated_comment.save()
-            messages.success(request,
-                             "Comment updated successfully. Awaits approval")
+            messages.success(
+                request,
+                "Comment updated successfully. Awaits approval.")
             return HttpResponseRedirect(
                 reverse('blogpost_detail', args=[slug]))
 
-    # This line picks all comments by a user whether approved or not approved
-    # but the comments NOT approved are still visible to the user who made
-    # the comment while this comment submitted BUT NOT approved is not visible
-    # to users other than the user who submitted the comment and is still
-    # awaiting approval on the comment
-
+    # Show all comments made by the user to be displayed
     user_comments = Discussion.objects.filter(commentator=request.user)
 
     return render(request, 'blog/edit_comment.html', {
@@ -240,21 +231,21 @@ def comment_edit(request, slug, comment_id):
 
 
 def delete_comment(request, slug, comment_id):
-    ''' View to delete a comment. A registered user who submitted
-    a comment before can delete the comment previously made'''
+    """View to delete a comment. A registered user who submitted
+    a comment can delete their comment regardless of approval status."""
 
-    queryset = DividendPosts.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comment = get_object_or_404(Discussion, pk=comment_id)
+    # Obtain the post using the slug / starting point
+    post = get_object_or_404(DividendPosts, slug=slug)
 
-    if comment.commentator == request.user:
-        comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Your comment is deleted')
-    else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments')
+    # Obtain the comment of that particular user logged-in
+    comment = get_object_or_404(
+        Discussion, pk=comment_id, commentator=request.user)
+
+    # Delete the comment
+    comment.delete()
+    messages.success(request, 'Your comment has been deleted.')
 
     return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
-
 
 
 def custom_404(request, exception=None):
