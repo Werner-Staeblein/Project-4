@@ -234,18 +234,17 @@ def delete_comment(request, slug, comment_id):
     """View to delete a comment. A registered user who submitted
     a comment can delete their comment regardless of approval status."""
 
-    # Obtain the post using the slug / starting point
+    # Obtain the post using the slug
     post = get_object_or_404(DividendPosts, slug=slug)
 
     # Obtain the comment of that particular user logged-in
-    comment = get_object_or_404(
-        Discussion, pk=comment_id, commentator=request.user)
+    comment = get_object_or_404(Discussion, pk=comment_id, commentator=request.user)
 
     # Delete the comment
     comment.delete()
     messages.success(request, 'Your comment has been deleted.')
 
-    return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
+    return redirect('blogpost_detail', slug=slug)
 
 
 def custom_404(request, exception=None):

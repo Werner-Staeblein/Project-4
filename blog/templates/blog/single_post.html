@@ -62,17 +62,11 @@
                             {{ comment.comment_text|linebreaks }}
                         </div>
 
-                        <!-- Edit button to edit comment previously made -->
                         {% if comment.commentator == user %}
                         <a href="{% url 'comment_edit' post.slug comment.id %}"
                             class="btn landing-btn d-block mx-auto w-50 custom-link common-btn mb-3">Edit</a>
 
-                        <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
-        javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
-        "where the user came from" and the comment for deletion has now been deleted -->
-                        <button type="button"
-                            class="btn landing-btn-1 d-block mx-auto w-50 custom-link common-btn delete-button"
-                            data-comment-id="{{ comment.id }}"
+                        <button type="button" class="btn delete-button landing-btn-1 d-block mx-auto w-50 common-btn"
                             data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
                             Delete
                         </button>
@@ -142,11 +136,9 @@
 <!-- Button Link Back to Blog -->
 <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5 common-btn">Back to all
     Posts</a>
-</div>
+
 
 <!-- Bootstrap Modal for confirmation of delete of comment -->
-
-<!-- Modal to confirm delete of a comment -->
 
 <div class="modal fade" id="ModalForDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -160,14 +152,12 @@
                 Are you sure you want to delete this comment?
             </div>
             <div class="modal-footer">
-                <a id="deleteConfirm" class="btn landing-btn-1 d-block mx-auto w-47 common-btn delete-button" href="#"
-                    data-comment-url="">Delete</a>
+                <a id="deleteConfirm" class="btn landing-btn-1 d-block mx-auto w-47 common-btn" href="#">Delete</a>
                 <button type="button" class="btn landing-btn d-block mx-auto w-47 common-btn"
                     data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
-
 
 {% endblock %}

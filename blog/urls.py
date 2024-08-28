@@ -8,4 +8,5 @@ urlpatterns = [
          comment_edit, name='comment_edit'),
     path('post/<slug:slug>/delete_comment/<int:comment_id>/',
          delete_comment, name='delete_comment'),
+
 ]
