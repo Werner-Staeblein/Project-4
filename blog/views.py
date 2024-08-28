@@ -239,5 +239,23 @@ def comment_edit(request, slug, comment_id):
     })
 
 
+def delete_comment(request, slug, comment_id):
+    ''' View to delete a comment. A registered user who submitted
+    a comment before can delete the comment previously made'''
+
+    queryset = DividendPosts.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Discussion, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Your comment is deleted')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments')
+
+    return HttpResponseRedirect(reverse('blogpost_detail', args=[slug]))
+
+
+
 def custom_404(request, exception=None):
     return render(request, '404.html', status=404)
