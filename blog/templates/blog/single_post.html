@@ -59,6 +59,7 @@
                         <!-- Edit previous comment button -->
                         {% if comment.commentator == user %}
                             <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
+                            <a href="{% url 'delete_comment' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" data-comment-id="{{ comment.id }}">Delete</a>
                         {% endif %}
                     </div>
                 {% empty %}
@@ -120,4 +121,31 @@
     <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5 common-btn">Back to all Posts</a>
 </div>
 
+<!-- Bootstrap Modal for confirmation of delete of comment -->
+
+<div class="modal fade" id="ModalForDelete" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+ 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Do you want to delete the comment?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your comment?
+        This action will permanently delete the comment.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
