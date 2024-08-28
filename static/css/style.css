@@ -372,6 +372,22 @@ body {
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
 
+@media (max-width: 1100px) {
+
+    .approval-success {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        max-width: 75%;
+    }
+        
+    .pending-approval {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        max-width: 75%;
+    } 
+}
+
+
 @media (max-width: 991px) {
 
 /* Avoid here that first nav-item touches the hamburger on smaller screens  */
@@ -404,6 +420,26 @@ body {
     .alert-custom {
         font-size: 1rem;
     }
+
+    .approval-success {
+        padding: 0.4rem;
+        font-size: 0.4rem;
+        max-width: 95%;
+    }
+        
+    .pending-approval {
+        padding: 0.4rem;
+        font-size: 0.4rem;
+        max-width: 95%;
+    } 
+}
+
+@media (max-width: 860px) {
+
+.comment-submit {
+    width: 80% !important;
+    font-size: 0.9rem !important;
+}
 }
 
 /* Media Query for AllAuth messages so that message does not overlap with the closing button */
