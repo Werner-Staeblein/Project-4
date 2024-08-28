@@ -315,8 +315,11 @@ body {
     color: white;
     padding: 0.5rem;
     border-radius: 0.2rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto 0 auto;
     font-weight: bold;
+    font-size: 0.7rem;
+    max-width: 50%;
+    text-align: center;
 }
 
 /* Message to a user who made a comment that comment is still pending approval */
@@ -325,8 +328,11 @@ body {
     color: black;
     padding: 0.5rem;
     border-radius: 0.2rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto 0 auto;
     font-weight: bold;
+    max-width: 50%;
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 /*-------------------------------------------------------------------------

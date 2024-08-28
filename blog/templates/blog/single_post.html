@@ -4,11 +4,12 @@
 {% load static %}
 
 {% block title %}
-    {{ post.headline }} - Dividend Dynamics
+{{ post.headline }} - Dividend Dynamics
 {% endblock %}
 
 {% block content %}
-<div class="container my-5 jumbotron bg-light rounded">
+<div class="container my-5 jumbotron bg-light rounded" style="max-width: 80%; margin: 0 auto;">
+
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <h1 class="card-title my-5">{{ post.headline }}</h1>
@@ -23,121 +24,132 @@
             </p>
             <div class="col-12">
                 <strong>
-                  <i class="far fa-comments"></i> {{ comment_count }}
+                    <i class="far fa-comments"></i> {{ comment_count }}
                 </strong>
-              </div>         
-        </div>
-    </div>
-
-    <!-- Comments and Comment Form Section -->
-    <div class="row mt-4">
-    
-    <!-- Comments Section -->
-    <div class="col-md-6"> <!-- This is the FIRST column on the left for the comments in the comment form -->
-        <h3>Comments:</h3>
-        <div class="card mb-4">
-            <div class="card-body">
-                
-                <!-- Django messages framework for message "comment is awaiting approval" -->
-                {% if messages %}
-                <div class="alert alert-info" role="alert">
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
-                </div>
-                {% endif %}
-                
-                <!-- Comments that have already been approved by admin are shown here -->
-            {% for comment in comments %}
-        <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-    <p class="font-weight-bold">
-        {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
-    </p>
-    <div id="comment{{ comment.id }}">
-        {{ comment.comment_text|linebreaks }}
-    </div>
-
-    <!-- Edit button to edit comment previously made -->
-    {% if comment.commentator == user %}
-        <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
-
-        <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
-        javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
-        "where the user came from" and the comment for deletion has now been deleted -->
-        <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" 
-            data-comment-id="{{ comment.id }}" 
-            data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
-            Delete
-        </button>
-    {% endif %}
-</div> 
-
-{% empty %}
-<p>No comments yet. Be the first to comment!</p>
-{% endfor %}
-
-
-        </div>
-    </div>
-</div>
-
-<!-- Comment Form Section / here new comments can be made -->
-<div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
-    <h3>Leave a comment:</h3>
-    <div class="card mb-4">
-        <div class="card-body">
-            {% if user.is_authenticated %}
-                <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post" style="margin-top: 1rem;">
-                    {% csrf_token %}
-                    {{ comment_form|crispy }}
-                    <button id="submitButton" type="submit" class="btn landing-btn my-5 d-block mx-auto w-100 common-btn">Submit</button>
-                </form>
-                
-                <!-- Display comments by a user regardless of the approval status and only user who submitted can see the comment -->
-                {% for comment in user_comments %}
-                    <div class="comment">
-                        <p>{{ comment.comment_text }}</p>
-                        {% if comment.approved %}
-                            <p class="approval-success">Approved</p>
-                        {% else %}
-                            <p class="pending-approval">Pending Approval</p>
-                        {% endif %}
-                    </div>
-                {% endfor %}
-            {% else %}
-                
-                <p>Please register or log in to create a comment.</p>
-            {% endif %}
-        </div>
-    </div>
-</div>
-
-    <!-- Comment to edit with rendering edit comment -->
-
-    {% if comment_to_edit %}
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h3>Edit Comment</h3>
-                <form method="post" action="{% url 'comment_edit' post.slug comment_to_edit.id %}">
-                    {% csrf_token %}
-                    <textarea name="comment_text" class="form-control" rows="4" required placeholder="Write your comment here...">{{ comment_to_edit.comment_text }}</textarea>
-                    <button type="submit" class="btn btn-primary">Update Comment</button>
-                    <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary common-btn">Cancel</a>
-                </form>
             </div>
         </div>
-    {% endif %}
+    </div>
+</div>
 
-    <!-- Button Link Back to Blog -->
-    <a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5 common-btn">Back to all Posts</a>
+<!-- Comments and Comment Form Section -->
+<div class="container" style="max-width: 60%;">
+    <div class="row mt-4">
+
+        <!-- Comments Section -->
+        <div class="col-md-6"> <!-- This is the FIRST column on the left for the comments in the comment form -->
+            <h3>Comments:</h3>
+            <div class="card mb-4">
+                <div class="card-body">
+
+                    <!-- Django messages framework for message "comment is awaiting approval" -->
+                    {% if messages %}
+                    <div class="alert alert-info" role="alert">
+                        {% for message in messages %}
+                        {{ message }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Comments that have already been approved by admin are shown here -->
+                    {% for comment in comments %}
+                    <div
+                        class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font-weight-bold">
+                            {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span>
+                            wrote:
+                        </p>
+                        <div id="comment{{ comment.id }}">
+                            {{ comment.comment_text|linebreaks }}
+                        </div>
+
+                        <!-- Edit button to edit comment previously made -->
+                        {% if comment.commentator == user %}
+                        <a href="{% url 'comment_edit' post.slug comment.id %}"
+                            class="btn landing-btn d-block mx-auto w-50 custom-link common-btn mb-3">Edit</a>
+
+                        <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
+        javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
+        "where the user came from" and the comment for deletion has now been deleted -->
+                        <button type="button"
+                            class="btn landing-btn-1 d-block mx-auto w-50 custom-link common-btn delete-button"
+                            data-comment-id="{{ comment.id }}"
+                            data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
+                            Delete
+                        </button>
+                        {% endif %}
+                    </div>
+
+                    {% empty %}
+                    <p>No comments yet. Be the first to comment!</p>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Form Section / here new comments can be made -->
+        <div class="col-md-6 px-4 mb-4"> <!-- This is the SECOND column in the make comment section -->
+            <h3>Leave a comment:</h3>
+            <div class="card mb-4">
+                <div class="customized-comment-form" style="width: 100%;">
+                    {% if user.is_authenticated %}
+                    <p>Posting as: {{ user.username }}</p>
+                    <form id="commentForm" method="post" style="margin-top: 1rem;">
+                        {% csrf_token %}
+                        {{ comment_form|crispy }}
+                        <button id="submitButton" type="submit"
+                            class="btn landing-btn my-5 d-block mx-auto w-50 common-btn">Submit</button>
+                    </form>
+
+                    <!-- Display comments by a user regardless of the approval status and only user who submitted can see the comment -->
+                    {% for comment in user_comments %}
+                    <div class="comment px-3">
+                        <p>{{ comment.comment_text }}</p>
+                        {% if comment.approved %}
+                        <p class="approval-success">Approved</p>
+                        {% else %}
+                        <p class="pending-approval">Pending Approval</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% else %}
+
+                    <p>Please register or log in to create a comment.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comment to edit with rendering edit comment -->
+
+{% if comment_to_edit %}
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h3>Edit Comment</h3>
+        <form method="post" action="{% url 'comment_edit' post.slug comment_to_edit.id %}">
+            {% csrf_token %}
+            <textarea name="comment_text" class="form-control" rows="4" required
+                placeholder="Write your comment here...">{{ comment_to_edit.comment_text }}</textarea>
+            <button type="submit" class="btn btn-primary">Update Comment</button>
+            <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary common-btn">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+<!-- Button Link Back to Blog -->
+<a href="{% url 'blog_index' %}" class="btn landing-btn d-block mx-auto w-50 custom-link mb-5 common-btn">Back to all
+    Posts</a>
 </div>
 
 <!-- Bootstrap Modal for confirmation of delete of comment -->
 
 <!-- Modal to confirm delete of a comment -->
 
-<div class="modal fade" id="ModalForDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalForDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -148,8 +160,8 @@
                 Are you sure you want to delete this comment?
             </div>
             <div class="modal-footer">
-                <a id="deleteConfirm" class="btn btn-danger" href="#" data-comment-url="">Delete</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" class="btn landing-btn-1 d-block mx-auto w-50 custom-link common-btn delete-button" href="#" data-comment-url="">Delete</a>
+                <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn mb-3" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
