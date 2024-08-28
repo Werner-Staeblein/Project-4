@@ -330,6 +330,34 @@ body {
 }
 
 /*-------------------------------------------------------------------------
+        Customize the delete modal on size, button and font-size
+---------------------------------------------------------------------------*/
+
+.custom-modal {
+    max-width: 50% !important;
+}
+
+.modal-content {
+    height: 50vh !important;
+}
+
+.delete-confirm-btn{
+    background-color: var(--headline);
+    color: white;
+    margin-left: 1rem;
+    max-width: 40%;
+}
+
+.close-confirm-btn{
+    max-width: 40%;
+}
+
+.modal-body {
+    font-size: 1.4rem;
+}
+
+
+/*-------------------------------------------------------------------------
         Media Queries / responsiveness
 ---------------------------------------------------------------------------*/
 
