@@ -115,6 +115,11 @@ body {
     color: white;
 }
 
+.landing-btn-1:hover{
+    background-color: var(--headline);
+    color: black;
+}
+
 .common-btn {
     font-size: 1.3rem;
     font-weight: bold;
