@@ -37,6 +37,7 @@
         <h3>Comments:</h3>
         <div class="card mb-4">
             <div class="card-body">
+                
                 <!-- Django messages framework for message "comment is awaiting approval" -->
                 {% if messages %}
                 <div class="alert alert-info" role="alert">
@@ -50,24 +51,35 @@
                 {% for comment in comments %}
                     <div class="p-2 comments{% if not comment.approved and comment.commentator == user %} faded{% elif not comment.approved %} d-none{% endif %}">
                         <p class="font-weight-bold">
-                            {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
+                        {{ comment.commentator }} <span>{{ comment.comment_date|date:"F j, Y, g:i a" }}</span> wrote:
                         </p>
-                        <div id="comment{{ comment.id }}">
-                            {{ comment.comment_text|linebreaks }}
-                        </div>
-
-                        <!-- Edit previous comment button -->
-                        {% if comment.commentator == user %}
-                            <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
-                            <a href="{% url 'delete_comment' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" data-comment-id="{{ comment.id }}">Delete</a>
-                        {% endif %}
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.comment_text|linebreaks }}
                     </div>
-                {% empty %}
-                    <p>No comments yet. Be the first to comment!</p>
-                {% endfor %}
-            </div>
+
+                <!-- Edit button to edit comment previously made -->
+                {% if comment.commentator == user %}
+                <a href="{% url 'comment_edit' post.slug comment.id %}" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn">Edit</a>
+            
+                <!-- Delete comment associated with a blog post. Click triggers JS event handled in script.js
+                 javascript will make modal visible. Final deletion is by user in modal with redirect to blog post
+                 "where the user came from" and the comment for deletion has now been deleted -->
+                
+                <button type="button" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-button" 
+                data-comment-id="{{ comment.id }}" data-comment-url="{% url 'delete_comment' post.slug comment.id %}">
+                Delete
+                </button>
+
+                {% endif %}
+            </div> 
+
+            {% empty %}
+            <p>No comments yet. Be the first to comment!</p>
+            {% endfor %}
+
         </div>
     </div>
+</div>
 
 <!-- Comment Form Section / here new comments can be made -->
 <div class="col-md-6"> <!-- This is the SECOND column in the make comment section -->
@@ -123,29 +135,25 @@
 
 <!-- Bootstrap Modal for confirmation of delete of comment -->
 
-<div class="modal fade" id="ModalForDelete" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
- 
-  <div class="modal-dialog custom-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Do you want to delete the comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action will permanently delete the comment.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn landing-btn d-block mx-auto custom-link w-50 common-btn close-confirm-btn"
-          data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn landing-btn d-block mx-auto w-50 custom-link common-btn delete-confirm-btn">Delete</a>
-      </div>
+<!-- Modal to confirm delete of a comment -->
+
+<div class="modal fade" id="ModalForDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this comment?
+            </div>
+            <div class="modal-footer">
+                <a id="deleteConfirm" class="btn btn-danger" href="#" data-comment-url="">Delete</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<script src="{% static 'js/script.js' %}"></script>
+
 {% endblock %}
