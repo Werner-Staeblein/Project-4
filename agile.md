@@ -2,7 +2,7 @@
 
 I have used GitHub Projects to create a kanban board / collection of initial user stories to facilitate the implementation of agile development.
 
-Three different EPICS were drafted. The EPICs are then broken down into user stories. 
+Three different EPICs were drafted. The EPICs are then broken down into user stories. 
 
 The EPICS are:
 -	Django setup and administrator/superuser
@@ -22,7 +22,7 @@ The Kanban board can be found here:
 
 ## Iteration 1 | Milestone 1
 
-My first sprint was planned to take place between Aug. 5, 2024 and Aug. 12, 2024. For my first iteration I created milestone 1 with a total of 8 users stories from my kanban board to be worked on.
+My first sprint was planned to take place between Aug. 5, 2024 and Aug. 12, 2024. For my first iteration I created milestone 1 with a total of 8 user stories from my kanban board to be worked on.
 The distribution of "must have" to "could have"/"should have" was not the perfect 60%/40% at this stage but three of eight user stories were assigned could have/should have for iteration 1 as it was
 not perfectly clear at the start of the iteration whether users stories 6,7, and 8 can be completed in the timeframe set for the first sprint (iteration 1).
 
@@ -32,10 +32,10 @@ not perfectly clear at the start of the iteration whether users stories 6,7, and
 
 Documentation of progress:
 
-- Despite the hickup of renaming my Django testing folder with subsequent adjustments to wsgi, settings, asgi to capture the new named "assigned" to the Django project, the first iteration proceeded surprisingly well. The "must have" user stories were closed on the second day into the sprint/iteration 1
+- Despite the hiccup of renaming my Django testing folder with subsequent adjustments to wsgi, settings, asgi to capture the new named "assigned" to the Django project, the first iteration proceeded surprisingly well. The "must have" user stories were closed on the second day into the sprint/iteration 1
 - Progress with iteration 1 supported by careful planning of all users stories in advance and revisiting the LMS material notes
 - Creation of content for blog app most time-consuming user story in Iteration 1 as expected with almost one working day spent on collecting data and writing the blog app content
-- Iteration 1 was completed on Aug. 8, 2024 and much faster than expected. The intial "could have"/"should have" user stories have proven to be less time-consuming than planned
+- Iteration 1 was completed on Aug. 8, 2024 and much faster than expected. The initial "could have"/"should have" user stories have proven to be less time-consuming than planned
 - User Story 8 was moved back to the Kanban board to be worked on with the remaining user stories in subsequent iterations. User Story 8 covers the creation of content for the blog app and further content in addition to that already uploaded via fixtures/posts.json in iteraion 1 may be added in upcomin iterations
 
 **Iteration 1 | Milestone 1 at the end of Iteration 1**
@@ -62,7 +62,7 @@ Documentation of progress:
 - Still working on the first user story of iteration 2, I learned not to have defined a user story for the landing page of the dividend blog app. A new user story, #23, was created and added to iteration 2/sprint 2 milestone board
 - Interim testing on accessibility resulted in lighthouse results of only 95%. As a result: As good as the intentions were to use a certain color scheme, this color scheme had to be adjusted to improve lighthouse scoring on accessibility. The basic idea of using blue/gray colors, as described in the README, however, maintained
 - Half-way through the Iteration 2, I realised that the "mini-sprint" thought to be less time-consuming than Iteration 1 has proven to be more time-consuming than originally thought. Customizing CSS, synchronising CSS-classes and interim testing has taken more time than anticipated
-- Iteration 2 was closed with three user stories still open of which two (#12/#8) were "should have" and one was "must have" (# 13 responsinveness). Further responsiveness testing will be done until the end of the project and user story +13 (responsivness) will remain in the backlog and will not be closed
+- Iteration 2 was closed with three user stories still open of which two (#12/#8) were "should have" and one was "must have" (# 13 responsinveness). Further responsiveness testing will be done until the end of the project and user story #13 (responsiveness) will remain in the backlog and will not be closed
 
 **Iteration 2 | Milestone 2 at the end of Iteration 2**
 
@@ -117,7 +117,7 @@ Documentation of progress:
 - Using crispy forms and building crispy forms into my codebase has turned out to be much more difficult than the learning material for crispy suggested
 - On my final day of Iteration 4 I struggled with an error message "ERROR:  Failed to acquire permit to connect to the database. Too many database connection attempts are currently ongoing." for a few hours. I was not able to resolve the connection to the database myself and patiently used python manage.py runserver numerous times to have my code running locally
 - Iteration 4 was closed on Aug. 27, 2024 as planned for this sprint leaving two user stories open. Both users stories were "should have" for Iteration 4. Both user stories will be rolled forward to Iteration 5. Some of the user story #18 (edit comments) was completed in Iteration 4 leaving only the functionality of "delete comment" to be worked on in Iteration 5
-- Regular manual testing and validation of python code/html/css was done during Iteration 4 so that potential mistakes in the codebase can be spotted as eaerly as possible
+- Regular manual testing and validation of python code/html/css was done during Iteration 4 so that potential mistakes in the codebase can be spotted as early as possible
 
 **Iteration 4 | Milestone 4 at the end of Iteration 4**
 
@@ -133,7 +133,7 @@ Documentation of progress:
 Iteration 5 has its primary focus on finishing the CRUD functionality with the "D" (delete) from user story #18 still open and already placed into "in progress" in the Kanban board at the start of Iteration 5. The split of user stories again 60% must have 40% should have/could have. Further focus in Iteration 5 is on the
 creation of original models that are not included in the CI walkthrough material. This is to address a key specification and requirement of PP-4.
 
-**Iteration 5 | Milestone 5 at the start of Iteration 4**
+**Iteration 5 | Milestone 5 at the start of Iteration 5**
 
 ![Iteration_5_milestone](docs/agile/iteration_5_milestone_board_before_iteration_5.png)
 
@@ -143,8 +143,9 @@ creation of original models that are not included in the CI walkthrough material
 
 Documentation of progress:
 
--
--
+- On the first day of iteration 5, the CRUD functionality was completed. Only the "D" for delete remained from the user story. This final step of CRUD proved to be time-consuming, even though I understand Bootstrap and its functions very well with a modal. During iteration 5, I continued to attempt automated testing with HTML, CSS, and Python as often as possible to ensure that all files always pass the automated testing without issues.
+
+- On the second day of iteration 5, housekeeping was initially done in the README area. The specifications and criteria for PP-4 were reviewed again. I updated my manual testing table in an Excel spreadsheet. Creating the About app was significantly easier and implemented more quickly, thanks to the learning curve with the blog app.
 -
 -
 
