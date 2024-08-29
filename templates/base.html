@@ -85,6 +85,10 @@
             <li class="nav-item">
               <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}" href="{% url 'blog_index' %}">Blog</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about_page' %}">About</a>
+            </li>
     
 <!-- Display the nav based on login-status/registration status of user. If logged in, the logout button shown, if not registered then register and login  -->
             {% if user.is_authenticated %}
