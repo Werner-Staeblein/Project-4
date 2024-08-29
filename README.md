@@ -27,6 +27,9 @@
 - [Deployment](#deployment)
   - [Steps before deployment | Update code for deployment](#steps-before-deployment--update-code-for-deployment)
   - [Deployment on Heroku (step-by-step guide)](#deployment-on-heroku-step-by-step-guide)
+  - [Local Development](#local-development)
+    - [How to Fork the project](#how-to-fork-the-project)
+    - [How to Clone the Project](#how-to-clone-the-project)
 
 # Project Planning
 	
@@ -311,3 +314,32 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 11. Final Step:
     - The last step is to click **"Deploy Branch"** in the section named **"Manual deploy"**.
     - This will start the build process in Heroku. Once the build process is completed successfully, a link is shown to view the deployed app.
+
+
+## Local Development
+
+### How to Fork the project
+
+1. Log in or Sign Up on GitHub
+
+2. The repository of this project can be found at **[Project Repository](https://github.com/Werner-Staeblein/Project-4)**
+
+3. The "Fork" button is a the top right of the page. The "Fork" button is located immdiately left to the button ***Star***. Click on the button named "Fork"
+
+4. A new page titled "Create a new fork" will be shown
+
+5. At the bottom of the new page click on "Create fork"
+
+6. With steps 1. to 5. completed, a copy of the project exists in your list of repositories
+
+### How to Clone the Project
+
+1. Log in or Sign Up on GitHub
+
+2. The repository of this project can be found at **[Project Repository](https://github.com/Werner-Staeblein/Project-4)**
+
+3. Click on button named "Code" button. Here, you can choose a clone method (HTTPS, SSH, Github CLI). The link provided must be copied
+
+4. In your code editor navigate to the directory where you would want to clone the repository
+
+5. In the terminal of your code editor, type 'git clone'. Here, the copied link must be pasted. Finish the step by pressing Enter
