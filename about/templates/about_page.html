@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<h1>{{ about_content.heading }}</h1>
+    <img src="{{ about_content.about_image.url }}" alt="About Image">
+    <p>{{ about_content.about_text }}</p>
+    <p>Last updated: {{ about_content.last_update }}</p>
+
+{% endblock content %}
