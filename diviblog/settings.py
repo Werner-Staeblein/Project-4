@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'blog',
+    'about',
 ]
 
 # bootstrap 5 as I use Bootstrap CDN with version 5
