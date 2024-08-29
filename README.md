@@ -156,6 +156,8 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[Techsini](https://techsini.com/multi-mockup/)** Multi Device Website Mockup generator				
 
+**[Tinypng](https://tinypng.com/)** To reduce the size of the images used and improve lighthouse score on performance				
+
 **[Visual Studio Code](https://code.visualstudio.com/)** Visual Studio Code (VS-Code) was used as an integrated development environment (IDE) for the entire project. The GitHub repository was cloned to VS-Code for this purpose			
 
 
