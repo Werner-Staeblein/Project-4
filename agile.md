@@ -158,3 +158,6 @@ Documentation of progress:
 ![Kanban_Board_after_iteration_5](docs/agile/)
 
 
+
+
+
