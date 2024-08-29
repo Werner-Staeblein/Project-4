@@ -1,10 +1,41 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends "base.html" %}
 {% load static %}
+{% block content %}
 
-<h1>{{ about_content.heading }}</h1>
-    <img src="{{ about_content.about_image.url }}" alt="About Image">
-    <p>{{ about_content.about_text }}</p>
-    <p>Last updated: {{ about_content.last_update }}</p>
+<!-- The About Page Content starts here / the content itself create in /admin  -->
 
-{% endblock content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron bg-light p-5 rounded">
+                <h1 class="display-4 text-center">{{ about_instance.title }}</h1>
+                <p class="lead text-center">{{ about_instance.intro }}</p>
+                <hr class="my-4">
+
+                <img src="{{ about_instance.about_image.url }}" alt="About Image" class="img-fluid mb-3">            
+
+                <h2 class="my-5 text-center">My Story</h2>
+                <p class="landing-text">{{ about_instance.my_story }}</p>
+                
+                <h2 class="my-5 text-center">Why I Created Dividend Dynamics</h2>
+                <p class="landing-text">{{ about_instance.why_created }}</p>
+
+                <h3 class="my-4 text-center"><strong>What You Can Expect:</strong></h3>
+                <ul>
+                    <li class="landing-text"><strong>Comprehensive Analysis:</strong> {{ about_instance.comprehensive_analysis }}</li>
+                    <li class="landing-text"><strong>Personalized Insights:</strong> {{ about_instance.personalized_insights }}</li>
+                    <li class="landing-text"><strong>Expert Opinions:</strong> {{ about_instance.expert_opinions }}</li>
+                </ul>
+
+                <p class="landing-text">{{ about_instance.conclusion }}</p>
+                <p class="landing-text text-center"><strong>Your path to steady income and capital appreciation starts here!</strong></p>
+
+                <a href="{% url 'blog_index' %}" class="btn landing-btn mt-5 d-block mx-auto w-25 custom-link">Explore Our Blog</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock %}

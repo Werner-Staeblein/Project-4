@@ -17,6 +17,6 @@ class AboutPage(models.Model):
 
     def __str__(self):
         return self.heading
+    
 
-    def __str__(self):
-        return self.heading
+    
