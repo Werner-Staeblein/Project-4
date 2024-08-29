@@ -35,9 +35,7 @@
 	
 This is project milestone 4 for the Code Institute full-stack development program. The project is a full-stack website built using the Django framework.
 
-The live site deployed on Heroku can be found here: **[Final_Project](https://dividend-blog-app-7524309b6f0c.herokuapp.com/)**
-[Dividend Dynamics] is .....where users can look for. For logged-in users, a like/unlike functionality for a post is possible. Logged-in users likewise can comment on a post.
-
+The live site deployed on Heroku can be found here: **[Dividend Dynamics](https://dividend-blog-app-7524309b6f0c.herokuapp.com/)**
  
 ## Site Goal
 The goal of the Dividend Shares Blog App is to provide comprehensive, reliable, and insightful information about companies that have a strong track record of paying dividends. The blog content aims to serve as a resource for investors looking to build or manage a dividend-focused investment portfolio. By delivering short summaries of analysis on dividend-paying companies, the blog content helps users with ideas of potential investments to be investigated further.
@@ -85,7 +83,7 @@ The pairing of Times New Roman's traditional reliability with Roboto's modern cl
 	
 # Agile Development Process
 
-Details on the agile development process can be found here **[AGILE.md](agile.md)**
+Details on the agile development process can be found here **[agile.md](agile.md)**
 
 # Features
 
