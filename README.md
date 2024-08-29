@@ -235,7 +235,15 @@ The custom `404.html` page was created using the guidance from **[Create_Custom_
 
 The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
 
-The video titled "README.md - Manual Testing Write Up Overview" **[README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy to structure the README section on testing.
+The video titled **[README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo)** by Kasia Bogucka made it easy to structure the README section on testing.
+
+The video titled **[README.md - How, What and When?](https://www.youtube.com/watch?v=l1DE7L-4eKQ)** by Kasia Bogucka.
+
+The video titled **[Guide to Github Aigle Tool](https://www.youtube.com/watch?v=U_dMihBgUNY&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=20)** by Kasia Bogucka helped to understand the organisation of the agile development process. 
+
+The video titled **[Community Q&A: Validating Your Code Before Project Submission]((https://www.youtube.com/watch?v=wiqAvRCheKo&list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWY&index=17))** by Code Institute provided good instructions on code validation/linter. Validation of HTML, CSS, Python, and Javascript was done throughout the project development and not just at the end of the project.
+
+The video titled **[Guide to MVP](https://www.youtube.com/watch?v=vIv1c6RLBac)** by Kasia Bogucka provided additional insights and understanding to the PP-4 specifications and project requirements.
 
 The video titled **[Community Q&A: PP4 Project FAQ's](https://www.youtube.com/watch?v=Q5cdZXomzVg)** was used to have some more clarity about the project requirements.
 
