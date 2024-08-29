@@ -8,6 +8,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', landing, name='landing'),
     path('blog/', include('blog.urls')),
+    path('about/', include('about.urls')),
 ]
 
 handler404 = 'diviblog.views.custom_404'
