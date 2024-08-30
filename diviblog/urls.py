@@ -15,9 +15,3 @@ urlpatterns = [
 ]
 
 handler404 = 'diviblog.views.custom_404'
-
-
-# For local developing, media files must be served when debug is changed
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
