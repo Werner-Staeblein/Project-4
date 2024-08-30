@@ -367,6 +367,14 @@ body {
     font-size: 1.4rem;
 }
 
+/*-------------------------------------------------------------------------
+        Contact page
+---------------------------------------------------------------------------*/
+
+#jumbo-contact {
+    max-width: 40% !important;
+    margin: 0 auto !important;
+}
 
 /*-------------------------------------------------------------------------
         Media Queries / responsiveness
@@ -385,6 +393,7 @@ body {
         font-size: 0.7rem;
         max-width: 75%;
     }
+
     .jumbo-contact{
         width: 75% !important;
     }
@@ -455,16 +464,22 @@ body {
     .btn-close {
         font-size: 1.2rem;
     }
-}
 
-/*  Media Query for AllAuth messages so that message does not overlap 
+    .jumbotron.jumbo-contact {
+        max-width: 90% !important;
+        margin: 0 auto;
+        background-color: yellow !important;
+    }
+    
+}
+/* Media Query for AllAuth messages so that message does not overlap 
     with the closing button + smaller buttons */
 
 
 @media (max-width: 400px) {
     .custom-link {
-        width: 80% !important;
-        font-size: 0.8rem !important;
+        width: 90% !important;
+        font-size: 15rem !important;
     }
 
     .alert-custom {
@@ -474,7 +489,17 @@ body {
 
     .btn-close {
         font-size: 1rem;
+    }   
+
+    .landing-btn {
+        width: 80% !important;
+        font-size: 15rem !important;
+        padding: 0.8rem !important;
+    }
+
+    .custom-link {
+        width: 80% !important;
+        font-size: 15rem !important;
+        
     }
 }
-
-
