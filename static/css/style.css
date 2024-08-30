@@ -421,7 +421,7 @@ body {
 
 .custom-link {
     width: 80% !important;
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
     margin-top: 1rem;
 }
 
@@ -475,7 +475,6 @@ body {
 /* Media Query for AllAuth messages so that message does not overlap 
     with the closing button + smaller buttons */
 
-
 @media (max-width: 400px) {
     .custom-link {
         width: 90% !important;
@@ -489,17 +488,11 @@ body {
 
     .btn-close {
         font-size: 1rem;
-    }   
-
-    .landing-btn {
-        width: 80% !important;
-        font-size: 15rem !important;
-        padding: 0.8rem !important;
     }
 
-    .custom-link {
-        width: 80% !important;
+    .landing-btn{
+        width: 90% !important;
         font-size: 15rem !important;
-        
     }
 }
+
