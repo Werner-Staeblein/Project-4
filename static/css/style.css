@@ -384,9 +384,11 @@ body {
         padding: 0.5rem;
         font-size: 0.7rem;
         max-width: 75%;
-    } 
+    }
+    .jumbo-contact{
+        width: 75% !important;
+    }
 }
-
 
 @media (max-width: 991px) {
 
