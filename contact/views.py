@@ -13,7 +13,7 @@ def contact_view(request):
             form.save()
             messages.success(
                 request,
-                'Your message submitted successfully.'
+                'Your message was submitted successfully.'
             )
             return redirect('landing')
         else:
