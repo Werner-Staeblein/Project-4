@@ -31,7 +31,6 @@ body {
     background-color: var(--background);
 }
 
-
 .brand {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
@@ -102,6 +101,7 @@ body {
 
 .landing-btn{
     background-color: var(--background);
+    background-color: red !important;
     font-size: 1.3rem;
     font-weight: bold;
     box-shadow: 0 0.4rem 0.7rem black;
@@ -109,6 +109,7 @@ body {
 
 .landing-btn-1{
     background-color: var(--headline);
+    background-color: red !important;
     font-size: 1.3rem;
     font-weight: bold;
     box-shadow: 0 0.4rem 0.7rem black;
@@ -133,7 +134,7 @@ body {
 
 .landing-btn-1:hover {
     color: white;
-}
+} */
 
 /*---------------------------------------------------------------------------------
                         Styling of blog content and blog cards
@@ -420,11 +421,10 @@ body {
 }
 
 .custom-link {
-    width: 80% !important;
-    font-size: 0.8rem;
+    width: 80%;
+    font-size: 1.3rem;
     margin-top: 1rem;
 }
-
 }
 
 @media (max-width: 926px) {
@@ -472,6 +472,7 @@ body {
     }
     
 }
+
 /* Media Query for AllAuth messages so that message does not overlap 
     with the closing button + smaller buttons */
 
@@ -492,6 +493,6 @@ body {
 
     .landing-btn{
         width: 90% !important;
-        font-size: 15rem !important;
+        font-size: 1.3rem !important;
     }
 }

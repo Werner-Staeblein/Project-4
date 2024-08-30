@@ -31,7 +31,6 @@ body {
     background-color: var(--background);
 }
 
-
 .brand {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
@@ -133,7 +132,7 @@ body {
 
 .landing-btn-1:hover {
     color: white;
-}
+} */
 
 /*---------------------------------------------------------------------------------
                         Styling of blog content and blog cards
@@ -367,6 +366,14 @@ body {
     font-size: 1.4rem;
 }
 
+/*-------------------------------------------------------------------------
+        Contact page
+---------------------------------------------------------------------------*/
+
+#jumbo-contact {
+    max-width: 40% !important;
+    margin: 0 auto !important;
+}
 
 /*-------------------------------------------------------------------------
         Media Queries / responsiveness
@@ -384,9 +391,12 @@ body {
         padding: 0.5rem;
         font-size: 0.7rem;
         max-width: 75%;
-    } 
-}
+    }
 
+    .jumbo-contact{
+        width: 75% !important;
+    }
+}
 
 @media (max-width: 991px) {
 
@@ -409,11 +419,10 @@ body {
 }
 
 .custom-link {
-    width: 80% !important;
-    font-size: 0.8rem !important;
+    width: 80%;
+    font-size: 1.3rem;
     margin-top: 1rem;
 }
-
 }
 
 @media (max-width: 926px) {
@@ -453,16 +462,22 @@ body {
     .btn-close {
         font-size: 1.2rem;
     }
+
+    .jumbotron.jumbo-contact {
+        max-width: 90% !important;
+        margin: 0 auto;
+        background-color: yellow !important;
+    }
+    
 }
 
-/*  Media Query for AllAuth messages so that message does not overlap 
+/* Media Query for AllAuth messages so that message does not overlap 
     with the closing button + smaller buttons */
-
 
 @media (max-width: 400px) {
     .custom-link {
-        width: 80% !important;
-        font-size: 0.8rem !important;
+        width: 90% !important;
+        font-size: 15rem !important;
     }
 
     .alert-custom {
@@ -473,6 +488,9 @@ body {
     .btn-close {
         font-size: 1rem;
     }
+
+    .landing-btn{
+        width: 90% !important;
+        font-size: 1.3rem !important;
+    }
 }
-
-
