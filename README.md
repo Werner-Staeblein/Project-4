@@ -177,6 +177,10 @@ For my 404.html I defined classes in the markup of the 404.html. I did load stat
 my style.css were only PARTLY applied to the 404.html. Some styles affected the 404.html, some did not. I change class names in 404.html to be as distinctly different from bootstrap classes as possible to avoid that bootstrap is over-riding my custom CSS for the 404.html page but this did likewise not work. I decided to make the the styles of the 404.html with an internal stylesheet inside the 404.html and everything worked out well. Adds some more complexity maintaining the code as I have defined custom properties in
 my CSS stylesheet and when one of these custom properties such as colors changes, the internal stylesheet of the 404.html would need additional attention to synchronise colors with potentially changed colors of my custom CSS defined in the :root of my CSS stylesheet
 
+**Debug on False and change of styles in style.css**
+After running a deployment test on heroku I did not reset the debug to True. I tried to change some of my custom styles in my style.css but none of the new styles in the stylesheet was applied. I increased specificity of CSS styles and even emptied the entire style.css for testing purposes only to learn that my "old" styles from the style.css are still applied. Puzzled by the fact that styles are applied even if a stylesheet is entirely empty but correctly connected, I stopped development for the day. Rethinking the issue while the code editor was turned off, I speculated that django was using the stylesheet inside the staticfiles as my debug of FALSE was in "production mode". Quite logically, I can change my style.css as much as I want to with no effect as long as Django is using the style.css from staticfiles with debug on FALSE. I changed debug back to TRUE and all my issues with style.css were resolved. Do not really know whether my theory is correct but all simple changes in styles were done once I changed the DEBUG back to true.
+
+
 
 # Testing
 
