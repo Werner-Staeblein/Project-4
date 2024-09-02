@@ -295,21 +295,33 @@ After running a deployment test on heroku I did not reset the debug to True. I t
 1. **[W3C Markup Validation Service](https://validator.w3.org/) - HTML Validation**
 The W3 HTML validator was used throughout the developmeht phase to ensure consistency with HTML standards. All site pages were tested with official W3C validator for both users logged in and those not logged in. HTML validation was done with the renedered pages. The reason for this is that W3C validation does not recognize Django template language (DTL).
 
-This is/will be several screenshots of all the respective pages / subfolder needed
+| URL Path                                | Screenshot                                    |
+|-----------------------------------------|-----------------------------------------------|
+| home                                    | ![Default_Value](docs/readme/testing/image.png) |
+| home/blog                               | ![Default_Value](docs/readme/testing/image.png) |
+| home/about                              | ![Default_Value](docs/readme/testing/image.png) |
+| home/contact                            | ![Default_Value](docs/readme/testing/image.png) |
+| home/accounts/logout/                   | ![Default_Value](docs/readme/testing/image.png) |
+| home/accounts/signup/                   | ![Default_Value](docs/readme/testing/image.png) |
+| home/accounts/login/                    | ![Default_Value](docs/readme/testing/image.png) |
+| home/newsletter/subscribe/              | ![Default_Value](docs/readme/testing/image.png) |
+| home/blog/post/A-SINGLE-BLOGPOST/       | ![Default_Value](docs/readme/testing/image.png) |
 
-![HTML Validator](docs/readme/)
 
 2. **[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
 The CSS stylesheet was tested with the W3C CSS validator. No error messages or syntactical errors.
 
-![Jigsaw CSS valiation](docs/readme/coolors_color_palette.png)
+![Jigsaw CSS valiation](docs/readme/css_jigsaw_w3c_validation_outcome.png)
 
 3. **[CI Python Linter](https://pep8ci.herokuapp.com/)** The Code Institute Python Linter was used to validate Python code
 
-This is/will be several screenshots of all the respective pages / subfolder needed
+![Python Validation](docs/readme/placeholder_image_for_automated_py_testing.png)
 
-![Python Validation](docs/readme/)
+
+
+
+
 
 4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
