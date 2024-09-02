@@ -31,6 +31,8 @@
 - [Bugs and issues](#bugs-and-issues)
 - [Testing](#testing)
   - [Automated Testing](#automated-testing)
+      - [Lighthouse results Desktop](#lighthouse-results-desktop)
+      - [Lighthouse results Mobile](#lighthouse-results-mobile)
   - [Manual Testing](#manual-testing)
 - [Security Features](#security-features)
   - [SECURITY](#security)
@@ -304,8 +306,8 @@ The W3 HTML validator was used throughout the developmeht phase to ensure consis
 | home/accounts/logout/                   | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_logout.png) |
 | home/accounts/signup/                   | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_signup.png) |
 | home/accounts/login/                    | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_login.png) |
-| home/newsletter/subscribe/              | ![Default_Value](docs/readme/testing/image.png) |
-| home/blog/post/A-SINGLE-BLOGPOST/       | ![Default_Value](docs/readme/testing/image.png) |
+| home/newsletter/subscribe/              | ![Default_Value](docs/readme/testing/w3c_validation_home_newsletter_subscribe.png) |
+| home/blog/post/A-SINGLE-BLOGPOST/       | ![Default_Value](docs/readme/testing/w3c_validation_home_blog_post_singlepost.png) |
 
 
 2. **[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
@@ -321,13 +323,38 @@ The CSS stylesheet was tested with the W3C CSS validator. No error messages or s
 
 
 
-
-
 4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
-Performance of pages, best practices and SEO was tested for every page with Lighthouse.
+Performance of pages, best practices and SEO was tested for every page with Lighthouse. Instead of inserting many different screenshots of all lighthouse results, the lighthouse results are summarised as per tables below.
 
-This is/will be several screenshots of all the respective pages / subfolder needed
+#### Lighthouse results Desktop
+
+| **Page**                           | **Performance** | **Accessibility** | **Best Practices** | **SEO** |
+|------------------------------------|----------------|-------------------|--------------------|---------|
+| home                               | 99             | 100               | 100                | 100     |
+| home/blog                          | 100            | 100               | 100                | 100     |
+| home/about                         | 100            | 100               | 100                | 100     |
+| home/contact                       | 100            | 100               | 100                | 100     |
+| home/accounts/logout/              | 100            | 100               | 100                | 100     |
+| home/accounts/signup/              | 100            | 100               | 100                | 100     |
+| home/accounts/login/               | 100            | 100               | 100                | 100     |
+| home/newsletter/subscribe/         | 100            | 100               | 100                | 100     |
+| home/blog/post/A-SINGLE-BLOGPOST/ | 100            | 98                | 100                | 100     |
+
+
+#### Lighthouse results Mobile
+
+| **Page**                           | **Performance** | **Accessibility** | **Best Practices** | **SEO** |
+|------------------------------------|----------------|-------------------|--------------------|---------|
+| home                               | 90             | 100               | 96                 | 100     |
+| home/blog                          | 90             | 100               | 96                 | 100     |
+| home/about                         | 94             | 100               | 96                 | 100     |
+| home/contact                       | 95             | 100               | 96                 | 100     |
+| home/accounts/logout/              | 98             | 100               | 96                 | 100     |
+| home/accounts/signup/              | 99             | 100               | 96                 | 100     |
+| home/accounts/login/               | 96             | 100               | 96                 | 100     |
+| home/newsletter/subscribe/         | 96             | 100               | 96                 | 100     |
+| home/blog/post/A-SINGLE-BLOGPOST/ | 92             | 98                | 96                 | 100     |
 
 
 ## Manual Testing
@@ -352,6 +379,11 @@ This is/will be several screenshots of all the respective pages / subfolder need
   - Critical environment variables such as `DATABASE_URL` and `CLOUDINARY_URL` are stored in the `env.py` file and as config vars on Heroku for secure access.
 
 # Credits
+
+
+
+
+
 
 ## Code
 
