@@ -17,9 +17,12 @@
       - [Navigation Components](#navigation-components)
       - [Design and Functionality](#design-and-functionality)
       - [Navigation Items for User Status](#navigation-items-for-user-status)
+  - [Blog Page | Blog App](#blog-page--blog-app)
+      - [Blog Page](#blog-page)
+      - [User access to blog content | ability to make comments](#user-access-to-blog-content--ability-to-make-comments)
+      - [Individual Blogpost](#individual-blogpost)
   - [Feature ABCD](#feature-abcd)
   - [Feature ABCD](#feature-abcd-1)
-  - [Feature ABCD](#feature-abcd-2)
   - [Customized 404 Error Page](#customized-404-error-page)
     - [Key Features of the Customized 404 Page:](#key-features-of-the-customized-404-page)
 - [Technologies](#technologies)
@@ -137,14 +140,40 @@ The navigation items differ based on the user's login status
 ![Clickable_Logo_and_Favicon](docs/readme/features/features_navigation_including_login_status_logedin_user.png)
 
 
+## Blog Page | Blog App
+
+The Blog Page is designed to enable users to view and interact with the blog post content. 
+
+#### Blog Page
+
+- **Display of All Blog Posts**: A dedicated blog page where all published blog posts are displayed. Users can easily scroll and paginate through the available content
+
+![Blog_Page_with_pagination](docs/readme/features/blog_page_with_pagination.png)
+
+#### User access to blog content | ability to make comments
+
+- **Unregistered Users**: Both unregistered and registered users can view blog posts individually. This allows anyone to access the content
+
+- **Registered Users**: While registered users can view all blog posts, only registered users have the ability to comment on posts. Comments on blog posts need approval by admin before the comment is made public to all other users on the blogpost page. The registered user is displayed the comments already made and still subject to approval by admin with message of either "approved" or "pending approval"
+
+#### Individual Blogpost
+
+Logged-in users have the ability to make comments on blog posts. The features on commenting are:
+
+- **Comment Submission**: Registered users can submit comments on individual blog posts. However, comments submitted are not visible to other users until they are approved by an admin.
+
+- **Pending Approval Notification**: Once a user submits a comment, the user receives a notification indicating that the comment is pending approval. This ensures transparency to the contributing user regarding the status of their submission
+
+- **Approval Status Labels**: Comments awaiting approval are displayed with the label **"pending approval."** Once a comment has been approved by the admin, it is updated with the label **"approved."** This distinction helps users to understand the status of their comments
+
+- **Edit and Delete Options**: Registered users also have the ability to edit or delete comments that have been previously approved by the admin. This feature provides users with control over their contributions
+
+- **Returning to the Blog Page**: For convenience, users can easily navigate back to the main blog page that displays all blog posts. Each individual blog post includes a button that, when clicked, takes the user back to the blog listing page
+
+![Blogpost_CRUD_features](docs/readme/features/individual_blogpost_CRUD_features.png)
+
+
 ## Feature ABCD
-
-
-
-
-
-## Feature ABCD
-
 
 
 
