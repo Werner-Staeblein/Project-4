@@ -297,13 +297,13 @@ The W3 HTML validator was used throughout the developmeht phase to ensure consis
 
 | URL Path                                | Screenshot                                    |
 |-----------------------------------------|-----------------------------------------------|
-| home                                    | ![Default_Value](docs/readme/testing/image.png) |
-| home/blog                               | ![Default_Value](docs/readme/testing/image.png) |
-| home/about                              | ![Default_Value](docs/readme/testing/image.png) |
-| home/contact                            | ![Default_Value](docs/readme/testing/image.png) |
-| home/accounts/logout/                   | ![Default_Value](docs/readme/testing/image.png) |
-| home/accounts/signup/                   | ![Default_Value](docs/readme/testing/image.png) |
-| home/accounts/login/                    | ![Default_Value](docs/readme/testing/image.png) |
+| home                                    | ![Default_Value](docs/readme/testing/w3c_validation_check_homepage.png) |
+| home/blog                               | ![Default_Value](docs/readme/testing/w3c_validation_check_home_blog.png) |
+| home/about                              | ![Default_Value](docs/readme/testing/w3c_validation_home_about.png) |
+| home/contact                            | ![Default_Value](docs/readme/testing/w3c_validation_home_contact.png) |
+| home/accounts/logout/                   | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_logout.png) |
+| home/accounts/signup/                   | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_signup.png) |
+| home/accounts/login/                    | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_login.png) |
 | home/newsletter/subscribe/              | ![Default_Value](docs/readme/testing/image.png) |
 | home/blog/post/A-SINGLE-BLOGPOST/       | ![Default_Value](docs/readme/testing/image.png) |
 
