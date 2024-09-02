@@ -2,10 +2,11 @@ from django.db import models
 
 from django.db import models
 
+
 class AboutPage(models.Model):
     heading = models.CharField(max_length=255)
     last_update = models.DateTimeField(auto_now=True)
-    about_text = models.TextField()      
+    about_text = models.TextField()
     intro = models.TextField(blank=True)
     my_story = models.TextField(blank=True)
     why_created = models.TextField(blank=True)
@@ -16,6 +17,3 @@ class AboutPage(models.Model):
 
     def __str__(self):
         return self.heading
-    
-
-    
