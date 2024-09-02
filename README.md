@@ -21,6 +21,7 @@
       - [Blog Page](#blog-page)
       - [User access to blog content | ability to make comments](#user-access-to-blog-content--ability-to-make-comments)
       - [Individual Blogpost](#individual-blogpost)
+  - [About Page | About App](#about-page--about-app)
   - [Feature ABCD](#feature-abcd)
   - [Feature ABCD](#feature-abcd-1)
   - [Customized 404 Error Page](#customized-404-error-page)
@@ -173,13 +174,27 @@ Logged-in users have the ability to make comments on blog posts. The features on
 ![Blogpost_CRUD_features](docs/readme/features/individual_blogpost_CRUD_features.png)
 
 
+## About Page | About App
+
+The blog application includes a dedicated About page that provides information about the blog, its purpose, and its creators. This page can be managed and populated by an admin through a model interface. The admin panel for admin users can access the About model.
+
+- **Admin Interface**: Admin users have access to a dedicated interface where they can create, edit, and delete content for the About page. Changes made by the admin are immediately reflected on the About page
+  
+- **Rich Text Support**: The About page can include formatted text or an image to enhance the information presented
+
+- **Frontend**: The About page is designed to be visually consistent with the remainder of the application and includes a link to all blogposts to guide the user to the important content of the application
+
+- **Access Control**: Only authenticated admin users (superusers) have the permission to access or modify the content of the About page.
+
+![About_Page_Feature](docs/readme/features/feature_about_page.png)
+
+
 ## Feature ABCD
 
 
 
+
 ## Feature ABCD
-
-
 
 
 
