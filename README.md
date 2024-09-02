@@ -45,6 +45,7 @@
   - [Local Development](#local-development)
     - [How to Fork the project](#how-to-fork-the-project)
     - [How to Clone the Project](#how-to-clone-the-project)
+- [Acknowledgements](#acknowledgements)
 
 # Project Planning
 	
@@ -379,21 +380,18 @@ Performance of pages, best practices and SEO was tested for every page with Ligh
   - Critical environment variables such as `DATABASE_URL` and `CLOUDINARY_URL` are stored in the `env.py` file and as config vars on Heroku for secure access.
 
 # Credits
+The project follows the walkthrough project of Matt Rudge from Code Institute named "I Think Therefore I Blog". Using the walkthrough project as a guide improved my understanding of the project goals. I changed the models, including modifications to class names and field names. Additionally, I customized the views and rendering of data in the templates to better suit the specific requirements of my application. I benchmarked and compared the code from the walkthrough project to ensure that my implementation is unique and distinct. Through modifications, I have made the best effort possible to create original work.
 
 
-
-
-
-
-## Code
-
-
-Reference to the learning material used for the contact form: https://pythonguides.com/contact-form-with-django-and-sqlite/
-
-
+For my contact app, I used [Contact_App_Reference_Material](https://pythonguides.com/contact-form-with-django-and-sqlite/). I made significant modifications and customizations to this code including adjustment of the model (class names, field names) so that the contact app is distinctly different from the reference material. The adapted code and rendered page was styled with custom CSS stylesheet.
 
 The custom `404.html` page was created using the guidance from **[Create_Custom_404_error_page](https://www.makeuseof.com/create-custom-404-error-page-django/).**
 
+<div style="color: red; font-weight: bold;">
+    Reminder to include reference for newsletter signup
+</div>
+
+## Code
 
 The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
 
@@ -410,7 +408,6 @@ The video titled **[Guide to MVP](https://www.youtube.com/watch?v=vIv1c6RLBac)**
 The video titled **[Community Q&A: PP4 Project FAQ's](https://www.youtube.com/watch?v=Q5cdZXomzVg)** was used to have some more clarity about the project requirements.
 
 Notes from the call **"Community Q&A: Mastering Full Stack Applications: Your Way to PP4 Success"** webinar held on July 30, 2024.
-
 
 ## Content Data Sources
 
@@ -492,3 +489,13 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 3. Click on button named "Code" button. Here, you can choose a clone method (HTTPS, SSH, Github CLI). The link provided must be copied
 4. In your code editor navigate to the directory where you would want to clone the repository
 5. In the terminal of your code editor, type 'git clone'. Here, the copied link must be pasted. Finish the step by pressing Enter
+
+
+# Acknowledgements
+
+
+
+*****************
+
+[Back to top](#table-of-contents)
+
