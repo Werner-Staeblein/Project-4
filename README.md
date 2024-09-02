@@ -357,6 +357,12 @@ Performance of pages, best practices and SEO was tested for every page with Ligh
 | home/newsletter/subscribe/         | 96             | 100               | 96                 | 100     |
 | home/blog/post/A-SINGLE-BLOGPOST/ | 92             | 98                | 96                 | 100     |
 
+5. **[JS_hint](https://jshint.com/)**
+I have configured JSHint to support ES6 features, and the code is functioning correctly; however, I was unable to resolve the warning regarding the undefined variable bootstrap, as the Bootstrap modal is working as intended.
+
+![JavaScirpt Validation](docs/readme/testing/js_hint_testing_of_js_code.png)
+
+
 
 ## Manual Testing
 
