@@ -238,7 +238,11 @@ def delete_comment(request, slug, comment_id):
     post = get_object_or_404(DividendPosts, slug=slug)
 
     # Obtain the comment of that particular user logged-in
-    comment = get_object_or_404(Discussion, pk=comment_id, commentator=request.user)
+    comment = get_object_or_404(
+        Discussion,
+        pk=comment_id,
+        commentator=request.user
+    )
 
     # Delete the comment
     comment.delete()

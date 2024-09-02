@@ -12,7 +12,7 @@ urlpatterns = [
     path('', landing, name='landing'),
     path('blog/', include('blog.urls')),
     path('about/', include('about.urls')),
-    path('contact/',include('contact.urls')),
+    path('contact/', include('contact.urls')),
     path('newsletter/', include('newsletter.urls')),
 ]
 
