@@ -162,18 +162,17 @@ Documentation of progress:
 ![Kanban_Board_after_iteration_5](docs/agile/kanban_board_at_end_of_iteration_5.png)
 
 
-
 ## Iteration 6 | Milestone 6
 
-Iteration 6 
+The remaining two user stories will be developed in Iteration 6. Both user stories are "must have" for the project to be closed in the final iteration. Iteration 6 will be likewise focus on further manual testing, lighthouse testing, automated testing with validators or linter (pep8) and updating the README sections not populated so far.
 
 **Iteration 6 | Milestone 6 at the start of Iteration 6**
 
-![Iteration_5_milestone](docs/agile/)
+![Iteration_6_milestone](docs/agile/iteration_6_milestone_board_before_iteration_6.png)
 
 **Kanban board before start of Iteration 6**
 
-![Kanban_Board_before_start_iteration_5](docs/agile/)
+![Kanban_Board_before_start_iteration_6](docs/agile/kanban_board_at_start_of_iteration_6.png)
 
 Documentation of progress:
 
@@ -184,8 +183,8 @@ Documentation of progress:
 
 **Iteration 6 | Milestone 6 at the end of Iteration 6**
 
-![Milestone_Board_after_Iteration_5](docs/agile/)
+![Milestone_Board_after_Iteration_6](docs/agile/)
 
 **Kanban board at the end of Iteration 6**
 
-![Kanban_Board_after_iteration_5](docs/agile/)
+![Kanban_Board_after_iteration_6](docs/agile/)
