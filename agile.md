@@ -146,18 +146,46 @@ Documentation of progress:
 - On the first day of iteration 5, the CRUD functionality was completed. Only the "D" for delete remained from the user story. This final step of CRUD proved to be time-consuming, even though I understand Bootstrap and its functions very well with a modal. During iteration 5, I continued to attempt automated testing with HTML, CSS, and Python as often as possible to ensure that all files always pass the automated testing without issues.
 
 - On the second day of iteration 5, housekeeping was initially done in the README area. The specifications and criteria for PP-4 were reviewed again. I updated my manual testing table in an Excel spreadsheet. Creating the About app was significantly easier and implemented more quickly, thanks to the learning curve with the blog app.
--
--
+  
+- Adding the contact app including models.py/urls.py/views.py, registration for admin was not too much of a difficult task with the learning effects from the development so far
+
+- In Iteration 5 I spent a lot of effort on consistent styling, made responsiveness tests, made automated testing of HTML, CSS and Python files with W3C valiator and pep8 linter to ensure that no issues are "carried forward" inside those files in the development process
+
+- User story #13 (responsiveness) remained open at end of Iteration 5, similar to previous iterations as the teting of responsiveness is an ongoing process
 
 **Iteration 5 | Milestone 5 at the end of Iteration 5**
 
-![Milestone_Board_after_Iteration_5](docs/agile/)
+![Milestone_Board_after_Iteration_5](docs/agile/iteration_5_milestone_board_after_iteration_5.png)
 
 **Kanban board at the end of Iteration 5**
 
+![Kanban_Board_after_iteration_5](docs/agile/kanban_board_at_end_of_iteration_5.png)
+
+
+
+## Iteration 6 | Milestone 6
+
+Iteration 6 
+
+**Iteration 6 | Milestone 6 at the start of Iteration 6**
+
+![Iteration_5_milestone](docs/agile/)
+
+**Kanban board before start of Iteration 6**
+
+![Kanban_Board_before_start_iteration_5](docs/agile/)
+
+Documentation of progress:
+
+- 
+- 
+- 
+- 
+
+**Iteration 6 | Milestone 6 at the end of Iteration 6**
+
+![Milestone_Board_after_Iteration_5](docs/agile/)
+
+**Kanban board at the end of Iteration 6**
+
 ![Kanban_Board_after_iteration_5](docs/agile/)
-
-
-
-
-
