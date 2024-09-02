@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'blog',
     'about',
     'contact',
+    'newsletter',
 ]
 
 # bootstrap 5 as I use Bootstrap CDN with version 5

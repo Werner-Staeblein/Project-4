@@ -13,6 +13,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('about/', include('about.urls')),
     path('contact/',include('contact.urls')),
+    path('newsletter/', include('newsletter.urls')),
 ]
 
 handler404 = 'diviblog.views.custom_404'
