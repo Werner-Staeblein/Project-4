@@ -11,6 +11,15 @@
   - [Typography](#typography)
 - [Agile Development Process](#agile-development-process)
 - [Features](#features)
+  - [Navigation | Logo | Favicon](#navigation--logo--favicon)
+    - [Logo Details | Favicon](#logo-details--favicon)
+    - [Navigation](#navigation)
+      - [Navigation Components](#navigation-components)
+      - [Design and Functionality](#design-and-functionality)
+      - [Navigation Items for User Status](#navigation-items-for-user-status)
+  - [Feature ABCD](#feature-abcd)
+  - [Feature ABCD](#feature-abcd-1)
+  - [Feature ABCD](#feature-abcd-2)
   - [Customized 404 Error Page](#customized-404-error-page)
     - [Key Features of the Customized 404 Page:](#key-features-of-the-customized-404-page)
 - [Technologies](#technologies)
@@ -34,6 +43,8 @@
 # Project Planning
 	
 This is project milestone 4 for the Code Institute full-stack development program. The project is a full-stack website built using the Django framework.
+
+![Color Scheme](docs/readme/mockup_image_generated_with_techsini.png)
 
 The live site deployed on Heroku can be found here: **[Dividend Dynamics](https://dividend-blog-app-7524309b6f0c.herokuapp.com/)**
  
@@ -87,13 +98,64 @@ Details on the agile development process can be found here **[agile.md](agile.md
 
 # Features
 
+## Navigation | Logo | Favicon
+
+The project features a user-friendly navigation system designed to enhance the overall experience. A key component of this navigation is the **logo**, which is seamlessly integrated into the layout.
+
+### Logo Details | Favicon
+
+- **Design Consistency**: The logo's style is intentionally aligned with the navigation icon (navicon), ensuring a cohesive visual identity across the entire application
+  
+- **Functionality**: The logo, when clicked, will reroute users back to the **landing page**. This feature provides a convenient way for users to return to the starting point of their journey within the application.
+
+![Clickable_Logo_and_Favicon](docs/readme/features/feature_logo_and_favicon.png)
+
+### Navigation
+
+The application features an intuitive navigation system designed to enhance user experience. Below is a detailed description of the navigation components and their functionalities
+
+#### Navigation Components
+
+- **Navigation Items**: The navigation bar includes items that provide links to key sections of the application. Each item is labeled to help users find what they need quickly
+
+- **Login Status**: The navigation also displays the user's login status. This feature allows users to easily see whether they are logged in and provides relevant options based on their authentication status
+
+#### Design and Functionality
+
+- **Consistent Styling**: The background color of navigation items is dynamically updated to match the main background color used throughout the application
+
+#### Navigation Items for User Status
+
+The navigation items differ based on the user's login status
+
+- **Not Logged-In Users**: For users who are not logged in, the navigation includes items that direct the user to the blog page, login page, registration, about and contact
+
+![Clickable_Logo_and_Favicon](docs/readme/features/features_navigation_including_login_status.png)
+
+- **Logged-In Users**: For users who are logged in, the navigation displays additional 
+
+![Clickable_Logo_and_Favicon](docs/readme/features/features_navigation_including_login_status_logedin_user.png)
+
+
+## Feature ABCD
+
+
+
+
+
+## Feature ABCD
+
+
+
+
+## Feature ABCD
+
+
 
 
 
 
 ## Customized 404 Error Page
-
-**<span style="color:red">Reminder: Screenshot still needed for the 404 page</span>**
 
 To enhance user engagement and experience, a customized 404 error page has been implemented. This approach prevents the display of generic error messages and ensures that users encountering errors are provided with a more informative and user-friendly response.
 
@@ -109,6 +171,8 @@ To enhance user engagement and experience, a customized 404 error page has been 
 
 - **User-Centric Approach**:
   - This user-centric design reinforces the website’s commitment to providing a good user experience.
+
+![404_page](docs/readme/features/screenshot_404_page.png)
 
 # Technologies
 
@@ -179,8 +243,6 @@ my CSS stylesheet and when one of these custom properties such as colors changes
 
 **Debug on False and change of styles in style.css**
 After running a deployment test on heroku I did not reset the debug to True. I tried to change some of my custom styles in my style.css but none of the new styles in the stylesheet was applied. I increased specificity of CSS styles and even emptied the entire style.css for testing purposes only to learn that my "old" styles from the style.css are still applied. Puzzled by the fact that styles are applied even if a stylesheet is entirely empty but correctly connected, I stopped development for the day. Rethinking the issue while the code editor was turned off, I speculated that django was using the stylesheet inside the staticfiles as my debug of FALSE was in "production mode". Quite logically, I can change my style.css as much as I want to with no effect as long as Django is using the style.css from staticfiles with debug on FALSE. I changed debug back to TRUE and all my issues with style.css were resolved. Do not really know whether my theory is correct but all simple changes in styles were done once I changed the DEBUG back to true.
-
-
 
 # Testing
 
