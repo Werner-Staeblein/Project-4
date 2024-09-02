@@ -1,8 +1,9 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .forms import NewsLetterSubscriberForm
 from django.contrib import messages
 
 # Create your views here.
+
 
 def subscription(request):
     if request.method == 'POST':
@@ -21,5 +22,5 @@ def subscription(request):
             )
     else:
         form = NewsLetterSubscriberForm()
-    
+
     return render(request, 'newsletter/subscribe.html', {'form': form})
