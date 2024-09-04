@@ -1,6 +1,6 @@
 # Agile development process
 
-I have used GitHub Projects to create a kanban board / collection of initial user stories to facilitate the implementation of agile development.
+I have used GitHub Projects to create a Kanban board / collection of initial user stories to facilitate the implementation of agile development.
 
 Three different EPICs were drafted. The EPICs are then broken down into user stories. 
 
