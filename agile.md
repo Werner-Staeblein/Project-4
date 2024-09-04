@@ -176,15 +176,14 @@ The remaining two user stories will be developed in Iteration 6. Both user stori
 
 Documentation of progress:
 
-- 
-- 
-- 
-- 
+- The final Iteration 6 went very smooth. Learning effects from previous iterations, notably on the MVT approach to build a model, view and template for a newsletter signup form was completed with not issues
+- Responsiveness testing was done throughout the project and further responsiveness testing in final Iteration 6
+- Remainder of Iteration 6 and beyond Iteration 6 is manual testing, automated testing, further deployment testing, update of README, grammarly check of README and agile.md
 
 **Iteration 6 | Milestone 6 at the end of Iteration 6**
 
-![Milestone_Board_after_Iteration_6](docs/agile/)
+![Milestone_Board_after_Iteration_6](docs/agile/iteration_6_milestone_board_after_iteration_6.png)
 
 **Kanban board at the end of Iteration 6**
 
-![Kanban_Board_after_iteration_6](docs/agile/)
+![Kanban_Board_after_iteration_6](docs/agile/kanban_board_at_end_of_iteration_6.png)
