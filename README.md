@@ -1,4 +1,3 @@
- 
 # Table of contents
 
 - [Table of contents](#table-of-contents)
@@ -35,7 +34,6 @@
       - [Lighthouse results Mobile](#lighthouse-results-mobile)
   - [Manual Testing](#manual-testing)
 - [Security Features](#security-features)
-  - [SECURITY](#security)
 - [Credits](#credits)
   - [Code](#code)
   - [Content Data Sources](#content-data-sources)
@@ -362,17 +360,9 @@ I have configured JSHint to support ES6 features, and the code is functioning co
 
 ![JavaScirpt Validation](docs/readme/testing/js_hint_testing_of_js_code.png)
 
-
-
 ## Manual Testing
 
-
-
-
-
 # Security Features
-
-## SECURITY
 
 - **User Authentication**:
   - Only superusers can access the admin panel; normal users do not have access.
