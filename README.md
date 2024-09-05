@@ -436,7 +436,6 @@ The custom `404.html` page was created using the guidance from **[Create_Custom_
 For the newsletter signup feature, I referred to this source: **[NewsLetter_with_Django](https://dev.to/shubhamkshatriya25/how-to-build-a-email-newsletter-subscriber-in-django-j2p)**.
 The code mentioned in this source was modified and adjusted to ensure that the model, view, and template used are as different as possible from the code used in this source
 
-
 ## Code
 
 The Readme.md file follows the structure of Readme.md provided by Code Institute **[Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template)**. 
