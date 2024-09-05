@@ -33,6 +33,15 @@
       - [Lighthouse results Desktop](#lighthouse-results-desktop)
       - [Lighthouse results Mobile](#lighthouse-results-mobile)
   - [Manual Testing](#manual-testing)
+    - [Manual Testing Page 1](#manual-testing-page-1)
+    - [Manual Testing Page 2](#manual-testing-page-2)
+    - [Manual Testing Page 3](#manual-testing-page-3)
+    - [Manual Testing Page 4](#manual-testing-page-4)
+    - [Manual Testing Page 5](#manual-testing-page-5)
+    - [Manual Testing Page 6](#manual-testing-page-6)
+    - [Manual Testing Page 7](#manual-testing-page-7)
+    - [Manual Testing Page 8](#manual-testing-page-8)
+    - [Manual Testing Page 9](#manual-testing-page-9)
 - [Security Features](#security-features)
 - [Credits](#credits)
   - [Code](#code)
@@ -317,7 +326,7 @@ The CSS stylesheet was tested with the W3C CSS validator. No error messages or s
 
 3. **[CI Python Linter](https://pep8ci.herokuapp.com/)** The Code Institute Python Linter was used to validate Python code
 
-![Python Validation](docs/readme/placeholder_image_for_automated_py_testing.png)
+![Python Validation](docs/readme/testing/table_summary_for_automated_py_testing_with_pep8_linter.png)
 
 
 
@@ -361,6 +370,47 @@ I have configured JSHint to support ES6 features, and the code is functioning co
 ![JavaScirpt Validation](docs/readme/testing/js_hint_testing_of_js_code.png)
 
 ## Manual Testing
+
+Manual testing was carried out repeatedly throughout the entire development. During the development phase, an Excel table was created during the manual testing in which the results of the manual testing were documented. At the end of the development and after iteration 6 was closed, all features were manually tested again, and the result of the manual test was finally documented.
+
+### Manual Testing Page 1
+
+![Manual_Testing_Page_1](docs/readme/testing/manual_testing/manual_testing_page_1.png)
+
+### Manual Testing Page 2
+
+![Manual_Testing_Page_2](docs/readme/testing/manual_testing/manual_testing_page_2.png)
+
+### Manual Testing Page 3
+
+![Manual_Testing_Page_3](docs/readme/testing/manual_testing/manual_testing_page_3.png)
+
+### Manual Testing Page 4
+
+![Manual_Testing_Page_4](docs/readme/testing/manual_testing/manual_testing_page_4.png)
+
+### Manual Testing Page 5
+
+![Manual_Testing_Page_5](docs/readme/testing/manual_testing/manual_testing_page_5.png)
+
+### Manual Testing Page 6
+
+![Manual_Testing_Page_6](docs/readme/testing/manual_testing/manual_testing_page_6.png)
+
+### Manual Testing Page 7
+
+![Manual_Testing_Page_7](docs/readme/testing/manual_testing/manual_testing_page_7.png)
+
+### Manual Testing Page 8
+
+![Manual_Testing_Page_8](docs/readme/testing/manual_testing/manual_testing_page_8.png)
+
+![Manual_Testing_Page_8](docs/readme/testing/manual_testing/manual_testing_page_8_continued.png)
+
+### Manual Testing Page 9
+
+![Manual_Testing_Page_9](docs/readme/testing/manual_testing/manual_testing_page_9.png)
+
 
 # Security Features
 
