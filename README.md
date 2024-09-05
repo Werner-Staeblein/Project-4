@@ -433,9 +433,9 @@ For my contact app, I used [Contact_App_Reference_Material](https://pythonguides
 
 The custom `404.html` page was created using the guidance from **[Create_Custom_404_error_page](https://www.makeuseof.com/create-custom-404-error-page-django/).**
 
-<div style="color: red; font-weight: bold;">
-    Reminder to include reference for newsletter signup
-</div>
+For the newsletter signup feature, I referred to this source: **[NewsLetter_with_Django](https://dev.to/shubhamkshatriya25/how-to-build-a-email-newsletter-subscriber-in-django-j2p)**.
+The code mentioned in this source was modified and adjusted to ensure that the model, view, and template used are as different as possible from the code used in this source
+
 
 ## Code
 
