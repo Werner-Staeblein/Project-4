@@ -485,7 +485,7 @@ The command gunicorn MY_PROJECT.wsgi is used by Heroku to start the server (for 
 Unless created already, create a file named env.py at the root directory to store environment variables|sensitive and secret information
 To ensure that secret information|sensitive information is not leaking, the env.py file must be included in .gitignore
 Include the environment variables listed below in the Heroku deployment
-    
+
 5. Adjust the settings.py in your Django project
 In the settings.py, the Heroku hostname must be appended to the ALLOWED_HOST list
 Add Heroku to the ALLOWED_HOST list by adding '.herokuapp.com' to ALLOWED_HOSTS in settings.py
@@ -534,7 +534,6 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 3. Click on button named "Code" button. Here, you can choose a clone method (HTTPS, SSH, Github CLI). The link provided must be copied
 4. In your code editor navigate to the directory where you would want to clone the repository
 5. In the terminal of your code editor, type 'git clone'. Here, the copied link must be pasted. Finish the step by pressing Enter
-
 
 # Acknowledgements
 
