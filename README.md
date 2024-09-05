@@ -428,8 +428,7 @@ Manual testing was carried out repeatedly throughout the entire development. Dur
 # Credits
 The project follows the walkthrough project of Matt Rudge from Code Institute named "I Think Therefore I Blog". Using the walkthrough project as a guide improved my understanding of the project goals. I changed the models, including modifications to class names and field names. Additionally, I customized the views and rendering of data in the templates to better suit the specific requirements of my application. I benchmarked and compared the code from the walkthrough project to ensure that my implementation is unique and distinct. Through modifications, I have made the best effort possible to create original work.
 
-
-For my contact app, I used [Contact_App_Reference_Material](https://pythonguides.com/contact-form-with-django-and-sqlite/). I made significant modifications and customizations to this code including adjustment of the model (class names, field names) so that the contact app is distinctly different from the reference material. The adapted code and rendered page was styled with custom CSS stylesheet.
+For my contact app, I used **[Contact_App_Reference_Material](https://pythonguides.com/contact-form-with-django-and-sqlite/).** I made significant modifications and customizations to this code including adjustment of the model (class names, field names) so that the contact app is distinctly different from the reference material. The adapted code and rendered page was styled with custom CSS stylesheet.
 
 The custom `404.html` page was created using the guidance from **[Create_Custom_404_error_page](https://www.makeuseof.com/create-custom-404-error-page-django/).**
 
