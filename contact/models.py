@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 # Guidance for this model was obtained from
 # https://pythonguides.com/contact-form-with-django-and-sqlite/
 # but tuple/variable names customized. Field names likewise customized and
