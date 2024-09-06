@@ -4,16 +4,20 @@
 <!-- Landing Page Content  -->
 
     
-<div class="container mt-5">
-    <div class="row">
+<main class="container mt-5">
+    <section class="row">
         <div class="col-md-12">
-            <div class="jumbotron bg-light p-5 rounded">
-                <h1 class="display-4">Welcome to Dividend Dynamics</h1>
-                <p class="lead">Your Go-To for Growing Income and Capital Growth</p>
-                <hr class="my-4">
+            <article class="jumbotron bg-light p-5 rounded">
+                <header>
+                    <h1 class="display-4">Welcome to Dividend Dynamics</h1>
+                    <p class="lead">Your Go-To for Growing Income and Capital Growth</p>
+                    <hr class="my-4">
+                </header>
                 <p  class="landing-text">At Dividend Dynamics, we understand that dividends are more than just a regular income—they are a gateway to financial growth and stability. Our platform is designed to help you navigate the world of dividend stocks, offering insights and strategies to maximize both your income and your capital appreciation.</p>
 
-                <img src="{% static 'images/pexels-picture-no_1_minified.jpg' %}" alt="Chart of a stock" class="img-fluid mb-3">
+                <figure>
+                    <img src="{% static 'images/pexels-picture-no_1_minified.jpg' %}" alt="Chart of a stock" class="img-fluid mb-3">
+                </figure>
 
                 <h2 class="my-5">Why Choose Dividend Growth Stocks?</h2>
                 <ul>
@@ -23,20 +27,24 @@
                     <li class="landing-text"><strong>Stability and Growth:</strong> Dividend-paying companies are often well-established with stable cash flows. They tend to have a history of strong performance and resilience, which can provide both security and growth potential for your portfolio.</li>
                 </ul>
                 
-                <img src="{% static 'images/pexels-picture-no_2_minified.jpg' %}" alt="Stock charts and calculator image" class="img-fluid mb-3">
+                <figure>
+                    <img src="{% static 'images/pexels-picture-no_2_minified.jpg' %}" alt="Stock charts and calculator image" class="img-fluid mb-3">
+                </figure>
 
-                <h2 class="my-5">Features of Dividend Dynamics:</h2>
-                <ul>
-                    <li class="landing-text"><strong>Comprehensive Analysis:</strong> Get in-depth reviews and performance metrics of top dividend stocks, including detailed information on dividend history, growth rates, and financial health.</li>
-                    <li class="landing-text"><strong>Personalized Insights:</strong> Tailor your investment strategy with our recommendations based on your financial goals and risk tolerance.</li>
-                    <li class="landing-text"><strong>Expert Opinions:</strong> Access expert analyses and market trends to stay informed about the best dividend stocks and investment opportunities.</li>
-                </ul>
-                <p class="landing-text">Make the most of your investments with Dividend Dynamics. Join us today and start your journey towards financial stability through the power of dividend investing. Your path to a steady income and capital appreciation starts here!</p>
-                <a href="{% url 'blog_index' %}" class="btn landing-btn mt-5 d-block mx-auto custom-link">Explore Our Blog</a>
-            </div>
+                <section>
+                    <h2 class="my-5">Features of Dividend Dynamics:</h2>
+                    <ul>
+                        <li class="landing-text"><strong>Comprehensive Analysis:</strong> Get in-depth reviews and performance metrics of top dividend stocks, including detailed information on dividend history, growth rates, and financial health.</li>
+                        <li class="landing-text"><strong>Personalized Insights:</strong> Tailor your investment strategy with our recommendations based on your financial goals and risk tolerance.</li>
+                        <li class="landing-text"><strong>Expert Opinions:</strong> Access expert analyses and market trends to stay informed about the best dividend stocks and investment opportunities.</li>
+                    </ul>
+                </section>
+                    <p class="landing-text">Make the most of your investments with Dividend Dynamics. Join us today and start your journey towards financial stability through the power of dividend investing. Your path to a steady income and capital appreciation starts here!</p>
+                    <a href="{% url 'blog_index' %}" class="btn landing-btn mt-5 d-block mx-auto custom-link">Explore Our Blog</a>
+            </article>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 <!-- Landing Page Content Ends Here -->
  
 {% endblock %}
