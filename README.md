@@ -5,6 +5,14 @@
   - [Site Goal](#site-goal)
   - [Targeted Audience](#targeted-audience)
   - [Wireframes](#wireframes)
+    - [Wireframe landing | home page](#wireframe-landing--home-page)
+    - [Wireframe blog page](#wireframe-blog-page)
+    - [Wireframe about page](#wireframe-about-page)
+    - [Wireframe contact page](#wireframe-contact-page)
+    - [Wireframe registration page](#wireframe-registration-page)
+    - [Wireframe login page](#wireframe-login-page)
+    - [Wireframe individual blogpost](#wireframe-individual-blogpost)
+    - [Wireframe landing | home mobile](#wireframe-landing--home-mobile)
   - [Database Schema](#database-schema)
   - [Color Scheme](#color-scheme)
   - [Typography](#typography)
@@ -82,7 +90,41 @@ The dividend blog app caters to the information needs of users as follows:
 -	Offers the opportunity to share thoughts on specific dividend investment ideas via a comment function and get engaged in a discussion with other users
 
 ## Wireframes
-	
+
+My wireframes served as a rough guideline for the development, the user interface, and the overall appearance of the application. Bootstrap was used during development. Bootstrap has built-in breakpoints for different screen widths. Therefore, my influence on the appearance of the app in Bootstrap was naturally limited, and the user interface of the application is based on the breakpoints as well as how my application is displayed in Bootstrap on different devices.
+
+### Wireframe landing | home page
+
+![Wireframe_landing](docs/readme/wireframes/wireframe_landing.png)
+
+### Wireframe blog page
+
+![Wireframe_blog](docs/readme/wireframes/wireframe_blog.png)
+
+### Wireframe about page
+
+![Wireframe_about](docs/readme/wireframes/wireframe_about.png)
+
+### Wireframe contact page
+
+![Wireframe_contact](docs/readme/wireframes/wireframe_contact.png)
+
+### Wireframe registration page
+
+![Wireframe_registration](docs/readme/wireframes/wireframe_register.png)
+
+### Wireframe login page
+
+![Wireframe_login](docs/readme/wireframes/wireframe_login.png)
+
+### Wireframe individual blogpost
+
+![Wireframe_blogpost](docs/readme/wireframes/wireframe_individual_blogpost.png)
+
+### Wireframe landing | home mobile
+
+![Wireframe_blogpost](docs/readme/wireframes/wireframe_landing_mobile.png)
+
 ## Database Schema
 
 The database model (Entity Relationship Diagram | ERD) describes the connection among the different models used in the site
