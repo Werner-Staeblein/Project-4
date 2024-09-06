@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import AboutPage
 
-# Create your views here.
-
 # For this view, I used
 # https://docs.djangoproject.com/en/dev/ref/models/querysets/#first
 # to understand that it is sufficient to simply retrieve the entire instance
