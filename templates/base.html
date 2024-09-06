@@ -48,17 +48,18 @@
   
   <!-- Message to user on successful login or successful logout -->
   {% if messages %}
-  <div class="container my-3">
+  <section class="container my-3">
     {% for message in messages %}
         <div class="alert alert-custom alert-success-custom d-flex justify-content-between align-items-center alert-dismissible fade show" role="alert">
             <span>{{ message }}</span>
             <button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     {% endfor %}
-  </div>
+  </section>
   {% endif %}
 
   <!-- Navigation -->
+  <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand" href="{% url 'landing' %}" title="Click to return to the homepage">
@@ -122,6 +123,7 @@
         </div>
       </div>
     </nav>
+  </header>
 
 <!-- Main content -->
     <main class="flex-shrink-0">
@@ -133,7 +135,7 @@
 <footer class="footer mt-auto py-3">
   <div class="container text-center py-4">
     <div class="row align-items-center">
-      <div class="col-md-4 d-flex justify-content-center">
+      <section class="col-md-4 d-flex justify-content-center">
         <!-- Social Media Links -->
         <a href="https://www.linkedin.com" class="text-white mx-2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="fab fa-linkedin fa-2x"></i>
@@ -144,19 +146,19 @@
         <a href="https://www.instagram.com" class="text-white mx-2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <i class="fab fa-instagram fa-2x"></i>
         </a>
-      </div>
+      </section>
       
-      <div class="col-md-4 d-flex justify-content-center">
+      <section class="col-md-4 d-flex justify-content-center">
         <!-- Link to Newsletter Subscription -->
         <a href="{% url 'subscribe' %}" class="btn landing-btn mt-5 d-block mx-auto custom-link" role="button">
           Sign Up for Our Newsletter
         </a>
-      </div>
+      </section>
 
-      <div class="col-md-4 d-flex justify-content-center">
+      <section class="col-md-4 d-flex justify-content-center">
         <!-- Copyright sign  -->
         <span>© 2024 Dividend Dynamics</span>
-      </div>
+      </section>
     </div>
   </div>
 </footer>
