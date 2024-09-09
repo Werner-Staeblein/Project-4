@@ -360,7 +360,7 @@ The W3 HTML validator was used throughout the developmeht phase to ensure consis
 | home/accounts/login/                    | ![Default_Value](docs/readme/testing/w3c_validation_home_accounts_login.png) |
 | home/newsletter/subscribe/              | ![Default_Value](docs/readme/testing/w3c_validation_home_newsletter_subscribe.png) |
 | home/blog/post/A-SINGLE-BLOGPOST/       | ![Default_Value](docs/readme/testing/w3c_validation_home_blog_post_singlepost.png) |
-
+| home/404_page/                          | ![Default_Value](docs/readme/testing/w3c_validation_home_404_page.png) |
 
 2. **[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) - CSS Validation**
 
