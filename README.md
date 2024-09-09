@@ -373,8 +373,6 @@ The CSS stylesheet was tested with the W3C CSS validator. No error messages or s
 ![Python Validation](docs/readme/testing/table_summary_for_automated_py_testing_with_pep8_linter.png)
 
 
-
-
 4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
 Performance of pages, best practices and SEO was tested for every page with Lighthouse. Instead of inserting many different screenshots of all lighthouse results, the lighthouse results are summarised as per tables below.
