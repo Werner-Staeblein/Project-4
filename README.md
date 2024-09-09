@@ -12,6 +12,7 @@
     - [Wireframe registration page](#wireframe-registration-page)
     - [Wireframe login page](#wireframe-login-page)
     - [Wireframe individual blogpost](#wireframe-individual-blogpost)
+    - [Wireframe 404 page](#wireframe-404-page)
     - [Wireframe landing | home mobile](#wireframe-landing--home-mobile)
   - [Database Schema](#database-schema)
   - [Color Scheme](#color-scheme)
@@ -120,6 +121,10 @@ My wireframes served as a rough guideline for the development, the user interfac
 ### Wireframe individual blogpost
 
 ![Wireframe_blogpost](docs/readme/wireframes/wireframe_individual_blogpost.png)
+
+### Wireframe 404 page
+
+![Wireframe_404_page](docs/readme/wireframes/wireframe_404_page.png)
 
 ### Wireframe landing | home mobile
 
@@ -372,7 +377,6 @@ The CSS stylesheet was tested with the W3C CSS validator. No error messages or s
 
 ![Python Validation](docs/readme/testing/table_summary_for_automated_py_testing_with_pep8_linter.png)
 
-
 4. **[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)**
 
 Performance of pages, best practices and SEO was tested for every page with Lighthouse. Instead of inserting many different screenshots of all lighthouse results, the lighthouse results are summarised as per tables below.
@@ -390,7 +394,7 @@ Performance of pages, best practices and SEO was tested for every page with Ligh
 | home/accounts/login/               | 100            | 100               | 100                | 100     |
 | home/newsletter/subscribe/         | 100            | 100               | 100                | 100     |
 | home/blog/post/A-SINGLE-BLOGPOST/ | 100            | 98                | 100                | 100     |
-
+| home/404_page/ | 100            | 100                | 96                | 91     |
 
 #### Lighthouse results Mobile
 
@@ -405,6 +409,7 @@ Performance of pages, best practices and SEO was tested for every page with Ligh
 | home/accounts/login/               | 96             | 100               | 96                 | 100     |
 | home/newsletter/subscribe/         | 96             | 100               | 96                 | 100     |
 | home/blog/post/A-SINGLE-BLOGPOST/ | 92             | 98                | 96                 | 100     |
+| home/404_page/ | 99             | 100                | 93                 | 91     |
 
 5. **[JS_hint](https://jshint.com/)**
 I have configured JSHint to support ES6 features, and the code is functioning correctly; however, I was unable to resolve the warning regarding the undefined variable bootstrap, as the Bootstrap modal is working as intended.
