@@ -6,10 +6,10 @@
     <div class="row">
 
         <!-- These are the columns where the blogposts are shown -->
-        <div class="col-12 mt-3 left">
+        <section class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <article class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -24,7 +24,7 @@
                             <p class="card-text">{{ post.published_date }}</p>
                         </div>
                     </div>
-                </div>
+                </article>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
@@ -32,7 +32,7 @@
                 {% endfor %}
 
             </div>
-        </div>
+        </section>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">

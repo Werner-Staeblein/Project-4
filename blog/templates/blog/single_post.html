@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container my-5 jumbotron bg-light rounded" style="max-width: 80%; margin: 0 auto;">
+<article class="container my-5 jumbotron bg-light rounded" style="max-width: 80%; margin: 0 auto;">
 
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -29,10 +29,10 @@
             </div>
         </div>
     </div>
-</div>
+</article>
 
 <!-- Comments and Comment Form Section -->
-<div class="container" style="max-width: 60%;">
+<section class="container" style="max-width: 60%;">
     <div class="row mt-4">
 
         <!-- Comments Section -->
@@ -114,12 +114,12 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Comment to edit with rendering edit comment -->
 
 {% if comment_to_edit %}
-<div class="row mt-4">
+<section class="row mt-4">
     <div class="col-md-12">
         <h3>Edit Comment</h3>
         <form method="post" action="{% url 'comment_edit' post.slug comment_to_edit.id %}">
@@ -130,7 +130,7 @@
             <a href="{% url 'blogpost_detail' post.slug %}" class="btn btn-secondary common-btn">Cancel</a>
         </form>
     </div>
-</div>
+</section>
 {% endif %}
 
 <!-- Button Link Back to Blog -->
