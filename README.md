@@ -30,8 +30,11 @@
       - [User access to blog content | ability to make comments](#user-access-to-blog-content--ability-to-make-comments)
       - [Individual Blogpost](#individual-blogpost)
   - [About Page | About App](#about-page--about-app)
-  - [Feature ABCD](#feature-abcd)
-  - [Feature ABCD](#feature-abcd-1)
+  - [Contact Page | Contact App](#contact-page--contact-app)
+  - [Newsletter Signup Page | Newsletter App](#newsletter-signup-page--newsletter-app)
+    - [Call-to-Action Button in Footer](#call-to-action-button-in-footer)
+  - [Registration Page](#registration-page)
+  - [Login Page](#login-page)
   - [Customized 404 Error Page](#customized-404-error-page)
     - [Key Features of the Customized 404 Page:](#key-features-of-the-customized-404-page)
 - [Technologies](#technologies)
@@ -246,13 +249,42 @@ The blog application includes a dedicated About page that provides information a
 ![About_Page_Feature](docs/readme/features/feature_about_page.png)
 
 
-## Feature ABCD
+## Contact Page | Contact App
+
+The **Contact** feature allows users to submit messages via a contact form on the website. It includes the following functionality:
+
+- **Contact Form Submission**: Users can fill out and submit the contact form with their details and message.
+- **Form Handling**: The form is processed when a user submits it (via a POST request). If the form is valid, the data is saved, and a success message is displayed to the user.
+- **Error Handling**: If the form contains invalid data, an error message is shown, and the form is re-rendered with the user's input preserved.
+- **Form Rendering**: For GET requests, an empty form is rendered for the user to fill out.
+
+![Contact_Page_Feature](docs/readme/features/feature_contact_page.png)
+
+## Newsletter Signup Page | Newsletter App
+
+The **Newsletter Subscription** feature allows users to sign up for a newsletter. 
+
+- **Newsletter Subscription Form**: 
+  The form is built on the `NewsLetterSubscriber` modeland includes fields for:
+    - `email`: The user's email address
+    - `name`: The user's name
+  
+  The form is designed to be user-friendly and uses Bootstrap classes for consistent styling across the website.
+
+![Newsletter_AppFeature](docs/readme/features/feature_newsletter_signup_form.png)
+
+### Call-to-Action Button in Footer
+
+A "Sign Up for Our Newsletter" button is strategically placed in the footer of the website. This button remains visible across all pages, encouraging users to subscribe to the newsletter no matter where they are on the site. 
+
+![Newsletter_AppFeature](docs/readme/features/feature_newsletter_button.png)
+
+## Registration Page
 
 
 
 
-## Feature ABCD
-
+## Login Page
 
 
 
@@ -480,7 +512,7 @@ For my contact app, I used **[Contact_App_Reference_Material](https://pythonguid
 The custom `404.html` page was created using the guidance from **[Create_Custom_404_error_page](https://www.makeuseof.com/create-custom-404-error-page-django/).**
 
 For the newsletter signup feature, I referred to this source: **[NewsLetter_with_Django](https://dev.to/shubhamkshatriya25/how-to-build-a-email-newsletter-subscriber-in-django-j2p)**.
-The code mentioned in this source was modified and adjusted to ensure that the model, view, and template used are as different as possible from the code used in this source
+The code mentioned in this source was modified and adjusted to ensure that the model, view, and template used are as different as possible from the code used in this source.
 
 ## Code
 
