@@ -307,8 +307,45 @@ body {
 }
 
 /*-------------------------------------------------------------------------
-        Styles for the 404.html page are inline styles in the 404.html
+        Styles for the 404.html page
 ---------------------------------------------------------------------------*/
+
+.custom-error-page {
+    background-color: rgba(200,230,255);
+    color: rgb(0,0,0);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.custom-error-page .error-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgb(200,200,220);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(200,230,255, 0.5);
+}
+
+.custom-error-page .error-message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: rgb(0,60,120);
+    margin-bottom: 1rem;
+}
+
+.custom-error-page p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-error-page a {
+    text-decoration: none;
+    color: rgb(0,60,120);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
 /*-------------------------------------------------------------------------
         Styles for approval messages to users (approved or pending approval)
