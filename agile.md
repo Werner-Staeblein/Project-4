@@ -5,9 +5,9 @@ I have used GitHub Projects to create a Kanban board / collection of initial use
 Three different EPICs were drafted. The EPICs are then broken down into user stories. 
 
 The EPICS are:
--	Django setup and administrator/superuser
--	EPIC for unregistered users
--	EPIC for registered users
+-	EPIC 1: Django setup and administrator/superuser
+-	EPIC 2: EPIC for unregistered users
+-	EPIC 3: EPIC for registered users
 
 Some of the user stories that pertain to a certain EPIC may overlap with another EPIC. The reason is that some functionality available for superuser/admin likewise overlaps with the features planned for registered users.
 GitHub projects was used to create the Kanban board to track the development of the user stories created for this project. The user stories are listed in the Kanban board created.

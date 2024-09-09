@@ -5,6 +5,18 @@ from .forms import UserContactForm
 
 def contact_view(request):
 
+    """
+    Handles the contact form submission and rendering.
+
+    View processes the contact form when submitted via POST.
+    If the form is valid, data is saved and displays a success message.
+    With success, redirect of user.
+    If the form is invalid, error message is shown.
+    Error leads to form being rendered again with provided data.
+
+    GET requests result in empty form rendered for user to populate.
+    """
+
     if request.method == 'POST':
         form = UserContactForm(request.POST)
         if form.is_valid():

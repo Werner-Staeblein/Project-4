@@ -9,6 +9,14 @@ from .models import AboutPage
 
 
 def about_page(request):
+    """
+    Render about page. Information results from AboutPage model.
+
+    View retrieves first instance of the AboutPage model and passes it to
+    the template for rendering.
+
+    """
+
     about_instance = AboutPage.objects.first()
     context = {
         'about_instance': about_instance

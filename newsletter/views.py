@@ -6,6 +6,20 @@ from django.contrib import messages
 
 
 def subscription(request):
+
+    """
+    Handles subscription form submission for newsletter.
+
+    View processes newsletter subscription form when POST request exists.
+
+    Valid form saves subscriber information and displays of success
+    message to the user. Success leads to redirect to landing page.
+
+    Invalid form leads to error message and form rendered again.
+
+    GET request renders empty subscription form for user.
+
+    """
     if request.method == 'POST':
         form = NewsLetterSubscriberForm(request.POST)
         if form.is_valid():
