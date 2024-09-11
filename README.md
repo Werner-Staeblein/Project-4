@@ -696,6 +696,7 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 # Acknowledgements
 
 
+
 *****************
 
 [Back to top](#table-of-contents)
