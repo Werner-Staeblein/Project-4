@@ -433,8 +433,6 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[Visual Studio Code](https://code.visualstudio.com/)** Visual Studio Code (VS-Code) was used as an integrated development environment (IDE) for the entire project. The GitHub repository was cloned to VS-Code for this purpose
 
-
-
 # Bugs and issues
 
 **Erroneously Renaming Django Project Folder**
@@ -698,8 +696,6 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 # Acknowledgements
 
 
-
 *****************
 
 [Back to top](#table-of-contents)
-
