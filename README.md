@@ -19,6 +19,7 @@
   - [Typography](#typography)
 - [Agile Development Process](#agile-development-process)
 - [Features](#features)
+  - [Hompage | Landing Page](#hompage--landing-page)
   - [Navigation | Logo | Favicon](#navigation--logo--favicon)
     - [Logo Details | Favicon](#logo-details--favicon)
     - [Navigation](#navigation)
@@ -33,6 +34,7 @@
   - [Contact Page | Contact App](#contact-page--contact-app)
   - [Newsletter Signup Page | Newsletter App](#newsletter-signup-page--newsletter-app)
     - [Call-to-Action Button in Footer](#call-to-action-button-in-footer)
+  - [Altert and feedback messages](#altert-and-feedback-messages)
   - [Registration Page](#registration-page)
   - [Login Page](#login-page)
   - [Customized 404 Error Page](#customized-404-error-page)
@@ -162,6 +164,19 @@ Details on the agile development process can be found here **[agile.md](agile.md
 
 # Features
 
+Semantic HTML tags were used throughout the process. This allows search engines, screen readers, or other accessbility devices to access the content.
+
+Use of Bootstrap allows to that styles are consistent and that site is visually appealing. The use of Bootstrap ensures that site is responsive across all devices with MFRD used in Bootstrap thus supporting progressive enhancement in the development process
+
+## Hompage | Landing Page
+
+The homepage | landing page includes navbar, footer, and information about the applications purpose.
+
+Screen is different for registered and logged in users and users not logged in.
+
+![Homepage_user_not_logged_in](docs/readme/features/feature_homepage_user_not_logged_in.png)
+
+
 ## Navigation | Logo | Favicon
 
 The project features a user-friendly navigation system designed to enhance the overall experience. A key component of this navigation is the **logo**, which is seamlessly integrated into the layout.
@@ -279,8 +294,27 @@ A "Sign Up for Our Newsletter" button is strategically placed in the footer of t
 
 ![Newsletter_AppFeature](docs/readme/features/feature_newsletter_button.png)
 
+## Altert and feedback messages
+
+User feedback was implemented with altert-messages. Changes in data such as login-status are alerted to user to confirm back to user successful completion of intended step.
+
+![Alert_and_feedback_messages](docs/readme/features/features_altert_and_feedback_messages_part1.png)
+
+When comment is posted, changed or deleted, the user is inform about successful completion. Alter-messages were implemented with Django altert messaging. The altert and feedback messaging was likewise used for the contact app and newsletter app providing immediate feedback to the user once changes in data are completed successfully.
+
+![Alert_and_feedback_messages](docs/readme/features/features_altert_and_feedback_messages_part2.png)
+
 ## Registration Page
 
+Users can register an account. The username and password are required fields while email is an optional field.
+
+The sign-up for was styled to be consistent with the remaining colors of the site. Crispyforms was used for the layout of the form.
+
+The username and password are clearly conveyed to the user to be required fields while providing the email adress is optional for the user.
+
+User input data into the registration form is validated before submission can be executed successfully by the user. Input errors in the form are displayed to the user with messaging system. Successful completion and submission of the registration form is displayed to user with success message.
+
+![User_registration_page](docs/readme/features/features_user_registration_page.png)
 
 
 
