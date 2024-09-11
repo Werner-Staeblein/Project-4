@@ -248,7 +248,7 @@ Logged-in users have the ability to make comments on blog posts. The features on
 
 - **Returning to the Blog Page**: For convenience, users can easily navigate back to the main blog page that displays all blog posts. Each individual blog post includes a button that, when clicked, takes the user back to the blog listing page
 
-![Blogpost_CRUD_features](docs/readme/features/individual_blogpost_CRUD_features.png)
+![Blogpost_CRUD_features](docs/readme/features/individual_blogpost_crud_features.png)
 
 
 ## About Page | About App
@@ -381,7 +381,7 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[Cloudinary](https://cloudinary.com/)** Cloudinary is an image/video management solution for websites to easily upload images to the cloud with the delivery of media files through a fast content delivery network (CDN)
 
-**[CrispyForms](https://pypi.org/project/django-crispy-forms/)** Crispy Forms is a third-party Django app to manage Django forms with Bootstrap styles		
+**[CrispyForms](https://pypi.org/project/django-crispy-forms/)** Crispy Forms is a third-party Django app to manage Django forms with Bootstrap styles
 
 **[Crispy Bootstrap5](https://pypi.org/project/crispy-bootstrap5/)** Crispy Bootstrap5 is a Bootstrap template pack for Django Crispy Forms
 
@@ -397,25 +397,33 @@ The frontend primarily relies on the CSS framework Bootstrap for the efficient l
 
 **[Browserling](https://www.browserling.com/)** Browserling is a web-based cross-browser testing software that allows users to test the website across desktop and mobile browsers such as Chrome, Firefox, Edge, or Opera without downloading and installing the respective browser
 
-**[CI Python Linter](https://pep8ci.herokuapp.com/)** The Code Institute Python Linter was used to validate Python code	
+**[CI Python Linter](https://pep8ci.herokuapp.com/)** The Code Institute Python Linter was used to validate Python code
 
-**[Favicon](https://favicon.io/favicon-generator/)** Favicon generates favicons						
+**[Favicon](https://favicon.io/favicon-generator/)** Favicon generates favicons
 
-**[GitHub](https://github.com/)** The code files, README files, and assets are stored on GitHub. The code on GitHub was pushed from Git				
+**[Fontawesome](https://fontawesome.com/)** fontawesome was used for icons
+
+**[GitHub](https://github.com/)** The code files, README files, and assets are stored on GitHub. The code on GitHub was pushed from Git
 
 **[Git](https://git-scm.com/)** The version control system Git was used to document the development of the application and to push code to the GitHub repository. The specific reasons for the commit are reflected in the respective commit message
 
+**[Google fonts](https://fonts.google.com/)** googlefonts were used for customized use of font-types
+
+**[Grammarly](https://app.grammarly.com/)** Grammarly is an online grammar-check tool to check English grammar and eliminate writing mistakes
+
 **[Heroku](https://www.heroku.com/)** Heroku is a platform as a service (PaaS) to build, run, and operate cloud-based applications. It was used to deploy the website
 
-**[Lucid Chart](https://www.lucidchart.com/pages/)** Lucid Chart is a web-based diagramming tool to create flowcharts, wireframes, and visualisation of concepts							
+**[Lucid Chart](https://www.lucidchart.com/pages/)** Lucid Chart is a web-based diagramming tool to create flowcharts, wireframes, and visualisation of concepts			
 
-**[Python](https://www.python.org/)** Python is an interpreted, high-level general-purpose programming language	
+**[Python](https://www.python.org/)** Python is an interpreted, high-level general-purpose programming language
 
-**[Techsini](https://techsini.com/multi-mockup/)** Multi Device Website Mockup generator				
+**[Random Key Generator](https://acte.ltd/utils/randomkeygen)** Random key generator to create a SECRET_KEY for the Django app that is different from the secret key created initially and generated once the env.py and .gitignore already existed to ensure that no secret information is shared in the commits
 
-**[Tinypng](https://tinypng.com/)** To reduce the size of the images used and improve lighthouse score on performance				
+**[Techsini](https://techsini.com/multi-mockup/)** Multi Device Website Mockup generator
 
-**[Visual Studio Code](https://code.visualstudio.com/)** Visual Studio Code (VS-Code) was used as an integrated development environment (IDE) for the entire project. The GitHub repository was cloned to VS-Code for this purpose			
+**[Tinypng](https://tinypng.com/)** To reduce the size of the images used and improve lighthouse score on performance	
+
+**[Visual Studio Code](https://code.visualstudio.com/)** Visual Studio Code (VS-Code) was used as an integrated development environment (IDE) for the entire project. The GitHub repository was cloned to VS-Code for this purpose
 
 
 
@@ -507,6 +515,12 @@ Performance of pages, best practices and SEO was tested for every page with Ligh
 I have configured JSHint to support ES6 features, and the code is functioning correctly; however, I was unable to resolve the warning regarding the undefined variable bootstrap, as the Bootstrap modal is working as intended.
 
 ![JavaScirpt Validation](docs/readme/testing/js_hint_testing_of_js_code.png)
+
+6. **Accessibility testing**
+
+Accessbility testing with color scheme was built into the development process. A sufficient contrast in the color palette was used to ensure accessibility. This is verified by the lighthouse results on accessibility.
+
+Good accessibility was likewise achieved with the use of semantic HTML tags to facilitate access to the application with screenreaders.
 
 ## Manual Testing
 
