@@ -139,7 +139,13 @@ My wireframes served as a rough guideline for the development, the user interfac
 
 ## Database Schema
 
-The database model (Entity Relationship Diagram | ERD) describes the connection among the different models used in the site
+The database model (Entity Relationship Diagram | ERD) describes the connection among the different models used in the site.
+
+The user model was created with Django-Allauth. ForeignKey relationships exists to Django's built-in User model for the DividendPosts and Discussion entities.
+
+The UserContact, AboutPage, and NewsLetterSubscriber models/entities are independent entities with no explicit relationships to other models or entities in the Django project.
+
+![Entity_Relationship_Diagram](docs/readme/entity_relationship_diagram.png)
 	
 ## Color Scheme
 
