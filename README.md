@@ -37,8 +37,10 @@
   - [Altert and feedback messages](#altert-and-feedback-messages)
   - [Registration Page](#registration-page)
   - [Login Page](#login-page)
+  - [Logout | sign-out confirmation page](#logout--sign-out-confirmation-page)
   - [Customized 404 Error Page](#customized-404-error-page)
     - [Key Features of the Customized 404 Page:](#key-features-of-the-customized-404-page)
+  - [Possible future features](#possible-future-features)
 - [Technologies](#technologies)
   - [Django-based technologies](#django-based-technologies)
 - [Bugs and issues](#bugs-and-issues)
@@ -308,7 +310,7 @@ When comment is posted, changed or deleted, the user is inform about successful 
 
 Users can register an account. The username and password are required fields while email is an optional field.
 
-The sign-up for was styled to be consistent with the remaining colors of the site. Crispyforms was used for the layout of the form.
+The sign-up form was styled to be consistent with the remaining colors of the site. Crispyforms was used for the layout of the form.
 
 The username and password are clearly conveyed to the user to be required fields while providing the email adress is optional for the user.
 
@@ -316,11 +318,25 @@ User input data into the registration form is validated before submission can be
 
 ![User_registration_page](docs/readme/features/features_user_registration_page.png)
 
-
-
 ## Login Page
 
+User can login once an account was created. Users logged-in can create, view, edit and delete comments on blogposts while users not registered and not logged-in can not use CRUD functionality for comments in blogposts.
 
+The log-in/sign-in form was styled to be consistent with the remaining colors of the site. Crispyforms was used for the layout of the form.
+
+User input data into the log-in/sign-in form is validated before submission can be executed successfully by the user. Input errors (such as wrong password or wrong username) in the form are displayed to the user with messaging system. Successful completion and submission of the registration form is displayed to user with success message.
+
+![User_login_page](docs/readme/features/features_user_login_page.png)
+
+## Logout | sign-out confirmation page
+
+Users can securely log out of the application. Once the user clicks the logout button on any of the pages of the application, the user is redirected to the logout confirmation page.
+
+The logout confirmation page form was styled to be consistent with the remaining colors of the site. 
+
+Successful completion of the logout process is displayed to user with success message and redirect to the homepage/landing page.
+
+![User_logout_confirmation_page](docs/readme/features/features_logout_confirmation_page.png)
 
 ## Customized 404 Error Page
 
@@ -340,6 +356,16 @@ To enhance user engagement and experience, a customized 404 error page has been 
   - This user-centric design reinforces the website’s commitment to providing a good user experience.
 
 ![404_page](docs/readme/features/screenshot_404_page.png)
+
+## Possible future features
+
+Future features may include the following
+
+- Confirmation email once users register to the page or user sign-up/registration made dependent on user to confirm the sign-up process
+- Options for user to reset password. I a user forgot the password, user can access a page with password reset email notification
+- Sign-in via social accounts
+- Creation of a user profile page
+- Ability for user to assign likes or unlike a certain comment or blogpost
 
 # Technologies
 
