@@ -242,7 +242,9 @@ The Blog Page is designed to enable users to view and interact with the blog pos
 
 #### Individual Blogpost
 
-Logged-in users have the ability to make comments on blog posts. The features on commenting are:
+Logged-in users have the ability to make comments on blog posts. Access to restricted content of functionality is therefore linked to role-based login.
+
+The features on commenting are:
 
 - **Comment Submission**: Registered users can submit comments on individual blog posts. However, comments submitted are not visible to other users until they are approved by an admin.
 
