@@ -2,6 +2,10 @@
 
 I have used GitHub Projects to create a Kanban board / collection of initial user stories to facilitate the implementation of agile development.
 
+The GitHub projects can be found here
+
+**[GitHub Projects for this Project](https://github.com/Werner-Staeblein/Project-4/projects?query=is%3Aopen)**
+
 Three different EPICs were drafted. The EPICs are then broken down into user stories. 
 
 The EPICS are:
