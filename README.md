@@ -156,7 +156,6 @@ While developing the app a lighthouse test resulted in a bad score for the initi
 
 ![Color Scheme](docs/readme/coolors_color_palette.png)
 
-
 ## Typography
 
 For my application, I selected Roboto and Times New Roman to enhance both visual appeal and readability. Times New Roman is chosen for body text due to its serif style, which conveys tradition, reliability, and professionalism—key attributes for a finance-related blog.
