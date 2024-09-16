@@ -695,7 +695,9 @@ Inside settings.py of the Django project, set DEBUG = False, i.e. replace DEBUG 
 
 # Acknowledgements
 
+A heartfelt thanks goes to my mentor, David Bowers, for the unwavering support and guidance throughout this project. His encouragement and insights have been invaluable in keeping me motivated and on track.
 
+I also want to acknowledge the Slack community for their diverse ideas and discussions, as well as the forum members whose questions and answers helped me navigate potential pitfalls and refine my approach.
 
 *****************
 
